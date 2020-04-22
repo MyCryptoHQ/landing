@@ -29,6 +29,7 @@
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-prettier": "^6.3.0",
     "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jest": "^23.8.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-react": "^7.14.3",
@@ -44,6 +45,7 @@
   "license": "MIT",
   "scripts": {
     "lint": "eslint --ignore-path .gitignore . --ext ts --ext tsx --ext js --ext jsx",
+    "lint:fix": "yarn lint --fix",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
