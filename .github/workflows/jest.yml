@@ -1,0 +1,68 @@
+name: Jest
+
+on:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  setup:
+    name: Setup
+    runs-on: ubuntu-16.04
+    steps:
+      - name: Checkout PR
+        uses: actions/checkout@v1
+
+      - name: Retrieve engines' versions from package.json to env variables
+        id: engines
+        run: >
+          $hashtable = Get-Content -Raw -Path ./package.json | ConvertFrom-Json -AsHashtable;
+          echo $hashtable.engines;
+          $nodeVersion = $hashtable.engines.node;
+          $npmVersion = $hashtable.engines.npm;
+          $yarnVersion = $hashtable.engines.yarn;
+          Write-Output "##[set-output name=NODE_VERSION;]$($nodeVersion)";
+          Write-Output "##[set-output name=NPM_VERSION;]$($npmVersion)";
+          Write-Output "##[set-output name=YARN_VERSION;]$($yarnVersion)";
+
+      - name: Setup node ${{ steps.engines.outputs.NODE_VERSION }}
+        uses: actions/setup-node@master
+        with:
+          node-version: ${{ steps.engines.outputs.NODE_VERSION }}
+
+      - name: Cache depedendencies
+        id: cache
+        uses: actions/cache@v1
+        with:
+          path: node_modules
+          ## Check cache based on yarn.lock hashfile
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-${{ env.cache-name }}-
+            ${{ runner.os }}-yarn-
+            ${{ runner.os }}-
+
+      - name: Install dependencies
+        ## If no cache is found, install dependencies
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: yarn
+
+  test:
+    name: Test
+    needs: [setup]
+    runs-on: ubuntu-16.04
+    steps:
+      - name: Checkout PR
+        uses: actions/checkout@v1
+
+      - name: Restore cache
+        uses: actions/cache@v1
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+
+      - name: Lint
+        run: yarn lint
+
+      - name: Test
+        run: yarn test
