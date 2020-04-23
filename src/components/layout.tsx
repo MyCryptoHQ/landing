@@ -12,7 +12,11 @@ import Header from './header';
 import Footer from './footer';
 import './layout.css';
 
-const Layout = ({ children }) => (
+type Props = {
+  children: React.ReactNode;
+};
+
+const Layout = ({ children }: Props) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {

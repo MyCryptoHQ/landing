@@ -42,6 +42,8 @@
     // "noFallthroughCasesInSwitch": true,    /* Report errors for fallthrough cases in switch statement. */
 
     /* Module Resolution Options */
+    /* Otherwise tsc checks lib imports */
+    "skipLibCheck": true,
     // "moduleResolution": "node",            /* Specify module resolution strategy: 'node' (Node.js) or 'classic' (TypeScript pre-1.6). */
     /* Base directory to resolve non-absolute module names. */
     "baseUrl": "./src",

@@ -1,6 +1,10 @@
 import React from 'react';
 
-const Footer = ({ children }) => {
+type Props = {
+  children: React.ReactNode;
+};
+
+const Footer = ({ children }: Props) => {
   return (
     <div>
       <h1>Hello</h1>
