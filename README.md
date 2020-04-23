@@ -1,4 +1,4 @@
-![[Jest](https://github.com/MyCryptoHQ/landing/workflows/Jest/badge.svg)](https://github.com/MyCryptoHQ/landing/workflows/Jest/badge.svg)
+![[Jest](https://github.com/MyCryptoHQ/landing/workflows/Jest/badge.svg)](https://github.com/MyCryptoHQ/landing/workflows/Jest/badge.svg?branch=master)
 
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
