@@ -61,7 +61,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged && yarn tsc"
+      "pre-commit": "pretty-quick --staged && yarn tsc",
+      "pre-push": "yarn test"
     }
   },
   "repository": {
