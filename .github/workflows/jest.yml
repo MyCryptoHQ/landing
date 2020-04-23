@@ -18,15 +18,7 @@ jobs:
 
       - name: Retrieve engines' versions from package.json to env variables
         id: engines
-        run: >
-          $hashtable = Get-Content -Raw -Path ./package.json | ConvertFrom-Json -AsHashtable;
-          echo $hashtable.engines;
-          $nodeVersion = $hashtable.engines.node;
-          $npmVersion = $hashtable.engines.npm;
-          $yarnVersion = $hashtable.engines.yarn;
-          Write-Output "##[set-output name=NODE_VERSION;]$($nodeVersion)";
-          Write-Output "##[set-output name=NPM_VERSION;]$($npmVersion)";
-          Write-Output "##[set-output name=YARN_VERSION;]$($yarnVersion)";
+        run: echo "##[set-output name=NVMRC;]$(cat package.json | grep '\"node\":' | sed 's/^ *//;s/ *$//;s/\"node\":\ \"//;s/\",//' )"
 
       - name: Setup node ${{ steps.engines.outputs.NODE_VERSION }}
         uses: actions/setup-node@master
