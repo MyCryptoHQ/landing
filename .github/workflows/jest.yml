@@ -64,5 +64,8 @@ jobs:
       - name: Lint
         run: yarn lint
 
+      - name: Typescript
+        run: yarn tsc
+
       - name: Test
         run: yarn test
