@@ -23,6 +23,13 @@ module.exports = {
         href: to,
       })
   ),
-  StaticQuery: jest.fn(),
+  StaticQuery: ({ render }) =>
+    render({
+      site: {
+        siteMetadata: {
+          title: `Default Starter`,
+        },
+      },
+    }),
   useStaticQuery: jest.fn(),
 };
