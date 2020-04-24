@@ -5,7 +5,7 @@ import { Layout, Image, SEO } from '@/components';
 
 const HomePage = () => (
   <Layout>
-    <SEO title="Home" />
+    {/* <SEO title="Home" /> */}
     <h1>Hi people welcome to the live</h1>
     <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p>
