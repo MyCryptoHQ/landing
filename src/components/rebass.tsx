@@ -1,1 +1,1 @@
-export { Heading, Text, Button } from 'rebass/styled-components';
+export { Heading, Text, Button, Box, Flex } from 'rebass/styled-components';

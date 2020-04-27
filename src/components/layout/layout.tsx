@@ -7,6 +7,7 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
+import { Flex, Link, Text } from '../';
 import Header from './header';
 import Footer from './footer';
 
@@ -30,21 +31,16 @@ const Layout = ({ children }: Props) => {
   return (
     <>
       <Header siteTitle={site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0px 1.0875rem 1.45rem`,
-          paddingTop: 0,
-        }}
-      >
+      <Flex sx={{}}>
         <main>{children}</main>
-        <Footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </Footer>
-      </div>
+      </Flex>
+      <Footer>
+        © {new Date().getFullYear()}, Built with
+        {` `}
+        <Link href="https://www.gatsbyjs.org">
+          <Text>Gatsby</Text>
+        </Link>
+      </Footer>
     </>
   );
 };

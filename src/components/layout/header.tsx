@@ -1,6 +1,8 @@
 import { Link } from 'gatsby';
 import React from 'react';
 
+import { Heading, Box, Flex } from '../';
+
 type Props = {
   siteTitle: string;
 };
@@ -8,29 +10,29 @@ type Props = {
 const Header = ({ siteTitle }: Props) => (
   <header
     style={{
-      background: `rebeccapurple`,
       marginBottom: `1.45rem`,
     }}
   >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
+    <Flex
+      sx={{
+        bg: 'accent',
+        justifyContent: 'flex-start',
       }}
     >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
+      <Box sx={{}}>
+        <Heading style={{ margin: 0 }}>
+          <Link
+            to="/"
+            style={{
+              color: `white`,
+              textDecoration: `none`,
+            }}
+          >
+            {siteTitle}
+          </Link>
+        </Heading>
+      </Box>
+    </Flex>
   </header>
 );
 

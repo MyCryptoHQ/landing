@@ -11,7 +11,7 @@ const theme = {
     // background: '',
     primary: '#007896',
     // secondary: '',
-    // accent: '',
+    accent: '#163151',
     // hightlight: '',
     // muted: '',Ac
     /**

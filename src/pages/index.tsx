@@ -2,7 +2,7 @@ import React from 'react';
 
 import { URLS } from '@/config';
 
-import { Section, Image, SEO, Heading, Button, Link } from '@/components';
+import { Section, Image, SEO, Heading, Button, Link, Text } from '@/components';
 
 const HomePage = () => {
   return (
@@ -21,7 +21,7 @@ const HomePage = () => {
         </Heading>
         <Button variant="primary">Get Started</Button>
         <Link href={URLS.support}>
-          Have Questions? We&apos;re Here to Help!
+          <Text>Have Questions? We&apos;re Here to Help!</Text>
         </Link>
       </Section>
     </>
