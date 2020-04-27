@@ -5,12 +5,7 @@ type Props = {
 };
 
 const Footer = ({ children }: Props) => {
-  return (
-    <div>
-      <h1>Hello</h1>
-      {children}
-    </div>
-  );
+  return <footer>{children}</footer>;
 };
 
 export default Footer;

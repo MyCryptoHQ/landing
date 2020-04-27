@@ -38,8 +38,18 @@ module.exports = {
           '@/components': path.resolve(__dirname, 'src/components'),
           '@/images': path.resolve(__dirname, 'src/images'),
           '@/pages': path.resolve(__dirname, 'src/pages'),
+          '@/config': path.resolve(__dirname, 'src/config'),
         },
         extensions: ['tsx', 'ts', 'js', 'jsx'],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        // Change plugin default options here, e.g.:
+        // ssr: false
+        // displayName: false,
+        // minify: false
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
