@@ -4,7 +4,10 @@
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
 
-// You can delete this file if you're not using it
 import { Root } from './src/Root';
+
+// Include theme fonts.
+require('typeface-lato');
+require('typeface-roboto-mono');
 
 export const wrapRootElement = Root;

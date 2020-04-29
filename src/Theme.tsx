@@ -20,6 +20,10 @@ breakpoints.xl = breakpoints[4];
 
 const theme = {
   breakpoints,
+  fonts: {
+    body: 'Lato, sans-serif',
+    mono: 'Roboto Mono, Menlo, Monaco, Consolas, Courier New, monospace',
+  },
   colors: {
     /**
      * Default color keys

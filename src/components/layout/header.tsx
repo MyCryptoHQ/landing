@@ -20,7 +20,7 @@ const Header = ({ siteTitle }: Props) => (
       }}
     >
       <Box sx={{}}>
-        <Heading style={{ margin: 0 }}>
+        <Heading>
           <Link
             to="/"
             style={{

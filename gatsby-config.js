@@ -55,6 +55,7 @@ module.exports = {
           '@/assets': path.resolve(__dirname, 'src/assets'),
           '@/pages': path.resolve(__dirname, 'src/pages'),
           '@/config': path.resolve(__dirname, 'src/config'),
+          '@/types': path.resolve(__dirname, 'src/types'),
         },
         extensions: ['tsx', 'ts', 'js', 'jsx'],
       },

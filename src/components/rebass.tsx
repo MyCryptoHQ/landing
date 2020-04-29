@@ -1,10 +1,14 @@
 import React from 'react';
-import { Box } from 'rebass/styled-components';
-export { Heading, Text, Button, Flex } from 'rebass/styled-components';
+import {
+  Box,
+  Text as RText,
+  Heading as RHeading,
+} from 'rebass/styled-components';
 
-type MediaProps = {
+import { BaseProps } from '@/types';
+
+type MediaProps = BaseProps & {
   type: 'desktop' | 'mobile';
-  children: React.ReactNode;
 };
 
 const Media = ({ type, children, ...props }: MediaProps) => (
@@ -22,4 +26,17 @@ const Media = ({ type, children, ...props }: MediaProps) => (
   </>
 );
 
-export { Box, Media };
+const Text = ({ children, ...props }: BaseProps) => (
+  <RText fontFamily="body" {...props}>
+    {children}
+  </RText>
+);
+
+const Heading = ({ children, ...props }: BaseProps) => (
+  <RHeading fontFamily="body" {...props}>
+    {children}
+  </RHeading>
+);
+
+export { Button, Flex } from 'rebass/styled-components';
+export { Box, Media, Text, Heading };
