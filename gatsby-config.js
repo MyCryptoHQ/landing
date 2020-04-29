@@ -13,8 +13,24 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        name: `assets`,
+        path: `${__dirname}/src/assets`,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: path.resolve(__dirname, 'src/assets/'),
+          omitKeys: [
+            'xmlnsDc',
+            'xmlnsCc',
+            'xmlnsRdf',
+            'xmlnsSvg',
+            'xmlnsSodipodi',
+            'xmlnsInkscape',
+          ],
+        },
       },
     },
     `gatsby-transformer-sharp`,
@@ -28,7 +44,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/assets/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
     {
@@ -36,7 +52,7 @@ module.exports = {
       options: {
         alias: {
           '@/components': path.resolve(__dirname, 'src/components'),
-          '@/images': path.resolve(__dirname, 'src/images'),
+          '@/assets': path.resolve(__dirname, 'src/assets'),
           '@/pages': path.resolve(__dirname, 'src/pages'),
           '@/config': path.resolve(__dirname, 'src/config'),
         },

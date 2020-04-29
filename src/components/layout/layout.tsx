@@ -32,7 +32,7 @@ const Layout = ({ children }: Props) => {
     <>
       <Header siteTitle={site.siteMetadata.title} />
       <Flex sx={{}}>
-        <main>{children}</main>
+        <main role="main">{children}</main>
       </Flex>
       <Footer>
         © {new Date().getFullYear()}, Built with

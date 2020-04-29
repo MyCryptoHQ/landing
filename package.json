@@ -10,7 +10,6 @@
     "yarn": ">= 1.19.1"
   },
   "dependencies": {
-    "@types/styled-components": "^5.1.0",
     "gatsby": "^2.15.15",
     "gatsby-image": "^2.2.19",
     "gatsby-plugin-alias-imports": "^1.0.5",
@@ -34,6 +33,7 @@
     "@types/react-helmet": "^5.0.15",
     "@types/react-test-renderer": "^16.9.2",
     "@types/rebass": "^4.0.5",
+    "@types/styled-components": "^5.1.0",
     "@typescript-eslint/eslint-plugin": "^2.2.0",
     "@typescript-eslint/parser": "^2.2.0",
     "babel-jest": "^25.4.0",
@@ -47,6 +47,7 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-react": "^7.14.3",
+    "gatsby-plugin-react-svg": "^3.0.0",
     "gatsby-plugin-styled-components": "^3.3.0",
     "husky": "^4.2.5",
     "identity-obj-proxy": "^3.0.0",
