@@ -1,7 +1,3 @@
-import React from 'react';
-import { ThemeProvider, createGlobalStyle } from 'styled-components';
-import 'normalize.css';
-
 /**
  *  From https://styled-system.com/responsive-styles/
  * */
@@ -18,8 +14,16 @@ breakpoints.md = breakpoints[2];
 breakpoints.lg = breakpoints[3];
 breakpoints.xl = breakpoints[4];
 
-const theme = {
+export const theme = {
   breakpoints,
+  radii: '3px',
+  shadows: {
+    default: `
+      0 0 0 1px rgba(0, 0, 0, 0.03),
+      0 1px 0 0 rgba(0, 0, 0, 0.05),
+      0 1px 3px 0 rgba(0, 0, 0, 0.1)
+    `,
+  },
   fonts: {
     body: 'Lato, sans-serif',
     mono: 'Roboto Mono, Menlo, Monaco, Consolas, Courier New, monospace',
@@ -50,26 +54,3 @@ const theme = {
 
   variants: {},
 };
-
-const GlobalStyle = createGlobalStyle`
-  html, body {
-    height: 100vh;
-    max-width: 100%;
-  }
-  main {
-     width: 100%;
-  }
-`;
-
-type ThemeProps = {
-  children: React.ReactNode;
-};
-
-const Theme = ({ children }: ThemeProps) => (
-  <ThemeProvider theme={theme}>
-    <GlobalStyle />
-    {children}
-  </ThemeProvider>
-);
-
-export default Theme;

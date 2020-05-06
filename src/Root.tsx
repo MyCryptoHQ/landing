@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Layout } from '@/components';
-import Theme from './Theme';
+import Theme from './theme';
 
 /**
  * Root component that we provide to Gatsby to wrap all our
