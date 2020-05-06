@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { URLS } from '@/config';
+import { URLS } from '@config';
 import {
   Section,
   SEO,
@@ -14,7 +14,7 @@ import {
   Flex,
   WalletList,
   WALLET_CARDS,
-} from '@/components';
+} from '@components';
 
 const HomePage = () => {
   return (

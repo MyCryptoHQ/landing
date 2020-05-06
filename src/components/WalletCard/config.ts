@@ -1,4 +1,4 @@
-import { IconName } from '@/components';
+import { IconName } from '@components';
 
 export interface TWalletCard {
   name: string;

@@ -51,12 +51,12 @@ module.exports = {
       resolve: `gatsby-plugin-alias-imports`,
       options: {
         alias: {
-          '@/components': path.resolve(__dirname, 'src/components'),
-          '@/assets': path.resolve(__dirname, 'src/assets'),
-          '@/pages': path.resolve(__dirname, 'src/pages'),
-          '@/config': path.resolve(__dirname, 'src/config'),
-          '@/types': path.resolve(__dirname, 'src/types'),
-          '@/theme': path.resolve(__dirname, 'src/theme'),
+          '@components': path.resolve(__dirname, 'src/components'),
+          '@assets': path.resolve(__dirname, 'src/assets'),
+          '@pages': path.resolve(__dirname, 'src/pages'),
+          '@config': path.resolve(__dirname, 'src/config'),
+          '@types': path.resolve(__dirname, 'src/types'),
+          '@theme': path.resolve(__dirname, 'src/theme'),
         },
         extensions: ['tsx', 'ts', 'js', 'jsx'],
       },

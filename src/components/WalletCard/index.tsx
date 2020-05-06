@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Flex, Card, Icon, Text, Link } from '@/components';
+import { Flex, Card, Icon, Text, Link } from '@components';
 import { WALLET_CARDS, TWalletCard } from './config';
 
 const WalletCard = ({ name, icon, path }: TWalletCard) => {

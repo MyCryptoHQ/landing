@@ -14,7 +14,7 @@ import {
   ButtonProps,
 } from 'rebass/styled-components';
 
-import { BaseProps } from '@/types';
+import { BaseProps } from '@types';
 
 type MediaProps = BaseProps & {
   type: 'desktop' | 'mobile';
