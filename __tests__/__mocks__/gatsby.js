@@ -31,5 +31,11 @@ module.exports = {
         },
       },
     }),
-  useStaticQuery: jest.fn(),
+  useStaticQuery: jest.fn().mockImplementation(() => ({
+    site: {
+      siteMetadata: {
+        title: `Default Starter`,
+      },
+    },
+  })),
 };
