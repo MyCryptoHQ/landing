@@ -76,7 +76,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged && yarn tsc",
+      "pre-commit": "pretty-quick --staged && yarn lint && yarn tsc",
       "pre-push": "yarn test"
     }
   },

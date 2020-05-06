@@ -17,7 +17,6 @@ const Section = ({
   children,
   ...props
 }: SectionProps) => {
-  console.log(relative);
   return type === 'landing' ? (
     <Box bg={bg}>
       <Box
