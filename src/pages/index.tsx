@@ -10,6 +10,8 @@ import {
   Text,
   Icon,
   Media,
+  Card,
+  Image,
   Box,
   Flex,
   WalletList,
@@ -21,9 +23,35 @@ const HomePage = () => {
     <Flex flexDirection="column" width="100%">
       <SEO title="Home" />
       {/* Get Started */}
-      <Section type="landing">
-        <Heading>You're in the right place</Heading>
-        <Text>It's Time To Use MyCrypto For Your Crypto</Text>
+      <Section type="landing" flexDirection="row">
+        <Box width={1 / 2}>
+          <Heading variant="largeHeading">You're In The Right Place.</Heading>
+          <Text variant="subHeading">
+            It's Time To Use MyCrypto
+            <br />
+            For Your Crypto.
+          </Text>
+          <Box>
+            <Card
+              variant="card"
+              sx={{
+                width: '70%',
+                height: '100px',
+              }}
+            >
+              <Flex flexDirection="row" justifyContent="space-between">
+                <Box>
+                  <Heading>I need a wallet</Heading>
+                  <Text>Download app to create wallet</Text>
+                </Box>
+                <Icon name="newWallet" />
+              </Flex>
+            </Card>
+          </Box>
+        </Box>
+        <Box width={1 / 2}>
+          <Icon name="users" width="auto" />
+        </Box>
       </Section>
       {/* Compatible Wallets */}
       <Section type="landing">

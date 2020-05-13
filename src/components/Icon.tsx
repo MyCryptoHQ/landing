@@ -12,6 +12,8 @@ import vault from '@assets/icn-vault2.svg';
 import dashboard from '@assets/illo-view-dashboard.svg';
 import manageYourWallets from '@assets/illo-manage-your-wallets.svg';
 import controlCrypto from '@assets/control-crypto.svg';
+import users from '@assets/title-illustration.svg';
+import newWallet from '@assets/icn-new-wallet.svg';
 
 /**
  * Wallets
@@ -27,6 +29,7 @@ import trust from '@assets/wallets/trust-2.svg';
 const IconMap = {
   sparkles,
   oval,
+  users,
   swoosh,
   bank,
   withMYC,
@@ -34,6 +37,7 @@ const IconMap = {
   opensource,
   vault,
   dashboard,
+  newWallet,
   manageYourWallets,
   controlCrypto,
   metamask,

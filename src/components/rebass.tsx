@@ -10,6 +10,8 @@ import {
   TextProps,
   Heading as RHeading,
   HeadingProps,
+  Image as RImage,
+  ImageProps,
   Button as RButton,
   ButtonProps,
 } from 'rebass/styled-components';
@@ -61,5 +63,7 @@ const Card = ({ children, ...props }: BaseProps & CardProps) => (
   <SCard {...props}>{children}</SCard>
 );
 
+const Image = (props: ImageProps) => <RImage {...props} />;
+
 export { Flex } from 'rebass/styled-components';
-export { Box, Media, Text, Heading, Button, Card };
+export { Box, Media, Text, Heading, Button, Card, Image };

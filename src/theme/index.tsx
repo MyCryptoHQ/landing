@@ -8,6 +8,7 @@ const GlobalStyle = createGlobalStyle`
   html, body {
     height: 100vh;
     max-width: 100%;
+    font-size: 18px;
   }
   main {
      width: 100%;
