@@ -20,7 +20,7 @@ const Section = ({
   return type === 'landing' ? (
     <Box bg={bg}>
       <Box
-        width={{ sm: '90%', md: '80%', lg: '70%' }}
+        width={{ sm: '90%', md: '80%', lg: '75%' }}
         margin="0 auto"
         sx={{ position: relative ? 'relative' : '' }}
       >

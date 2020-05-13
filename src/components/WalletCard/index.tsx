@@ -7,21 +7,21 @@ const WalletCard = ({ name, icon, path }: TWalletCard) => {
   return (
     <Card
       sx={{
-        width: '140px',
-        height: '140px',
-        cursor: 'pointer',
+        width: '8.75rem',
+        height: '8.75rem',
       }}
     >
-      <Link href={path}>
-        <Icon
-          sx={{
-            maxHeight: '53px',
-            height: '53px',
-            width: 'auto',
-          }}
-          name={icon}
-        />
-        <Text>{name}</Text>
+      <Link href={path} height="100%" width="100%">
+        <Flex
+          flexDirection="column"
+          justifyContent="center"
+          alignItems="center"
+          height="100%"
+          width="100%"
+        >
+          <Icon name={icon} height="60px" pb="0.9rem" />
+          <Text variant="base">{name}</Text>
+        </Flex>
       </Link>
     </Card>
   );
@@ -30,7 +30,7 @@ const WalletCard = ({ name, icon, path }: TWalletCard) => {
 type WalletListProp = { list: TWalletCard[] };
 export const WalletList = ({ list }: WalletListProp) => {
   return (
-    <Flex>
+    <Flex justifyContent="space-evenly" width="100%">
       {list.map((w, idx) => (
         <WalletCard key={idx} name={w.name} icon={w.icon} path={w.path} />
       ))}

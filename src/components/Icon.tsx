@@ -12,8 +12,9 @@ import vault from '@assets/icn-vault2.svg';
 import dashboard from '@assets/illo-view-dashboard.svg';
 import manageYourWallets from '@assets/illo-manage-your-wallets.svg';
 import controlCrypto from '@assets/control-crypto.svg';
-import users from '@assets/title-illustration.svg';
 import newWallet from '@assets/icn-new-wallet.svg';
+import signIn from '@assets/icn-sign-in.svg';
+import existingWallet from '@assets/icn-existing-wallet.svg';
 
 /**
  * Wallets
@@ -29,8 +30,9 @@ import trust from '@assets/wallets/trust-2.svg';
 const IconMap = {
   sparkles,
   oval,
-  users,
   swoosh,
+  signIn,
+  existingWallet,
   bank,
   withMYC,
   protect,
@@ -53,13 +55,14 @@ export type IconName = keyof typeof IconMap;
 
 type IconProps = {
   name: IconName;
+  width?: string | number;
 };
 
-const Icon = ({ name, ...props }: IconProps & BoxProps) => {
+const Icon = ({ name, width, ...props }: IconProps & BoxProps) => {
   const SVGIcon = IconMap[name];
   return (
     <Box {...props}>
-      <SVGIcon width="auto" height="100%" />
+      <img src={SVGIcon} width={width} height="100%" />
     </Box>
   );
 };

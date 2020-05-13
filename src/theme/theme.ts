@@ -28,8 +28,8 @@ export const theme = {
     body: 'Lato, sans-serif',
     mono: 'Roboto Mono, Menlo, Monaco, Consolas, Courier New, monospace',
   },
-  fontSizes: ['2.5rem', '1.5rem', '1.8rem', '1rem'],
-  lineHeights: ['2', '1.4', '1'],
+  fontSizes: ['3.1rem', '2.2rem', '1.8rem', '1.5rem', '1.25rem', '1rem'],
+  lineHeights: ['3.75rem', '2.8rem', '2.6rem', '2rem', '1.5rem'],
   colors: {
     /**
      * Default color keys
@@ -54,25 +54,37 @@ export const theme = {
     },
   },
   text: {
-    default: {
-      fontSize: 3,
-      lineHeight: 2,
-      color: 'text',
-    },
-    heading: {
-      fontSize: 1,
-      lineHeight: 1,
-      color: 'text',
-    },
     largeHeading: {
       fontSize: 0,
       lineHeight: 0,
       color: 'text',
     },
-    subHeading: {
-      fontSize: 2,
+    heading: {
+      fontSize: 1,
       lineHeight: 2,
       color: 'text',
+      fontWeight: 500,
+    },
+    subHeading: {
+      fontSize: 2,
+      lineHeight: 1,
+      color: 'text',
+    },
+    title: {
+      fontSize: 3,
+      lineHeight: 3,
+      color: 'text',
+    },
+    largeBase: {
+      fontSize: 4,
+      lineHeight: 4,
+      color: 'text',
+    },
+    base: {
+      fontSize: 5,
+      lineHeight: 4,
+      color: 'text',
+      textDecoration: 'none',
     },
   },
   variants: {
@@ -81,6 +93,7 @@ export const theme = {
       boxShadow: 'small',
       borderRadius: 'default',
       border: 'solid 1px rgb(247, 247, 247)',
+      cursor: 'pointer',
     },
   },
 };

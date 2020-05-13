@@ -17,22 +17,6 @@ module.exports = {
         path: `${__dirname}/src/assets`,
       },
     },
-    {
-      resolve: 'gatsby-plugin-react-svg',
-      options: {
-        rule: {
-          include: path.resolve(__dirname, 'src/assets/'),
-          omitKeys: [
-            'xmlnsDc',
-            'xmlnsCc',
-            'xmlnsRdf',
-            'xmlnsSvg',
-            'xmlnsSodipodi',
-            'xmlnsInkscape',
-          ],
-        },
-      },
-    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

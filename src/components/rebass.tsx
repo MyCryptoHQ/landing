@@ -38,7 +38,7 @@ const Media = ({ type, children, ...props }: MediaProps) => (
 );
 
 const Text = ({ children, ...props }: BaseProps & TextProps) => (
-  <RText fontFamily="body" {...props}>
+  <RText fontFamily="body" color="text" {...props}>
     {children}
   </RText>
 );

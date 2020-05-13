@@ -18,6 +18,8 @@ import {
   WALLET_CARDS,
 } from '@components';
 
+import users from '@assets/title-illustration.svg';
+
 const HomePage = () => {
   return (
     <Flex flexDirection="column" width="100%">
@@ -26,38 +28,103 @@ const HomePage = () => {
       <Section type="landing" flexDirection="row">
         <Box width={1 / 2}>
           <Heading variant="largeHeading">You're In The Right Place.</Heading>
-          <Text variant="subHeading">
+          <Heading sx={{ marginTop: '10px' }}>
             It's Time To Use MyCrypto
             <br />
             For Your Crypto.
-          </Text>
-          <Box>
+          </Heading>
+          <Box sx={{ marginTop: '30px' }}>
             <Card
               variant="card"
               sx={{
-                width: '70%',
-                height: '100px',
+                width: '400px',
+                height: '110px',
+                padding: '25px 30px',
+                marginBottom: '15px',
               }}
             >
-              <Flex flexDirection="row" justifyContent="space-between">
+              <Flex
+                flexDirection="row"
+                justifyContent="space-between"
+                alignItems="center"
+                height="100%"
+              >
                 <Box>
-                  <Heading>I need a wallet</Heading>
-                  <Text>Download app to create wallet</Text>
+                  <Heading variant="title">I need a wallet</Heading>
+                  <Text variant="base">Download app to create wallet</Text>
                 </Box>
-                <Icon name="newWallet" />
+                <Icon name="newWallet" width="60px" />
+              </Flex>
+            </Card>
+            <Card
+              variant="card"
+              sx={{
+                width: '400px',
+                height: '110px',
+                padding: '25px 30px',
+                marginBottom: '15px',
+              }}
+            >
+              <Flex
+                flexDirection="row"
+                justifyContent="space-between"
+                alignItems="center"
+                height="100%"
+              >
+                <Box>
+                  <Heading variant="title">I have a wallet</Heading>
+                  <Text variant="base">Connect wallet to MyCrypto</Text>
+                </Box>
+                <Icon name="existingWallet" width="60px" />
+              </Flex>
+            </Card>
+            <Card
+              variant="card"
+              sx={{
+                width: '400px',
+                height: '110px',
+                padding: '25px 30px',
+              }}
+            >
+              <Flex
+                flexDirection="row"
+                justifyContent="space-between"
+                alignItems="center"
+                height="100%"
+              >
+                <Box>
+                  <Heading variant="title">I've used MyCrypto</Heading>
+                  <Text variant="base">Continue to Dashboard</Text>
+                </Box>
+                <Icon name="signIn" width="60px" />
               </Flex>
             </Card>
           </Box>
         </Box>
         <Box width={1 / 2}>
-          <Icon name="users" width="auto" />
+          <img src={users} width="105%" height="auto" />
         </Box>
       </Section>
       {/* Compatible Wallets */}
-      <Section type="landing">
-        <Heading>Fully Compatible</Heading>
-        <Text>Use with your favorite hardware and software wallets</Text>
-        <WalletList list={WALLET_CARDS} />
+      <Section type="landing" bg="muted" flexDirection="row" py="20px">
+        <Flex
+          flexDirection="row"
+          justifyContent="center"
+          height="100%"
+          width="100%"
+        >
+          <Box width={1 / 3}>
+            <Flex flexDirection="column" justifyContent="center" height="100%">
+              <Heading variant="title">Fully Compatible</Heading>
+              <Text variant="base">
+                Use with your favorite hardware and software wallets:
+              </Text>
+            </Flex>
+          </Box>
+          <Box width={2 / 3}>
+            <WalletList list={WALLET_CARDS} />
+          </Box>
+        </Flex>
       </Section>
       {/* Features */}
       <Section type="landing">
