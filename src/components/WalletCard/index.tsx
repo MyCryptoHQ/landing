@@ -7,11 +7,16 @@ const WalletCard = ({ name, icon, path }: TWalletCard) => {
   return (
     <Card
       sx={{
-        width: '8.75rem',
-        height: '8.75rem',
+        width: '130px',
+        height: '130px',
       }}
     >
-      <Link href={path} height="100%" width="100%">
+      <Link
+        href={path}
+        height="100%"
+        width="100%"
+        sx={{ textDecoration: 'none' }}
+      >
         <Flex
           flexDirection="column"
           justifyContent="center"
@@ -19,7 +24,7 @@ const WalletCard = ({ name, icon, path }: TWalletCard) => {
           height="100%"
           width="100%"
         >
-          <Icon name={icon} height="60px" pb="0.9rem" />
+          <Icon name={icon} height="60px" pb="15px" />
           <Text variant="base">{name}</Text>
         </Flex>
       </Link>

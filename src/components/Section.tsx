@@ -30,7 +30,7 @@ const Section = ({
       </Box>
     </Box>
   ) : (
-    <Box width={'100%'} {...props}>
+    <Box width={'100%'} bg={bg} {...props}>
       {children}
     </Box>
   );

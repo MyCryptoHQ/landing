@@ -1,7 +1,9 @@
 import React from 'react';
 import { Box, BoxProps } from 'rebass/styled-components';
 
-import sparkles from '@assets/icn-sparkles-4.svg';
+import sparklesTop from '@assets/icn-sparkles01.svg';
+import sparklesBottom from '@assets/icn-sparkles02.svg';
+import sparklesMiddle from '@assets/icn-sparkles03.svg';
 import oval from '@assets/icn-oval.svg';
 import swoosh from '@assets/icn-purple-swoosh.svg';
 import bank from '@assets/illo-bank.svg';
@@ -15,6 +17,8 @@ import controlCrypto from '@assets/control-crypto.svg';
 import newWallet from '@assets/icn-new-wallet.svg';
 import signIn from '@assets/icn-sign-in.svg';
 import existingWallet from '@assets/icn-existing-wallet.svg';
+import bottle from '@assets/illo-bottle.svg';
+import more from '@assets/icn-more.svg';
 
 /**
  * Wallets
@@ -28,12 +32,16 @@ import web3Default from '@assets/wallets/web3-default.svg';
 import trust from '@assets/wallets/trust-2.svg';
 
 const IconMap = {
-  sparkles,
+  sparklesTop,
+  sparklesBottom,
+  sparklesMiddle,
   oval,
   swoosh,
   signIn,
+  bottle,
   existingWallet,
   bank,
+  more,
   withMYC,
   protect,
   opensource,

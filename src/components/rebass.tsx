@@ -50,9 +50,7 @@ const Heading = ({ children, ...props }: BaseProps & HeadingProps) => (
 );
 
 const Button = ({ children, ...props }: BaseProps & ButtonProps) => (
-  <RButton {...props}>
-    <Text>{children}</Text>
-  </RButton>
+  <RButton {...props}>{children}</RButton>
 );
 
 const SCard = styled(RCard)`

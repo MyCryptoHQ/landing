@@ -28,13 +28,22 @@ export const theme = {
     body: 'Lato, sans-serif',
     mono: 'Roboto Mono, Menlo, Monaco, Consolas, Courier New, monospace',
   },
-  fontSizes: ['3.1rem', '2.2rem', '1.8rem', '1.5rem', '1.25rem', '1rem'],
+  fontSizes: [
+    '3.1rem',
+    '2.2rem',
+    '1.8rem',
+    '1.5rem',
+    '1.25rem',
+    '1rem',
+    '1.12rem',
+  ],
   lineHeights: ['3.75rem', '2.8rem', '2.6rem', '2rem', '1.5rem'],
   colors: {
     /**
      * Default color keys
      */
     text: '#424242',
+    link: '#1EB8E7',
     textInvert: '#fff',
     // background: '',
     primary: '#007896',
@@ -51,40 +60,44 @@ export const theme = {
     primary: {
       backgroundColor: 'primary',
       color: 'white',
+      borderRadius: '2px',
+      fontFamily: 'body',
+      width: '300px',
+      height: '60px',
+      fontSize: 6,
     },
   },
   text: {
     largeHeading: {
       fontSize: 0,
       lineHeight: 0,
-      color: 'text',
+      fontWeight: 800,
     },
     heading: {
       fontSize: 1,
       lineHeight: 2,
-      color: 'text',
-      fontWeight: 500,
     },
     subHeading: {
       fontSize: 2,
       lineHeight: 1,
-      color: 'text',
     },
     title: {
       fontSize: 3,
       lineHeight: 3,
-      color: 'text',
     },
     largeBase: {
       fontSize: 4,
       lineHeight: 4,
-      color: 'text',
     },
     base: {
       fontSize: 5,
       lineHeight: 4,
-      color: 'text',
+    },
+    link: {
+      fontSize: 5,
+      lineHeight: 4,
       textDecoration: 'none',
+      fontFamily: 'body',
     },
   },
   variants: {

@@ -9,29 +9,411 @@ exports[`Home Page renders correctly 1`] = `
     className="sc-AxjAm bgAmkT"
   >
     <div
-      className="sc-AxjAm hPWGaW"
+      className="sc-AxjAm enNNFz"
       width={
         Object {
-          "lg": "70%",
+          "lg": "75%",
           "md": "80%",
           "sm": "90%",
         }
       }
     >
       <div
-        className="sc-AxjAm sc-AxirZ jcPbhY"
+        className="sc-AxjAm sc-AxirZ bslpMQ"
       >
-        <h2
-          className="sc-AxjAm hbdlIJ"
-          fontFamily="body"
-        >
-          You're in the right place
-        </h2>
         <div
-          className="sc-AxjAm bgQMNa"
-          fontFamily="body"
+          className="sc-AxjAm fwZJzo"
+          width={0.5}
         >
-          It's Time To Use MyCrypto For Your Crypto
+          <h2
+            className="sc-AxjAm hbdlIJ"
+            fontFamily="body"
+          >
+            You're In The Right Place.
+          </h2>
+          <h2
+            className="sc-AxjAm ghsFPN"
+            fontFamily="body"
+          >
+            It's Time To Use MyCrypto
+            <br />
+            For Your Crypto.
+          </h2>
+          <div
+            className="sc-AxjAm ktceTJ"
+          >
+            <div
+              className="sc-AxjAm irpXdH sc-AxiKw hiYNpo"
+            >
+              <div
+                className="sc-AxjAm sc-AxirZ bjraJa"
+                height="100%"
+              >
+                <div
+                  className="sc-AxjAm bgAmkT"
+                >
+                  <h2
+                    className="sc-AxjAm hbdlIJ"
+                    fontFamily="body"
+                  >
+                    I need a wallet
+                  </h2>
+                  <div
+                    className="sc-AxjAm hUVWTj"
+                    color="text"
+                    fontFamily="body"
+                  >
+                    Download app to create wallet
+                  </div>
+                </div>
+                <div
+                  className="sc-AxjAm bgAmkT"
+                >
+                  <img
+                    height="100%"
+                    src="test-file-stub"
+                    width="60px"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              className="sc-AxjAm irpXdH sc-AxiKw hiYNpo"
+            >
+              <div
+                className="sc-AxjAm sc-AxirZ bjraJa"
+                height="100%"
+              >
+                <div
+                  className="sc-AxjAm bgAmkT"
+                >
+                  <h2
+                    className="sc-AxjAm hbdlIJ"
+                    fontFamily="body"
+                  >
+                    I have a wallet
+                  </h2>
+                  <div
+                    className="sc-AxjAm hUVWTj"
+                    color="text"
+                    fontFamily="body"
+                  >
+                    Connect wallet to MyCrypto
+                  </div>
+                </div>
+                <div
+                  className="sc-AxjAm bgAmkT"
+                >
+                  <img
+                    height="100%"
+                    src="test-file-stub"
+                    width="60px"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              className="sc-AxjAm hnLwPi sc-AxiKw hiYNpo"
+            >
+              <div
+                className="sc-AxjAm sc-AxirZ bjraJa"
+                height="100%"
+              >
+                <div
+                  className="sc-AxjAm bgAmkT"
+                >
+                  <h2
+                    className="sc-AxjAm hbdlIJ"
+                    fontFamily="body"
+                  >
+                    I've used MyCrypto
+                  </h2>
+                  <div
+                    className="sc-AxjAm hUVWTj"
+                    color="text"
+                    fontFamily="body"
+                  >
+                    Continue to Dashboard
+                  </div>
+                </div>
+                <div
+                  className="sc-AxjAm bgAmkT"
+                >
+                  <img
+                    height="100%"
+                    src="test-file-stub"
+                    width="60px"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="sc-AxjAm fwZJzo"
+          width={0.5}
+        >
+          <img
+            height="auto"
+            src="test-file-stub"
+            width="105%"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="sc-AxjAm iknhDZ"
+  >
+    <div
+      className="sc-AxjAm enNNFz"
+      width={
+        Object {
+          "lg": "75%",
+          "md": "80%",
+          "sm": "90%",
+        }
+      }
+    >
+      <div
+        className="sc-AxjAm sc-AxirZ jupLEo"
+      >
+        <div
+          className="sc-AxjAm sc-AxirZ gTdblF"
+          height="100%"
+          width="100%"
+        >
+          <div
+            className="sc-AxjAm gKAcUb"
+            width={0.3333333333333333}
+          >
+            <div
+              className="sc-AxjAm sc-AxirZ bZSSkC"
+              height="100%"
+            >
+              <h2
+                className="sc-AxjAm hbdlIJ"
+                fontFamily="body"
+              >
+                Fully Compatible
+              </h2>
+              <div
+                className="sc-AxjAm hUVWTj"
+                color="text"
+                fontFamily="body"
+              >
+                Use with your favorite hardware and software wallets:
+              </div>
+            </div>
+          </div>
+          <div
+            className="sc-AxjAm fNUdkb"
+            width={0.6666666666666666}
+          >
+            <div
+              className="sc-AxjAm sc-AxirZ jsObdU"
+              width="100%"
+            >
+              <div
+                className="sc-AxjAm dIRfwe sc-AxiKw hiYNpo"
+              >
+                <a
+                  className="css-mce196"
+                  href="https://beta.mycrypto.com/add-account/web3"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  <div
+                    className="sc-AxjAm sc-AxirZ gaIRtV"
+                    height="100%"
+                    width="100%"
+                  >
+                    <div
+                      className="sc-AxjAm ffqCMY"
+                      height="60px"
+                    >
+                      <img
+                        height="100%"
+                        src="test-file-stub"
+                      />
+                    </div>
+                    <div
+                      className="sc-AxjAm hUVWTj"
+                      color="text"
+                      fontFamily="body"
+                    >
+                      Metamask
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div
+                className="sc-AxjAm dIRfwe sc-AxiKw hiYNpo"
+              >
+                <a
+                  className="css-mce196"
+                  href="https://beta.mycrypto.com/add-account/ledger_nano_s"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  <div
+                    className="sc-AxjAm sc-AxirZ gaIRtV"
+                    height="100%"
+                    width="100%"
+                  >
+                    <div
+                      className="sc-AxjAm ffqCMY"
+                      height="60px"
+                    >
+                      <img
+                        height="100%"
+                        src="test-file-stub"
+                      />
+                    </div>
+                    <div
+                      className="sc-AxjAm hUVWTj"
+                      color="text"
+                      fontFamily="body"
+                    >
+                      Ledger
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div
+                className="sc-AxjAm dIRfwe sc-AxiKw hiYNpo"
+              >
+                <a
+                  className="css-mce196"
+                  href="https://beta.mycrypto.com/add-account/trezor"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  <div
+                    className="sc-AxjAm sc-AxirZ gaIRtV"
+                    height="100%"
+                    width="100%"
+                  >
+                    <div
+                      className="sc-AxjAm ffqCMY"
+                      height="60px"
+                    >
+                      <img
+                        height="100%"
+                        src="test-file-stub"
+                      />
+                    </div>
+                    <div
+                      className="sc-AxjAm hUVWTj"
+                      color="text"
+                      fontFamily="body"
+                    >
+                      Trezor
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div
+                className="sc-AxjAm dIRfwe sc-AxiKw hiYNpo"
+              >
+                <a
+                  className="css-mce196"
+                  href="https://beta.mycrypto.com/add-account/walletconnect"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  <div
+                    className="sc-AxjAm sc-AxirZ gaIRtV"
+                    height="100%"
+                    width="100%"
+                  >
+                    <div
+                      className="sc-AxjAm ffqCMY"
+                      height="60px"
+                    >
+                      <img
+                        height="100%"
+                        src="test-file-stub"
+                      />
+                    </div>
+                    <div
+                      className="sc-AxjAm hUVWTj"
+                      color="text"
+                      fontFamily="body"
+                    >
+                      WalletConnect
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div
+                className="sc-AxjAm dIRfwe sc-AxiKw hiYNpo"
+              >
+                <a
+                  className="css-mce196"
+                  href="https://beta.mycrypto.com/add-account/web3"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  <div
+                    className="sc-AxjAm sc-AxirZ gaIRtV"
+                    height="100%"
+                    width="100%"
+                  >
+                    <div
+                      className="sc-AxjAm ffqCMY"
+                      height="60px"
+                    >
+                      <img
+                        height="100%"
+                        src="test-file-stub"
+                      />
+                    </div>
+                    <div
+                      className="sc-AxjAm hUVWTj"
+                      color="text"
+                      fontFamily="body"
+                    >
+                      Frame
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div
+                className="sc-AxjAm dIRfwe sc-AxiKw hiYNpo"
+              >
+                <a
+                  className="css-mce196"
+                  href="https://beta.mycrypto.com/add-account/web3"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  <div
+                    className="sc-AxjAm sc-AxirZ gaIRtV"
+                    height="100%"
+                    width="100%"
+                  >
+                    <div
+                      className="sc-AxjAm ffqCMY"
+                      height="60px"
+                    >
+                      <img
+                        height="100%"
+                        src="test-file-stub"
+                      />
+                    </div>
+                    <div
+                      className="sc-AxjAm hUVWTj"
+                      color="text"
+                      fontFamily="body"
+                    >
+                      Trust
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -40,195 +422,10 @@ exports[`Home Page renders correctly 1`] = `
     className="sc-AxjAm bgAmkT"
   >
     <div
-      className="sc-AxjAm hPWGaW"
+      className="sc-AxjAm enNNFz"
       width={
         Object {
-          "lg": "70%",
-          "md": "80%",
-          "sm": "90%",
-        }
-      }
-    >
-      <div
-        className="sc-AxjAm sc-AxirZ jcPbhY"
-      >
-        <h2
-          className="sc-AxjAm hbdlIJ"
-          fontFamily="body"
-        >
-          Fully Compatible
-        </h2>
-        <div
-          className="sc-AxjAm bgQMNa"
-          fontFamily="body"
-        >
-          Use with your favorite hardware and software wallets
-        </div>
-        <div
-          className="sc-AxjAm sc-AxirZ glDYrY"
-        >
-          <div
-            className="sc-AxjAm fNmBSC sc-AxiKw hiYNpo"
-          >
-            <a
-              className="css-vurnku"
-              href="add-account/web3"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <div
-                className="sc-AxjAm fWJZRy"
-              >
-                <test-file-stub
-                  height="100%"
-                  width="auto"
-                />
-              </div>
-              <div
-                className="sc-AxjAm bgQMNa"
-                fontFamily="body"
-              >
-                Metamask
-              </div>
-            </a>
-          </div>
-          <div
-            className="sc-AxjAm fNmBSC sc-AxiKw hiYNpo"
-          >
-            <a
-              className="css-vurnku"
-              href="add-account/ledger_nano_s"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <div
-                className="sc-AxjAm fWJZRy"
-              >
-                <test-file-stub
-                  height="100%"
-                  width="auto"
-                />
-              </div>
-              <div
-                className="sc-AxjAm bgQMNa"
-                fontFamily="body"
-              >
-                Ledger
-              </div>
-            </a>
-          </div>
-          <div
-            className="sc-AxjAm fNmBSC sc-AxiKw hiYNpo"
-          >
-            <a
-              className="css-vurnku"
-              href="add-account/trezor"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <div
-                className="sc-AxjAm fWJZRy"
-              >
-                <test-file-stub
-                  height="100%"
-                  width="auto"
-                />
-              </div>
-              <div
-                className="sc-AxjAm bgQMNa"
-                fontFamily="body"
-              >
-                Trezor
-              </div>
-            </a>
-          </div>
-          <div
-            className="sc-AxjAm fNmBSC sc-AxiKw hiYNpo"
-          >
-            <a
-              className="css-vurnku"
-              href="add-account/walletconnect"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <div
-                className="sc-AxjAm fWJZRy"
-              >
-                <test-file-stub
-                  height="100%"
-                  width="auto"
-                />
-              </div>
-              <div
-                className="sc-AxjAm bgQMNa"
-                fontFamily="body"
-              >
-                WalletConnect
-              </div>
-            </a>
-          </div>
-          <div
-            className="sc-AxjAm fNmBSC sc-AxiKw hiYNpo"
-          >
-            <a
-              className="css-vurnku"
-              href="add-account/web3"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <div
-                className="sc-AxjAm fWJZRy"
-              >
-                <test-file-stub
-                  height="100%"
-                  width="auto"
-                />
-              </div>
-              <div
-                className="sc-AxjAm bgQMNa"
-                fontFamily="body"
-              >
-                Frame
-              </div>
-            </a>
-          </div>
-          <div
-            className="sc-AxjAm fNmBSC sc-AxiKw hiYNpo"
-          >
-            <a
-              className="css-vurnku"
-              href="add-account/web3"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <div
-                className="sc-AxjAm fWJZRy"
-              >
-                <test-file-stub
-                  height="100%"
-                  width="auto"
-                />
-              </div>
-              <div
-                className="sc-AxjAm bgQMNa"
-                fontFamily="body"
-              >
-                Trust
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    className="sc-AxjAm bgAmkT"
-  >
-    <div
-      className="sc-AxjAm hPWGaW"
-      width={
-        Object {
-          "lg": "70%",
+          "lg": "75%",
           "md": "80%",
           "sm": "90%",
         }
@@ -244,7 +441,8 @@ exports[`Home Page renders correctly 1`] = `
           Managing and storing your assets has never been easier
         </h2>
         <div
-          className="sc-AxjAm bgQMNa"
+          className="sc-AxjAm hUVWTj"
+          color="text"
           fontFamily="body"
         >
           The MyCrypto apps put the power in your hands.
@@ -259,7 +457,8 @@ exports[`Home Page renders correctly 1`] = `
             Manage Your Wallets
           </h2>
           <div
-            className="sc-AxjAm bgQMNa"
+            className="sc-AxjAm hUVWTj"
+            color="text"
             fontFamily="body"
           >
             MyCrypto allows you to create, import, and manage all the wallets you'll ever need.
@@ -267,9 +466,9 @@ exports[`Home Page renders correctly 1`] = `
           <div
             className="sc-AxjAm bgAmkT"
           >
-            <test-file-stub
+            <img
               height="100%"
-              width="auto"
+              src="test-file-stub"
             />
           </div>
         </div>
@@ -283,17 +482,18 @@ exports[`Home Page renders correctly 1`] = `
             View Your Dashboard
           </h2>
           <div
-            className="sc-AxjAm bgQMNa"
+            className="sc-AxjAm hUVWTj"
+            color="text"
             fontFamily="body"
           >
             See a detailed breakdown of all your wallets, tokens, and transactions.
           </div>
           <div
-            className="sc-AxjAm ctWtTc"
-            width="auto"
+            className="sc-AxjAm lmbKMg"
           >
-            <test-file-stub
+            <img
               height="100%"
+              src="test-file-stub"
               width="auto"
             />
           </div>
@@ -308,7 +508,8 @@ exports[`Home Page renders correctly 1`] = `
             Control Your Crypto
           </h2>
           <div
-            className="sc-AxjAm bgQMNa"
+            className="sc-AxjAm hUVWTj"
+            color="text"
             fontFamily="body"
           >
             Manage your information and your cryptocurrency easily and without fear.
@@ -316,9 +517,9 @@ exports[`Home Page renders correctly 1`] = `
           <div
             className="sc-AxjAm bgAmkT"
           >
-            <test-file-stub
+            <img
               height="100%"
-              width="auto"
+              src="test-file-stub"
             />
           </div>
         </div>
@@ -329,10 +530,10 @@ exports[`Home Page renders correctly 1`] = `
     className="sc-AxjAm hFuQWu"
   >
     <div
-      className="sc-AxjAm hPWGaW"
+      className="sc-AxjAm enNNFz"
       width={
         Object {
-          "lg": "70%",
+          "lg": "75%",
           "md": "80%",
           "sm": "90%",
         }
@@ -349,7 +550,8 @@ exports[`Home Page renders correctly 1`] = `
           Everythind is Even More Secure with our Desktop App
         </h2>
         <div
-          className="sc-AxjAm bgQMNa"
+          className="sc-AxjAm hUVWTj"
+          color="text"
           fontFamily="body"
         >
           Keep your keys out of the browser with the MyCrypto Desktop App. You get more access to your funds, and scammers get less access to you.
@@ -358,7 +560,8 @@ exports[`Home Page renders correctly 1`] = `
           className="sc-AxjAm gCnANf"
         >
           <div
-            className="sc-AxjAm bgQMNa"
+            className="sc-AxjAm hUVWTj"
+            color="text"
             fontFamily="body"
           >
             Download for macOS
@@ -371,10 +574,10 @@ exports[`Home Page renders correctly 1`] = `
     className="sc-AxjAm iknhDZ"
   >
     <div
-      className="sc-AxjAm hPWGaW"
+      className="sc-AxjAm enNNFz"
       width={
         Object {
-          "lg": "70%",
+          "lg": "75%",
           "md": "80%",
           "sm": "90%",
         }
@@ -398,20 +601,22 @@ exports[`Home Page renders correctly 1`] = `
             <div
               className="sc-AxjAm bgAmkT"
             >
-              <test-file-stub
+              <img
                 height="100%"
-                width="auto"
+                src="test-file-stub"
               />
             </div>
             <div
-              className="sc-AxjAm eHeXRk"
+              className="sc-AxjAm iJxdSx"
+              color="text"
               fontFamily="body"
               fontWeight="bold"
             >
               With Banks
             </div>
             <div
-              className="sc-AxjAm bgQMNa"
+              className="sc-AxjAm hUVWTj"
+              color="text"
               fontFamily="body"
             >
               They control your account 
@@ -430,20 +635,22 @@ exports[`Home Page renders correctly 1`] = `
             <div
               className="sc-AxjAm bgAmkT"
             >
-              <test-file-stub
+              <img
                 height="100%"
-                width="auto"
+                src="test-file-stub"
               />
             </div>
             <div
-              className="sc-AxjAm eHeXRk"
+              className="sc-AxjAm iJxdSx"
+              color="text"
               fontFamily="body"
               fontWeight="bold"
             >
               With MyCrypto
             </div>
             <div
-              className="sc-AxjAm bgQMNa"
+              className="sc-AxjAm hUVWTj"
+              color="text"
               fontFamily="body"
             >
               You control your account 
@@ -464,10 +671,10 @@ exports[`Home Page renders correctly 1`] = `
     className="sc-AxjAm bgAmkT"
   >
     <div
-      className="sc-AxjAm hPWGaW"
+      className="sc-AxjAm enNNFz"
       width={
         Object {
-          "lg": "70%",
+          "lg": "75%",
           "md": "80%",
           "sm": "90%",
         }
@@ -492,7 +699,8 @@ exports[`Home Page renders correctly 1`] = `
           className="sc-AxjAm gCnANf"
         >
           <div
-            className="sc-AxjAm bgQMNa"
+            className="sc-AxjAm hUVWTj"
+            color="text"
             fontFamily="body"
           >
             Get Started on Web
@@ -502,7 +710,8 @@ exports[`Home Page renders correctly 1`] = `
           className="sc-AxjAm gCnANf"
         >
           <div
-            className="sc-AxjAm bgQMNa"
+            className="sc-AxjAm hUVWTj"
+            color="text"
             fontFamily="body"
           >
             Download the Desktop App
@@ -514,13 +723,14 @@ exports[`Home Page renders correctly 1`] = `
           <div
             className="sc-AxjAm bgAmkT"
           >
-            <test-file-stub
+            <img
               height="100%"
-              width="auto"
+              src="test-file-stub"
             />
           </div>
           <div
-            className="sc-AxjAm bgQMNa"
+            className="sc-AxjAm hUVWTj"
+            color="text"
             fontFamily="body"
           >
             Get your information out of other people's hands and back into yours
@@ -532,13 +742,14 @@ exports[`Home Page renders correctly 1`] = `
           <div
             className="sc-AxjAm bgAmkT"
           >
-            <test-file-stub
+            <img
               height="100%"
-              width="auto"
+              src="test-file-stub"
             />
           </div>
           <div
-            className="sc-AxjAm bgQMNa"
+            className="sc-AxjAm hUVWTj"
+            color="text"
             fontFamily="body"
           >
             Protect yourself from phishing attacks and malicious extensions
@@ -550,13 +761,14 @@ exports[`Home Page renders correctly 1`] = `
           <div
             className="sc-AxjAm bgAmkT"
           >
-            <test-file-stub
+            <img
               height="100%"
-              width="auto"
+              src="test-file-stub"
             />
           </div>
           <div
-            className="sc-AxjAm bgQMNa"
+            className="sc-AxjAm hUVWTj"
+            color="text"
             fontFamily="body"
           >
             Open-source, fully audited, and full verifiable.
@@ -569,10 +781,10 @@ exports[`Home Page renders correctly 1`] = `
     className="sc-AxjAm iknhDZ"
   >
     <div
-      className="sc-AxjAm hPWGaW"
+      className="sc-AxjAm enNNFz"
       width={
         Object {
-          "lg": "70%",
+          "lg": "75%",
           "md": "80%",
           "sm": "90%",
         }
@@ -589,10 +801,10 @@ exports[`Home Page renders correctly 1`] = `
     className="sc-AxjAm bgAmkT"
   >
     <div
-      className="sc-AxjAm iWucJa"
+      className="sc-AxjAm cNFsJD"
       width={
         Object {
-          "lg": "70%",
+          "lg": "75%",
           "md": "80%",
           "sm": "90%",
         }
@@ -607,9 +819,9 @@ exports[`Home Page renders correctly 1`] = `
           <div
             className="sc-AxjAm bgAmkT"
           >
-            <test-file-stub
+            <img
               height="100%"
-              width="auto"
+              src="test-file-stub"
             />
           </div>
         </div>
@@ -623,7 +835,8 @@ exports[`Home Page renders correctly 1`] = `
           className="sc-AxjAm gCnANf"
         >
           <div
-            className="sc-AxjAm bgQMNa"
+            className="sc-AxjAm hUVWTj"
+            color="text"
             fontFamily="body"
           >
             Get Started
@@ -636,7 +849,8 @@ exports[`Home Page renders correctly 1`] = `
           target="_blank"
         >
           <div
-            className="sc-AxjAm bgQMNa"
+            className="sc-AxjAm hUVWTj"
+            color="text"
             fontFamily="body"
           >
             Have Questions? We're Here to Help!
@@ -657,17 +871,17 @@ exports[`Home Page renders correctly 1`] = `
             <div
               className="sc-AxjAm bgAmkT"
             >
-              <test-file-stub
+              <img
                 height="100%"
-                width="auto"
+                src="test-file-stub"
               />
             </div>
             <div
               className="sc-AxjAm bgAmkT"
             >
-              <test-file-stub
+              <img
                 height="100%"
-                width="auto"
+                src="test-file-stub"
               />
             </div>
           </div>

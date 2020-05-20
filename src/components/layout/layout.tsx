@@ -30,17 +30,17 @@ const Layout = ({ children }: Props) => {
 
   return (
     <>
-      <Header siteTitle={site.siteMetadata.title} />
+      {/* <Header siteTitle={site.siteMetadata.title} /> */}
       <Flex sx={{}}>
         <main role="main">{children}</main>
       </Flex>
-      <Footer>
+      {/* <Footer>
         © {new Date().getFullYear()}, Built with
         {` `}
         <Link href="https://www.gatsbyjs.org">
           <Text>Gatsby</Text>
         </Link>
-      </Footer>
+      </Footer> */}
     </>
   );
 };

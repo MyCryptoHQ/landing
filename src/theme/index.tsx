@@ -27,4 +27,5 @@ const Theme = ({ children }: ThemeProps) => (
 );
 
 export default Theme;
+export { theme } from './theme';
 export * from './atoms';
