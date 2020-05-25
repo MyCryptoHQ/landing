@@ -23,100 +23,119 @@ import users from '@assets/title-illustration.svg';
 
 const HomePage = () => {
   return (
-    <Flex flexDirection="column" width="100%">
+    <Flex flexDirection="column">
       <SEO title="Home" />
       {/* Get Started */}
       <Section
         color="text"
-        py="75px"
-        pl="7%"
+        pl={{ _: 0, xxl: '7%' }}
+        my="20px"
+        height={{ _: '100vh', xxl: 'auto' }}
         sx={{
           backgroundImage: `url(${users})`,
           backgroundRepeat: 'no-repeat',
+          backgroundSize: ['90%', null, null, null, 'contain'],
           backgroundPosition: [
-            'center bottom',
+            'center center',
+            null,
             null,
             'right center',
-            null,
             null,
             '80% center',
           ],
         }}
       >
-        <Box width={['100%', null, null, null, 1 / 2]}>
-          <Heading variant="largeHeading">You're In The Right Place.</Heading>
-          <Heading sx={{ marginTop: '10px' }}>
-            It's Time To Use MyCrypto
-            <br />
-            For Your Crypto.
-          </Heading>
-          <Box sx={{ marginTop: '70px' }}>
-            <Card
-              variant="card"
-              sx={{
-                width: '400px',
-                height: '110px',
-                padding: '25px 30px',
-                marginBottom: '15px',
-              }}
-            >
-              <Flex
-                flexDirection="row"
-                justifyContent="space-between"
-                alignItems="center"
-                height="100%"
+        <Box width={{ _: '100%', xxl: 1 / 2 }} height="100%" py="55px">
+          <Flex
+            flexDirection="column"
+            alignItems={{ _: 'center', xxl: 'flex-start' }}
+            justifyContent={{ _: 'space-between', xxl: 'flex-start' }}
+            height="100%"
+          >
+            <Box>
+              <Heading
+                textAlign={{ _: 'center', xxl: 'left' }}
+                variant="largeHeading"
               >
-                <Box>
-                  <Heading variant="title">I need a wallet</Heading>
-                  <Text variant="base">Download app to create wallet</Text>
-                </Box>
-                <Icon name="newWallet" width="60px" />
-              </Flex>
-            </Card>
-            <Card
-              variant="card"
-              sx={{
-                width: '400px',
-                height: '110px',
-                padding: '25px 30px',
-                marginBottom: '15px',
-              }}
-            >
-              <Flex
-                flexDirection="row"
-                justifyContent="space-between"
-                alignItems="center"
-                height="100%"
+                You're In The Right Place.
+              </Heading>
+              <Heading
+                textAlign={{ _: 'center', xxl: 'left' }}
+                sx={{ marginTop: '10px' }}
               >
-                <Box>
-                  <Heading variant="title">I have a wallet</Heading>
-                  <Text variant="base">Connect wallet to MyCrypto</Text>
-                </Box>
-                <Icon name="existingWallet" width="60px" />
-              </Flex>
-            </Card>
-            <Card
-              variant="card"
-              sx={{
-                width: '400px',
-                height: '110px',
-                padding: '25px 30px',
-              }}
+                It's Time To Use MyCrypto
+                <br />
+                For Your Crypto.
+              </Heading>
+            </Box>
+            <Flex
+              flexDirection={{ _: 'row', xxl: 'column' }}
+              justifyContent={{ _: 'space-evenly', xxl: 'flex-start' }}
+              sx={{ marginTop: '70px' }}
+              width="100%"
             >
-              <Flex
-                flexDirection="row"
-                justifyContent="space-between"
-                alignItems="center"
-                height="100%"
+              <Card
+                variant="card"
+                width={{ _: '30%', xxl: '400px' }}
+                height={{ _: '160px', xxl: '110px' }}
+                padding={{ _: '0', xxl: '25px 30px' }}
+                mb="15px"
               >
-                <Box>
-                  <Heading variant="title">I've used MyCrypto</Heading>
-                  <Text variant="base">Continue to Dashboard</Text>
-                </Box>
-                <Icon name="signIn" width="60px" />
-              </Flex>
-            </Card>
-          </Box>
+                <Flex
+                  flexDirection={['column-reverse', null, null, null, 'row']}
+                  justifyContent="space-between"
+                  alignItems="center"
+                  height="100%"
+                >
+                  <Box>
+                    <Heading variant="title">I need a wallet</Heading>
+                    <Text variant="base">Download app to create wallet</Text>
+                  </Box>
+                  <Icon name="newWallet" width="60px" />
+                </Flex>
+              </Card>
+              <Card
+                variant="card"
+                width={{ _: '30%', xxl: '400px' }}
+                height={{ _: '160px', xxl: '110px' }}
+                padding={{ _: '0', xxl: '25px 30px' }}
+                mb="15px"
+              >
+                <Flex
+                  flexDirection={['column-reverse', null, null, null, 'row']}
+                  justifyContent="space-between"
+                  alignItems="center"
+                  height="100%"
+                >
+                  <Box>
+                    <Heading variant="title">I have a wallet</Heading>
+                    <Text variant="base">Connect wallet to MyCrypto</Text>
+                  </Box>
+                  <Icon name="existingWallet" width="60px" />
+                </Flex>
+              </Card>
+              <Card
+                variant="card"
+                width={{ _: '30%', xxl: '400px' }}
+                height={{ _: '160px', xxl: '110px' }}
+                padding={{ _: '0', xxl: '25px 30px' }}
+                mb="15px"
+              >
+                <Flex
+                  flexDirection={{ _: 'column-reverse', xxl: 'row' }}
+                  justifyContent="space-between"
+                  alignItems="center"
+                  height="100%"
+                >
+                  <Box>
+                    <Heading variant="title">I've used MyCrypto</Heading>
+                    <Text variant="base">Continue to Dashboard</Text>
+                  </Box>
+                  <Icon name="signIn" width="60px" />
+                </Flex>
+              </Card>
+            </Flex>
+          </Flex>
         </Box>
       </Section>
       {/* Compatible Wallets */}
@@ -295,7 +314,7 @@ const HomePage = () => {
       </Section>
       {/* Testimonials */}
       <Section bg="muted" py="200px">
-        {/* <Testimonials /> */}
+        <Testimonials />
       </Section>
       {/* Bottom Action */}
       <Section

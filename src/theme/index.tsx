@@ -8,10 +8,15 @@ const GlobalStyle = createGlobalStyle`
   html, body {
     height: 100vh;
     max-width: 100%;
-    font-size: 16px;
+    font-size: 16px
   }
   main {
      width: 100%;
+  }
+  @media screen and (max-width: 600px){
+    html, body {
+    font-size: 12px
+  }
   }
 `;
 

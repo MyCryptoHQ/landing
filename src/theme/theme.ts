@@ -7,12 +7,14 @@ const breakpoints: string[] & {
   md?: string;
   lg?: string;
   xl?: string;
-} = ['0', '600px', '960px', '1280px', '1920px'];
-breakpoints.sm = breakpoints[0];
+  xxl?: string;
+} = ['512px', '850px', '1080px', '1280px', '1441px', '1920px'];
+breakpoints.xs = breakpoints[0];
 breakpoints.sm = breakpoints[1];
 breakpoints.md = breakpoints[2];
 breakpoints.lg = breakpoints[3];
 breakpoints.xl = breakpoints[4];
+breakpoints.xxl = breakpoints[5];
 
 export const theme = {
   breakpoints,
