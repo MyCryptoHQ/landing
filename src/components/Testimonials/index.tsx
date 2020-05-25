@@ -5,7 +5,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 import moreIcon from '@assets/icn-more.svg';
-import { Box, Text } from '@components';
+import { Box, Text, Image } from '@components';
 import { TESTIMONIALS } from './config';
 import { theme } from '@theme';
 
@@ -71,28 +71,38 @@ interface TestimonialProps {
   text: string;
   author: string;
   sparkles: string;
-  position: string;
+  placement: object;
 }
 
 const sparkles = [sparklesTop, sparklesBottom, sparklesMiddle];
-const positions = ['top left', '65% 100%', '80% 65%'];
+const positions = [
+  { left: '0', top: '10px' },
+  { right: '75px', bottom: '0' },
+  { right: '75px', bottom: '50px' },
+];
 
 const Testimonial = ({
   text,
   author,
   sparkles,
-  position,
+  placement,
 }: TestimonialProps) => {
   return (
     <Box
       maxWidth="420px"
-      padding="60px"
-      sx={{
-        background: `url(${sparkles})}`,
-        backgroundPosition: position,
-        backgroundRepeat: 'no-repeat',
-      }}
+      padding="50px"
+      margin="0 auto"
+      sx={{ position: 'relative' }}
     >
+      <Image
+        src={sparkles}
+        height="60px"
+        width="auto"
+        sx={{
+          position: 'absolute',
+          ...placement,
+        }}
+      />
       <Text>{text}</Text>
       <Text variant="subHeading" mt="30px">
         {author}
@@ -135,7 +145,7 @@ const Testimonials = () => {
           <Testimonial
             key={index}
             sparkles={sparkles[index % 3]}
-            position={positions[index % 3]}
+            placement={positions[index % 3]}
             {...testimonial}
           />
         ))}

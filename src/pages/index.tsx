@@ -43,7 +43,7 @@ const HomePage = () => {
           ],
         }}
       >
-        <Box width={1 / 2}>
+        <Box width={['100%', null, null, null, 1 / 2]}>
           <Heading variant="largeHeading">You're In The Right Place.</Heading>
           <Heading sx={{ marginTop: '10px' }}>
             It's Time To Use MyCrypto
