@@ -295,7 +295,7 @@ const HomePage = () => {
       </Section>
       {/* Testimonials */}
       <Section bg="muted" py="200px">
-        <Testimonials />
+        {/* <Testimonials /> */}
       </Section>
       {/* Bottom Action */}
       <Section
