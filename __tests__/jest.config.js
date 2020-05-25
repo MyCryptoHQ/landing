@@ -11,7 +11,6 @@ module.exports = {
   moduleDirectories: ['node_modules', 'src'],
   moduleNameMapper: {
     // A map from regular expressions to module names that allow to stub out resources with a single module
-    'test-utils': '<rootDir>/jest_config/test-utils',
     '.+\\.(css|styl|less|sass|scss)$': `identity-obj-proxy`,
     '.+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$': `<rootDir>/__tests__/__mocks__/file.mock.js`,
     '@components': path.resolve('src/components'),
@@ -33,5 +32,8 @@ module.exports = {
     __PATH_PREFIX__: ``,
   },
   testURL: `http://localhost`,
-  setupFiles: [`<rootDir>/__tests__/loadershim.js`],
+  setupFiles: [
+    `<rootDir>/__tests__/loadershim.js`,
+    `<rootDir>/__tests__/jestSetup.js`,
+  ],
 };
