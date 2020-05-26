@@ -25,12 +25,12 @@ type MediaProps = BaseProps & {
 const Media = ({ type, children, ...props }: MediaProps) => (
   <>
     {type === 'mobile' && (
-      <Box display={{ xs: 'block', sm: 'none' }} {...props}>
+      <Box display={{ _: 'block', lg: 'none' }} {...props}>
         {children}
       </Box>
     )}
     {type === 'desktop' && (
-      <Box display={{ xs: 'none', sm: 'block' }} {...props}>
+      <Box display={{ _: 'none', lg: 'block' }} {...props}>
         {children}
       </Box>
     )}
@@ -64,4 +64,4 @@ const Card = ({ children, ...props }: BaseProps & CardProps) => (
 const Image = (props: ImageProps) => <RImage {...props} />;
 
 export { Flex } from 'rebass/styled-components';
-export { Box, Media, Text, Heading, Button, Card, Image };
+export { Box, Media, Text, Heading, Button, Card, Image, ImageProps };

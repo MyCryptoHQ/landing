@@ -7,3 +7,9 @@ window.matchMedia =
     addListener: noOp,
     removeListener: noOp,
   }));
+
+window.requestAnimationFrame =
+  window.requestAnimationFrame ||
+  (callback => {
+    setTimeout(callback, 0);
+  });

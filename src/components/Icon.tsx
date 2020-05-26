@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, BoxProps } from 'rebass/styled-components';
+import { Image, ImageProps } from '@components';
 
 import oval from '@assets/icn-oval.svg';
 import swoosh from '@assets/icn-purple-swoosh.svg';
@@ -57,16 +57,16 @@ export type IconName = keyof typeof IconMap;
 
 type IconProps = {
   name: IconName;
-  width?: string | number;
 };
 
-const Icon = ({ name, width, ...props }: IconProps & BoxProps) => {
-  const SVGIcon = IconMap[name];
-  return (
-    <Box {...props}>
-      <img src={SVGIcon} width={width} height="100%" />
-    </Box>
-  );
+const Icon = ({
+  name,
+  width = 'auto',
+  height = 'auto',
+  ...props
+}: IconProps & ImageProps) => {
+  const SVGIcon = IconMap[name as IconName];
+  return <Image src={SVGIcon} width={width} height={height} {...props} />;
 };
 
 export default Icon;

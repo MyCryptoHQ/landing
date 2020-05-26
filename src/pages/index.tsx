@@ -11,7 +11,6 @@ import {
   Icon,
   Media,
   Card,
-  Image,
   Box,
   Flex,
   WalletList,
@@ -28,13 +27,13 @@ const HomePage = () => {
       {/* Get Started */}
       <Section
         color="text"
-        pl={{ _: 0, xxl: '7%' }}
-        my="20px"
-        height={{ _: '100vh', xxl: 'auto' }}
+        pl={{ _: 0, lg: '7%' }}
+        my={{ _: '0', lg: '20px' }}
+        height={{ _: '100vh', lg: 'auto' }}
         sx={{
           backgroundImage: `url(${users})`,
           backgroundRepeat: 'no-repeat',
-          backgroundSize: ['90%', null, null, null, 'contain'],
+          backgroundSize: ['85%', null, null, null, 'contain'],
           backgroundPosition: [
             'center center',
             null,
@@ -45,22 +44,26 @@ const HomePage = () => {
           ],
         }}
       >
-        <Box width={{ _: '100%', xxl: 1 / 2 }} height="100%" py="55px">
+        <Box
+          width={{ _: '100%', lg: 1 / 2 }}
+          height="100%"
+          py={{ _: '20px', lg: '55px' }}
+        >
           <Flex
             flexDirection="column"
-            alignItems={{ _: 'center', xxl: 'flex-start' }}
-            justifyContent={{ _: 'space-between', xxl: 'flex-start' }}
+            alignItems={{ _: 'center', lg: 'flex-start' }}
+            justifyContent={{ _: 'space-between', lg: 'flex-start' }}
             height="100%"
           >
             <Box>
               <Heading
-                textAlign={{ _: 'center', xxl: 'left' }}
+                textAlign={{ _: 'center', lg: 'left' }}
                 variant="largeHeading"
               >
                 You're In The Right Place.
               </Heading>
               <Heading
-                textAlign={{ _: 'center', xxl: 'left' }}
+                textAlign={{ _: 'center', lg: 'left' }}
                 sx={{ marginTop: '10px' }}
               >
                 It's Time To Use MyCrypto
@@ -69,69 +72,105 @@ const HomePage = () => {
               </Heading>
             </Box>
             <Flex
-              flexDirection={{ _: 'row', xxl: 'column' }}
-              justifyContent={{ _: 'space-evenly', xxl: 'flex-start' }}
+              flexDirection={{ _: 'row', lg: 'column' }}
+              justifyContent={{ _: 'space-evenly', lg: 'flex-start' }}
               sx={{ marginTop: '70px' }}
               width="100%"
             >
               <Card
                 variant="card"
-                width={{ _: '30%', xxl: '400px' }}
-                height={{ _: '160px', xxl: '110px' }}
-                padding={{ _: '0', xxl: '25px 30px' }}
+                width={{ _: '30%', lg: '400px' }}
+                height={{ _: '160px', lg: '110px' }}
+                padding={{ _: '0', lg: '25px 30px' }}
                 mb="15px"
               >
                 <Flex
                   flexDirection={['column-reverse', null, null, null, 'row']}
-                  justifyContent="space-between"
+                  justifyContent={{ _: 'center', lg: 'space-between' }}
                   alignItems="center"
                   height="100%"
                 >
                   <Box>
-                    <Heading variant="title">I need a wallet</Heading>
-                    <Text variant="base">Download app to create wallet</Text>
+                    <Heading
+                      textAlign={{ _: 'center', lg: 'left' }}
+                      variant="title"
+                      my={{ _: '10px', lg: 'inherit' }}
+                    >
+                      I need a wallet
+                    </Heading>
+                    <Text
+                      textAlign={{ _: 'center', lg: 'left' }}
+                      variant="base"
+                    >
+                      Download app to create wallet
+                    </Text>
                   </Box>
-                  <Icon name="newWallet" width="60px" />
+                  <Icon name="newWallet" height={{ _: '28%', lg: '60px' }} />
                 </Flex>
               </Card>
               <Card
                 variant="card"
-                width={{ _: '30%', xxl: '400px' }}
-                height={{ _: '160px', xxl: '110px' }}
-                padding={{ _: '0', xxl: '25px 30px' }}
+                width={{ _: '30%', lg: '400px' }}
+                height={{ _: '160px', lg: '110px' }}
+                padding={{ _: '0', lg: '25px 30px' }}
                 mb="15px"
               >
                 <Flex
                   flexDirection={['column-reverse', null, null, null, 'row']}
-                  justifyContent="space-between"
+                  justifyContent={{ _: 'center', lg: 'space-between' }}
                   alignItems="center"
                   height="100%"
                 >
                   <Box>
-                    <Heading variant="title">I have a wallet</Heading>
-                    <Text variant="base">Connect wallet to MyCrypto</Text>
+                    <Heading
+                      textAlign={{ _: 'center', lg: 'left' }}
+                      variant="title"
+                      my={{ _: '10px', lg: 'inherit' }}
+                    >
+                      I have a wallet
+                    </Heading>
+                    <Text
+                      textAlign={{ _: 'center', lg: 'left' }}
+                      variant="base"
+                    >
+                      Connect wallet to MyCrypto
+                    </Text>
                   </Box>
-                  <Icon name="existingWallet" width="60px" />
+                  <Icon
+                    name="existingWallet"
+                    height={{ _: '28%', lg: '60px' }}
+                  />
                 </Flex>
               </Card>
               <Card
                 variant="card"
-                width={{ _: '30%', xxl: '400px' }}
-                height={{ _: '160px', xxl: '110px' }}
-                padding={{ _: '0', xxl: '25px 30px' }}
+                width={{ _: '30%', lg: '400px' }}
+                height={{ _: '160px', lg: '110px' }}
+                padding={{ _: '0', lg: '25px 30px' }}
                 mb="15px"
               >
                 <Flex
-                  flexDirection={{ _: 'column-reverse', xxl: 'row' }}
-                  justifyContent="space-between"
+                  flexDirection={{ _: 'column-reverse', lg: 'row' }}
+                  justifyContent={{ _: 'center', lg: 'space-between' }}
                   alignItems="center"
                   height="100%"
                 >
                   <Box>
-                    <Heading variant="title">I've used MyCrypto</Heading>
-                    <Text variant="base">Continue to Dashboard</Text>
+                    <Heading
+                      textAlign={{ _: 'center', lg: 'left' }}
+                      variant="title"
+                      my={{ _: '10px', lg: 'inherit' }}
+                    >
+                      I've used MyCrypto
+                    </Heading>
+                    <Text
+                      textAlign={{ _: 'center', lg: 'left' }}
+                      variant="base"
+                    >
+                      Continue to Dashboard
+                    </Text>
                   </Box>
-                  <Icon name="signIn" width="60px" />
+                  <Icon name="signIn" height={{ _: '28%', lg: '60px' }} />
                 </Flex>
               </Card>
             </Flex>
@@ -139,22 +178,31 @@ const HomePage = () => {
         </Box>
       </Section>
       {/* Compatible Wallets */}
-      <Section bg="muted" flexDirection="row" py="20px" px="140px" color="text">
+      <Section
+        bg="muted"
+        flexDirection="row"
+        py="20px"
+        px={{ _: 0, lg: '140px' }}
+        color="text"
+      >
         <Flex
-          flexDirection="row"
+          flexDirection={{ _: 'column', lg: 'row' }}
           justifyContent="center"
+          alignItems="center"
           height="100%"
           width="100%"
         >
-          <Box width={1 / 4}>
+          <Box width={{ _: 1 / 2, lg: 1 / 5 }}>
             <Flex flexDirection="column" justifyContent="center" height="100%">
-              <Heading variant="title">Fully Compatible</Heading>
-              <Text variant="base">
+              <Heading variant="title" textAlign={{ _: 'center', lg: 'left' }}>
+                Fully Compatible
+              </Heading>
+              <Text textAlign={{ _: 'center', lg: 'left' }} variant="base">
                 Use with your favorite hardware and software wallets:
               </Text>
             </Flex>
           </Box>
-          <Box width={3 / 4}>
+          <Box width={{ _: '100%', lg: 4 / 5 }}>
             <WalletList list={WALLET_CARDS} />
           </Box>
         </Flex>
