@@ -7,9 +7,9 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
-import { Flex, Link, Text } from '../';
-import Header from './header';
-import Footer from './footer';
+import { Flex } from '../';
+// import Header from './header';
+// import Footer from './footer';
 
 type Props = {
   children: React.ReactNode;
