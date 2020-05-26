@@ -4,10 +4,9 @@ import { Box, Flex, FlexProps, BoxProps } from 'rebass/styled-components';
 type SectionProps = {
   type?: 'landing';
   relative?: boolean;
-  flexDirection?: 'row' | 'column';
   bg?: string;
   children: React.ReactNode;
-} & (BoxProps | FlexProps);
+};
 
 const Section = ({
   type,
@@ -16,11 +15,11 @@ const Section = ({
   bg,
   children,
   ...props
-}: SectionProps) => {
+}: SectionProps & BoxProps & FlexProps) => {
   return type === 'landing' ? (
     <Box bg={bg}>
       <Box
-        width={{ sm: '90%', md: '80%', lg: '75%' }}
+        width={{ _: '100%', md: '80%', lg: '75%' }}
         margin="0 auto"
         sx={{ position: relative ? 'relative' : '' }}
       >

@@ -11,6 +11,9 @@ import vault from '@assets/icn-vault2.svg';
 import dashboard from '@assets/illo-view-dashboard.svg';
 import manageYourWallets from '@assets/illo-manage-your-wallets.svg';
 import controlCrypto from '@assets/control-crypto.svg';
+import dashboardMobile from '@assets/view-dashboard-mobile.svg';
+import manageYourWalletsMobile from '@assets/manage-your-wallets-mobile.svg';
+import controlCryptoMobile from '@assets/control-crypto-mobile.svg';
 import newWallet from '@assets/icn-new-wallet.svg';
 import signIn from '@assets/icn-sign-in.svg';
 import existingWallet from '@assets/icn-existing-wallet.svg';
@@ -44,6 +47,9 @@ const IconMap = {
   newWallet,
   manageYourWallets,
   controlCrypto,
+  dashboardMobile,
+  manageYourWalletsMobile,
+  controlCryptoMobile,
   metamask,
   ledger,
   trezor,

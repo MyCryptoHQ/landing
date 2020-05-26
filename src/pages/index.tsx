@@ -183,11 +183,12 @@ const HomePage = () => {
         flexDirection="row"
         py="20px"
         px={{ _: 0, lg: '140px' }}
+        height={{ _: '350px', lg: 'auto' }}
         color="text"
       >
         <Flex
           flexDirection={{ _: 'column', lg: 'row' }}
-          justifyContent="center"
+          justifyContent={{ _: 'space-evenly', lg: 'center' }}
           alignItems="center"
           height="100%"
           width="100%"
@@ -212,70 +213,154 @@ const HomePage = () => {
         type="landing"
         alignItems="center"
         color="accent"
-        pt="80px"
-        pb="140px"
+        pt={{ _: '40px', lg: '80px' }}
+        pb={{ _: '40px', lg: '140px' }}
       >
-        <Heading>
-          Managing and storing your assets has never been easier
+        <Heading textAlign="center" width={{ _: '90%', lg: 'auto' }}>
+          Managing and storing your assets has never been easier.
         </Heading>
-        <Text variant="subHeading" color="accent">
+        <Text
+          textAlign="center"
+          variant="subHeading"
+          color="accent"
+          my={{ _: '15px', lg: '0' }}
+          width={{ _: '90%', lg: 'auto' }}
+        >
           The MyCrypto apps put your safety & security first.
         </Text>
-        <Flex justifyContent="space-between" my="65px" width="100%">
-          <Box width={1 / 3} mt="120px">
-            <Heading>Manage Your Wallets</Heading>
-            <Text variant="largeBase" color="accent">
+        <Flex
+          flexDirection={{ _: 'column', lg: 'row' }}
+          justifyContent={{ _: 'center', lg: 'space-between' }}
+          alignItems={{ _: 'center', lg: 'flex-start' }}
+          my={{ _: '20px', lg: '65px' }}
+          width="100%"
+        >
+          <Box
+            width={{ _: '90%', lg: 1 / 3 }}
+            mt={{ _: '0', lg: '120px' }}
+            mb="20px"
+          >
+            <Heading textAlign={{ _: 'center', lg: 'inherit' }}>
+              Manage Your Wallets
+            </Heading>
+            <Text
+              textAlign={{ _: 'center', lg: 'inherit' }}
+              variant="largeBase"
+              color="accent"
+              my={{ _: '15px', lg: '0' }}
+            >
               MyCrypto allows you to create, import, and manage all the wallets
               you'll ever need.
             </Text>
           </Box>
-          <Box width={2 / 3}>
-            <Icon name="manageYourWallets" width="100%" />
+          <Box width={{ _: '100%', lg: 2 / 3 }}>
+            <Media type="desktop">
+              <Icon name="manageYourWallets" width="100%" />
+            </Media>
+            <Media type="mobile">
+              <Icon name="manageYourWalletsMobile" width="100%" />
+            </Media>
           </Box>
         </Flex>
-        <Flex justifyContent="space-between" my="65px" width="100%">
-          <Box width={3 / 4}>
-            <Icon name="dashboard" width="100%" />
+        <Flex
+          flexDirection={{ _: 'column-reverse', lg: 'row' }}
+          justifyContent={{ _: 'center', lg: 'space-between' }}
+          alignItems={{ _: 'center', lg: 'flex-start' }}
+          my={{ _: '20px', lg: '65px' }}
+          mb="20px"
+          width="100%"
+        >
+          <Box width={{ _: '100%', lg: 3 / 4 }}>
+            <Media type="desktop">
+              <Icon name="dashboard" width="100%" />
+            </Media>
+            <Media type="mobile">
+              <Icon name="dashboardMobile" width="100%" />
+            </Media>
           </Box>
-          <Box width={1 / 4} mt="150px">
-            <Heading>View Your Dashboard</Heading>
-            <Text variant="largeBase" color="accent">
+          <Box
+            width={{ _: '90%', lg: 1 / 4 }}
+            mt={{ _: '0', lg: '150px' }}
+            mb="20px"
+          >
+            <Heading textAlign={{ _: 'center', lg: 'right' }}>
+              View Your Dashboard
+            </Heading>
+            <Text
+              textAlign={{ _: 'center', lg: 'right' }}
+              variant="largeBase"
+              color="accent"
+              my={{ _: '15px', lg: '0' }}
+            >
               See a detailed breakdown of all your wallets, tokens, and
               transactions.
             </Text>
           </Box>
         </Flex>
-        <Flex justifyContent="space-between" my="65px" width="100%">
-          <Box width={1 / 3} mt="280px">
-            <Heading>Control Your Crypto</Heading>
-            <Text variant="largeBase" color="accent">
+        <Flex
+          flexDirection={{ _: 'column', lg: 'row' }}
+          justifyContent={{ _: 'center', lg: 'space-between' }}
+          alignItems={{ _: 'center', lg: 'flex-start' }}
+          my={{ _: '20px', lg: '65px' }}
+          width="100%"
+        >
+          <Box
+            width={{ _: '90%', lg: 1 / 3 }}
+            mt={{ _: '0', lg: '280px' }}
+            mb="20px"
+          >
+            <Heading textAlign={{ _: 'center', lg: 'inherit' }}>
+              Control Your Crypto
+            </Heading>
+            <Text
+              textAlign={{ _: 'center', lg: 'inherit' }}
+              variant="largeBase"
+              color="accent"
+              my={{ _: '15px', lg: '0' }}
+            >
               Manage your information and your cryptocurrency easily and without
               fear.
             </Text>
           </Box>
-          <Box width={2 / 3}>
-            <Icon name="controlCrypto" width="80%" />
+          <Box width={{ _: '100%', lg: 2 / 3 }}>
+            <Media type="desktop">
+              <Icon name="controlCrypto" width="80%" />
+            </Media>
+            <Media type="mobile">
+              <Icon name="controlCryptoMobile" width="100%" />
+            </Media>
           </Box>
         </Flex>
       </Section>
       {/* Download App */}
       <Section
         type="landing"
-        justifyContent="space-between"
-        flexDirection="row"
+        justifyContent={{ _: 'center', lg: 'space-between' }}
+        flexDirection={{ _: 'column-reverse', lg: 'row' }}
         bg="accent"
         color="textInvert"
-        py="150px"
+        py={{ _: '50px', lg: '150px' }}
+        px={{ _: '5%', lg: 0 }}
       >
-        <Box width={1 / 2}>
-          <Heading>Everythind is Even More Secure with our Desktop App</Heading>
-          <Text variant="subHeading" color="textInvert" my="20px">
+        <Box width={{ _: '100%', lg: 1 / 2 }}>
+          <Heading textAlign={{ _: 'center', lg: 'inherit' }}>
+            Everythind is Even More Secure with our Desktop App
+          </Heading>
+          <Text
+            textAlign={{ _: 'center', lg: 'inherit' }}
+            variant="subHeading"
+            color="textInvert"
+            my="20px"
+            mb={{ _: '70px', lg: 0 }}
+          >
             Keep your keys out of the browser with the MyCrypto Desktop App. You
             get more access to your funds, and scammers get less access to you.
           </Text>
-          <Button variant="primary">Download for macOS</Button>
+          <Button width={{ _: '100%', lg: '300px' }} variant="primary">
+            Download for macOS
+          </Button>
         </Box>
-        <Box width={1 / 2}>
+        <Box width={{ _: '100%', lg: 1 / 2 }} mb={{ _: '30px', lg: 0 }}>
           <Flex
             justifyContent="center"
             alignItems="center"
@@ -356,8 +441,12 @@ const HomePage = () => {
           </Flex>
         </Flex>
         <Flex width={2 / 3} justifyContent="space-between">
-          <Button variant="primary">Get Started on Web</Button>
-          <Button variant="primary">Download the Desktop App</Button>
+          <Button width={{ _: '100%', lg: '300px' }} variant="primary">
+            Get Started on Web
+          </Button>
+          <Button width={{ _: '100%', lg: '300px' }} variant="primary">
+            Download the Desktop App
+          </Button>
         </Flex>
       </Section>
       {/* Testimonials */}
@@ -376,7 +465,9 @@ const HomePage = () => {
         <Heading mb="60px">
           Ready to start managing your funds safely and confidently?
         </Heading>
-        <Button variant="primary">Get Started</Button>
+        <Button width={{ _: '100%', lg: '300px' }} variant="primary">
+          Get Started
+        </Button>
         <Link href={URLS.support} mt="20px" sx={{ textDecoration: 'none' }}>
           <Text variant="link" color="link">
             Have Questions? We&apos;re Here to Help!

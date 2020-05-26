@@ -64,7 +64,6 @@ export const theme = {
       color: 'white',
       borderRadius: '2px',
       fontFamily: 'body',
-      width: '300px',
       height: '60px',
       fontSize: 6,
     },
