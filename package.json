@@ -74,7 +74,7 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "jest --config=./__tests__/jest.config.js",
+    "test": "jest --passWithNoTests --config=./__tests__/jest.config.js",
     "tsc": "tsc -p ./tsconfig.json"
   },
   "husky": {
