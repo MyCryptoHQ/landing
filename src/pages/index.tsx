@@ -351,7 +351,7 @@ const HomePage = () => {
             variant="subHeading"
             color="textInvert"
             my="20px"
-            mb={{ _: '70px', lg: 0 }}
+            mb={{ _: '70px', lg: '20px' }}
           >
             Keep your keys out of the browser with the MyCrypto Desktop App. You
             get more access to your funds, and scammers get less access to you.
@@ -367,7 +367,7 @@ const HomePage = () => {
             width="100%"
             height="100%"
           >
-            <Icon name="bottle" />
+            <Icon name="bottle" width={{ _: '50%', lg: 'auto' }} />
           </Flex>
         </Box>
       </Section>
@@ -375,12 +375,20 @@ const HomePage = () => {
       <Section
         type="landing"
         bg="muted"
-        py="100px"
+        py={{ _: '45px', lg: '100px' }}
+        px={{ _: '5%', lg: 0 }}
         color="text"
         alignItems="center"
       >
-        <Heading>A Different Way to Keep Your Assets Safe</Heading>
-        <Flex width="100%" justifyContent="space-evenly" mt="100px">
+        <Heading textAlign="center">
+          A Different Way to Keep Your Assets Safe
+        </Heading>
+        <Flex
+          width="100%"
+          flexDirection={{ _: 'column', lg: 'row' }}
+          justifyContent="space-evenly"
+          mt={{ _: '65px', lg: '100px' }}
+        >
           <Flex flexDirection="column" alignItems="center">
             <Icon name="bank" />
             <Heading fontWeight="bold" my="20px">
@@ -393,7 +401,11 @@ const HomePage = () => {
               They tell you what you can do <br />
             </Text>
           </Flex>
-          <Flex flexDirection="column" alignItems="center">
+          <Flex
+            flexDirection="column"
+            alignItems="center"
+            mt={{ _: '45px', lg: 0 }}
+          >
             <Icon name="withMYC" />
             <Heading fontWeight="bold" my="20px">
               With MyCrypto
@@ -408,43 +420,75 @@ const HomePage = () => {
         </Flex>
       </Section>
       {/* Peace of Mind */}
-      <Section type="landing" py="100px" alignItems="center" color="text">
-        <Heading>Finally Enjoy Peace of Mind</Heading>
-        <Text variant="subHeading">
+      <Section
+        type="landing"
+        px={{ _: '5%', lg: 0 }}
+        py={{ _: '30px', lg: '100px' }}
+        alignItems="center"
+        color="text"
+      >
+        <Heading textAlign="center">Finally Enjoy Peace of Mind</Heading>
+        <Text textAlign="center" variant="subHeading">
           MyCrypto puts your safety & security first.
         </Text>
         <Flex
           width="100%"
-          flexDirection="row"
+          flexDirection={{ _: 'column', lg: 'row' }}
           justifyContent="space-between"
-          mt="60px"
-          mb="100px"
+          alignItems={{ _: 'center', lg: 'flex-start' }}
+          my={{ _: '20px', lg: '60px' }}
+          order={{ _: 2, lg: 1 }}
         >
-          <Flex width={1 / 3} flexDirection="column" alignItems="center">
+          <Flex
+            width={{ _: '100%', lg: 1 / 3 }}
+            flexDirection="column"
+            alignItems="center"
+          >
             <Icon name="vault" />
             <Text variant="subHeading" textAlign="center" maxWidth="350px">
               Get your information out of other people's hands and back into
               yours
             </Text>
           </Flex>
-          <Flex width={1 / 3} flexDirection="column" alignItems="center">
+          <Flex
+            width={{ _: '100%', lg: 1 / 3 }}
+            flexDirection="column"
+            alignItems="center"
+          >
             <Icon name="protect" />
             <Text variant="subHeading" textAlign="center" maxWidth="350px">
               Protect yourself from phishing attacks and malicious extensions
             </Text>
           </Flex>
-          <Flex width={1 / 3} flexDirection="column" alignItems="center">
+          <Flex
+            width={{ _: '100%', lg: 1 / 3 }}
+            flexDirection="column"
+            alignItems="center"
+          >
             <Icon name="vault" />
             <Text variant="subHeading" textAlign="center" maxWidth="350px">
               Open-source, fully <br /> audited, and fully <br /> verifiable.
             </Text>
           </Flex>
         </Flex>
-        <Flex width={2 / 3} justifyContent="space-between">
-          <Button width={{ _: '100%', lg: '300px' }} variant="primary">
+        <Flex
+          width={{ _: '100%', lg: 2 / 3 }}
+          flexDirection={{ _: 'column', lg: 'row' }}
+          justifyContent="space-between"
+          order={{ _: 1, lg: 2 }}
+        >
+          <Button
+            mt={{ _: '20px', lg: 0 }}
+            width={{ _: '100%', lg: '300px' }}
+            variant="primary"
+          >
             Get Started on Web
           </Button>
-          <Button width={{ _: '100%', lg: '300px' }} variant="primary">
+          <Button
+            mt={{ _: '20px', lg: 0 }}
+            width={{ _: '100%', lg: '300px' }}
+            variant="primary"
+          >
             Download the Desktop App
           </Button>
         </Flex>
