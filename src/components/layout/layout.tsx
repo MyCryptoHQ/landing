@@ -16,18 +16,6 @@ type Props = {
 };
 
 const Layout = ({ children }: Props) => {
-  const { site } = useStaticQuery(
-    graphql`
-      query SiteTitleQuery {
-        site {
-          siteMetadata {
-            title
-          }
-        }
-      }
-    `
-  );
-
   return (
     <>
       {/* <Header siteTitle={site.siteMetadata.title} /> */}
