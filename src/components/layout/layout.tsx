@@ -5,7 +5,6 @@
  */
 
 import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
 
 import { Flex } from '../';
 // import Header from './header';
