@@ -19,6 +19,9 @@ import signIn from '@assets/icn-sign-in.svg';
 import existingWallet from '@assets/icn-existing-wallet.svg';
 import bottle from '@assets/illo-bottle.svg';
 import more from '@assets/icn-more.svg';
+import plus from '@assets/icn-plus.svg';
+import circle from '@assets/icn-circle.svg';
+import rectangle from '@assets/icn-rectangle.svg';
 
 /**
  * Wallets
@@ -34,6 +37,9 @@ import trust from '@assets/wallets/trust-2.svg';
 const IconMap = {
   oval,
   swoosh,
+  plus,
+  circle,
+  rectangle,
   signIn,
   bottle,
   existingWallet,

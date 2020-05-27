@@ -1,9 +1,10 @@
 import React from 'react';
-import { shadow, border } from 'styled-system';
+import { shadow, border, position, PositionProps } from 'styled-system';
 import styled from 'styled-components';
 
 import {
-  Box,
+  Box as RBox,
+  BoxProps,
   Card as RCard,
   CardProps,
   Text as RText,
@@ -59,6 +60,14 @@ const SCard = styled(RCard)`
 `;
 const Card = ({ children, ...props }: BaseProps & CardProps) => (
   <SCard {...props}>{children}</SCard>
+);
+
+const SBox = styled(RBox)`
+  ${position}
+`;
+
+const Box = ({ children, ...props }: BaseProps & PositionProps & BoxProps) => (
+  <SBox {...props}>{children}</SBox>
 );
 
 const Image = (props: ImageProps) => <RImage {...props} />;

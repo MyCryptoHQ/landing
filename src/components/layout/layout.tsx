@@ -7,7 +7,7 @@
 import React from 'react';
 
 import { Flex } from '../';
-// import Header from './header';
+import Header from './Header';
 // import Footer from './footer';
 
 type Props = {
@@ -17,7 +17,7 @@ type Props = {
 const Layout = ({ children }: Props) => {
   return (
     <>
-      {/* <Header siteTitle={site.siteMetadata.title} /> */}
+      <Header />
       <Flex sx={{}}>
         <main role="main">{children}</main>
       </Flex>

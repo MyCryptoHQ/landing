@@ -443,6 +443,7 @@ const HomePage = () => {
             width={{ _: '100%', lg: 1 / 3 }}
             flexDirection="column"
             alignItems="center"
+            mt={{ _: '30px', lg: 0 }}
           >
             <Icon name="vault" />
             <Text variant="subHeading" textAlign="center" maxWidth="350px">
@@ -454,6 +455,7 @@ const HomePage = () => {
             width={{ _: '100%', lg: 1 / 3 }}
             flexDirection="column"
             alignItems="center"
+            mt={{ _: '30px', lg: 0 }}
           >
             <Icon name="protect" />
             <Text variant="subHeading" textAlign="center" maxWidth="350px">
@@ -464,6 +466,7 @@ const HomePage = () => {
             width={{ _: '100%', lg: 1 / 3 }}
             flexDirection="column"
             alignItems="center"
+            mt={{ _: '30px', lg: 0 }}
           >
             <Icon name="vault" />
             <Text variant="subHeading" textAlign="center" maxWidth="350px">
@@ -494,7 +497,7 @@ const HomePage = () => {
         </Flex>
       </Section>
       {/* Testimonials */}
-      <Section bg="muted" py="200px">
+      <Section bg="muted" py={{ _: '50px', lg: '200px' }}>
         <Testimonials />
       </Section>
       {/* Bottom Action */}
@@ -503,10 +506,12 @@ const HomePage = () => {
         flexDirection="column"
         alignItems="center"
         color="text"
-        py="100px"
+        py={{ _: '30px', lg: '100px' }}
+        px={{ _: '5%', lg: 0 }}
+        height={{ _: '100vh', lg: 'auto' }}
         relative
       >
-        <Heading mb="60px">
+        <Heading mt={{ _: '100px', lg: 0 }} mb="60px" textAlign="center">
           Ready to start managing your funds safely and confidently?
         </Heading>
         <Button width={{ _: '100%', lg: '300px' }} variant="primary">
@@ -518,10 +523,21 @@ const HomePage = () => {
           </Text>
         </Link>
         <Media type="mobile">
-          <Flex justifyContent="space-between">
+          <Box position="absolute" left="10%" bottom="20%">
             <Icon name="swoosh" />
-            <Icon name="oval" />
-          </Flex>
+          </Box>
+          <Box position="absolute" right="-15px" bottom="50px">
+            <Icon name="circle" />
+          </Box>
+          <Box position="absolute" right="15%" top="7%">
+            <Icon name="plus" />
+          </Box>
+          <Box position="absolute" right="20px" bottom="200px">
+            <Icon name="rectangle" />
+          </Box>
+          <Box position="absolute" right="30px" bottom="180px">
+            <Icon name="rectangle" />
+          </Box>
         </Media>
       </Section>
     </Flex>
