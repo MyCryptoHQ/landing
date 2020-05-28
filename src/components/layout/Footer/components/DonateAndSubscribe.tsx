@@ -1,5 +1,15 @@
-import React, { ReactNode } from 'react';
-import { Flex, Button, Icon, Text, IconName, Box, SubInput } from '@components';
+import React, { ReactNode, useState, FormEvent, ChangeEvent } from 'react';
+import { SUBSCRIBE } from '@config';
+import { useSubscribe } from '.';
+import {
+  Flex,
+  Button,
+  Icon,
+  Text,
+  IconName,
+  SubInput,
+  Link,
+} from '@components';
 
 const DonateButton = ({
   icon,
@@ -21,16 +31,49 @@ const DonateButton = ({
 };
 
 const SubscribeInput = () => {
+  const subscribe = useSubscribe(SUBSCRIBE.LIST_ID, SUBSCRIBE.TAG);
+  const [emailAddress, setEmailAddress] = useState<string>('');
+  const [isSubscribed, setSubscribed] = useState<boolean>(false);
+  const [isError, setError] = useState<boolean>(false);
+
+  const handleSubscribe = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setSubscribed(false);
+    setError(false);
+
+    subscribe(emailAddress)
+      .then(() => setSubscribed(true))
+      .catch(() => setError(true));
+  };
+
+  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setSubscribed(false);
+    setError(false);
+    setEmailAddress(event.target.value);
+  };
   return (
-    <Flex
-      flexDirection="row"
-      alignItems="center"
-      width="100%"
-      justifyContent={{ _: 'center', lg: 'flex-start' }}
-    >
-      <SubInput placeholder="Email Address" />
-      <Button variant="sub">Subscribe</Button>
-    </Flex>
+    <form onSubmit={handleSubscribe} style={{ width: '100%' }}>
+      <Flex
+        flexDirection="row"
+        alignItems="center"
+        width="100%"
+        justifyContent={{ _: 'center', lg: 'flex-start' }}
+      >
+        <SubInput placeholder="Email Address" onChange={handleChange} />
+        <Button variant="sub">Subscribe</Button>
+      </Flex>
+      {isSubscribed && (
+        <Text variant="footerLink" color="rgb(187, 194, 203)" mt="10px">
+          Your email was added to our mailing list!
+        </Text>
+      )}
+      {isError && (
+        <Text variant="footerLink" color="rgb(187, 194, 203)" mt="10px">
+          Your email could not be added to the mailing list. You may be
+          subscribed already.
+        </Text>
+      )}
+    </form>
   );
 };
 
@@ -71,6 +114,23 @@ const DonateAndSubscribe = () => {
           Get updates from MyCrypto straight to your inbox!
         </Text>
         <SubscribeInput />
+        <Text
+          variant="footerLink"
+          fontSize="12px"
+          color="rgb(187, 194, 203)"
+          mt="10px"
+        >
+          By submitting your email, you <strong>affirmatively</strong> agree to
+          our{' '}
+          <Link
+            href="https://about.mycrypto.com/privacy/"
+            sx={{ textDecoration: 'none' }}
+          >
+            <Text variant="link" fontSize="12px" color="primary">
+              Privacy Policy
+            </Text>
+          </Link>
+        </Text>
       </Flex>
     </Flex>
   );

@@ -205,17 +205,6 @@ const CenterImg = styled.img`
   height: 39px;
 `;
 
-const Lock = styled.li`
-  display: flex;
-  align-items: center;
-  border-left: 1px solid #3e546d;
-
-  svg {
-    margin-right: 6px;
-    color: #1eb8e7;
-  }
-`;
-
 interface IconWrapperProps {
   subItems?: boolean;
 }
