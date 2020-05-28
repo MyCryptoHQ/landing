@@ -22,6 +22,18 @@ import more from '@assets/icn-more.svg';
 import plus from '@assets/icn-plus.svg';
 import circle from '@assets/icn-circle.svg';
 import rectangle from '@assets/icn-rectangle.svg';
+import facebook from '@assets/socials/social-facebook.svg';
+import slack from '@assets/socials/social-slack.svg';
+import twitter from '@assets/socials/social-twitter.svg';
+import reddit from '@assets/socials/social-reddit.svg';
+import telegram from '@assets/socials/social-telegram.svg';
+import github from '@assets/socials/social-github.svg';
+import discord from '@assets/socials/social-discord.svg';
+import linkedin from '@assets/socials/social-linkedin.svg';
+import medium from '@assets/socials/social-medium.svg';
+import MYCLogo from '@assets/logo-mycrypto.svg';
+import bitcoin from '@assets/bitcoin.svg';
+import ether from '@assets/ether.svg';
 
 /**
  * Wallets
@@ -35,6 +47,18 @@ import web3Default from '@assets/wallets/web3-default.svg';
 import trust from '@assets/wallets/trust-2.svg';
 
 const IconMap = {
+  MYCLogo,
+  bitcoin,
+  ether,
+  facebook,
+  slack,
+  twitter,
+  reddit,
+  telegram,
+  github,
+  discord,
+  linkedin,
+  medium,
   oval,
   swoosh,
   plus,

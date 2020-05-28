@@ -29,7 +29,7 @@ const HomePage = () => {
         color="text"
         pl={{ _: 0, lg: '7%' }}
         my={{ _: '0', lg: '20px' }}
-        height={{ _: '100vh', lg: 'auto' }}
+        height={{ _: '90vh', lg: 'auto' }}
         sx={{
           backgroundImage: `url(${users})`,
           backgroundRepeat: 'no-repeat',
@@ -510,6 +510,7 @@ const HomePage = () => {
         px={{ _: '5%', lg: 0 }}
         height={{ _: '100vh', lg: 'auto' }}
         relative
+        overflow="hidden"
       >
         <Heading mt={{ _: '100px', lg: 0 }} mb="60px" textAlign="center">
           Ready to start managing your funds safely and confidently?

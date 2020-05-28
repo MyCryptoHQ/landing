@@ -25,6 +25,8 @@ export const theme = {
     small: '0px 3px 6px 0px rgba(0, 0, 0, 0.07)',
     medium: '0 1px 0 0 rgba(0, 0, 0, 0.05)',
     large: '0 1px 3px 0 rgba(0, 0, 0, 0.1)',
+    special:
+      '0px 1px 1px rgba(232, 234, 237, 0.1), inset 0px 1px 3px rgba(232, 234, 237, 0.1)',
   },
   fonts: {
     body: 'Lato, sans-serif',
@@ -57,6 +59,7 @@ export const theme = {
      * Custom colors
      */
     white: '#fff',
+    grey: '#E9E9E9',
   },
   buttons: {
     primary: {
@@ -66,6 +69,23 @@ export const theme = {
       fontFamily: 'body',
       height: '60px',
       fontSize: 6,
+      cursor: 'pointer',
+    },
+    donation: {
+      backgroundColor: 'rgba(255, 255, 255, 0.2)',
+      boxShadow: 'special',
+      borderRadius: '6px',
+      padding: '10px',
+      margin: '10px',
+      marginLeft: '0px',
+      cursor: 'pointer',
+    },
+    sub: {
+      height: '44px',
+      padding: '10px',
+      borderRadius: '0 3px 3px 0',
+      border: '3px solid #007896',
+      cursor: 'pointer',
     },
   },
   text: {
@@ -97,6 +117,17 @@ export const theme = {
     link: {
       fontSize: 5,
       lineHeight: 4,
+      textDecoration: 'none',
+      fontFamily: 'body',
+    },
+    footerSmall: {
+      fontSize: '0.625rem',
+      lineHeight: '0.75rem',
+    },
+    footerLink: {
+      fontSize: '0.875em',
+      lineHeight: '1.18em',
+      fontWeight: 300,
       textDecoration: 'none',
       fontFamily: 'body',
     },

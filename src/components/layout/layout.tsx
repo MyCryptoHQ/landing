@@ -8,7 +8,7 @@ import React from 'react';
 
 import { Flex } from '../';
 import Header from './Header';
-// import Footer from './footer';
+import Footer from './Footer';
 
 type Props = {
   children: React.ReactNode;
@@ -21,13 +21,7 @@ const Layout = ({ children }: Props) => {
       <Flex sx={{}}>
         <main role="main">{children}</main>
       </Flex>
-      {/* <Footer>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <Link href="https://www.gatsbyjs.org">
-          <Text>Gatsby</Text>
-        </Link>
-      </Footer> */}
+      <Footer />
     </>
   );
 };
