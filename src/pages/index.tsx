@@ -84,29 +84,35 @@ const HomePage = () => {
                 padding={{ _: '0', lg: '25px 30px' }}
                 mb="15px"
               >
-                <Flex
-                  flexDirection={['column-reverse', null, null, null, 'row']}
-                  justifyContent={{ _: 'center', lg: 'space-between' }}
-                  alignItems="center"
-                  height="100%"
+                <Link
+                  href="https://beta.mycrypto.com/download-desktop-app"
+                  sx={{ textDecoration: 'none' }}
                 >
-                  <Box>
-                    <Heading
-                      textAlign={{ _: 'center', lg: 'left' }}
-                      variant="title"
-                      my={{ _: '10px', lg: 'inherit' }}
-                    >
-                      I need a wallet
-                    </Heading>
-                    <Text
-                      textAlign={{ _: 'center', lg: 'left' }}
-                      variant="base"
-                    >
-                      Download app to create wallet
-                    </Text>
-                  </Box>
-                  <Icon name="newWallet" height={{ _: '28%', lg: '60px' }} />
-                </Flex>
+                  <Flex
+                    flexDirection={['column-reverse', null, null, null, 'row']}
+                    justifyContent={{ _: 'center', lg: 'space-between' }}
+                    alignItems="center"
+                    height="100%"
+                  >
+                    <Box>
+                      <Heading
+                        textAlign={{ _: 'center', lg: 'left' }}
+                        variant="title"
+                        my={{ _: '10px', lg: 'inherit' }}
+                        color="text"
+                      >
+                        I need a wallet
+                      </Heading>
+                      <Text
+                        textAlign={{ _: 'center', lg: 'left' }}
+                        variant="base"
+                      >
+                        Download app to create wallet
+                      </Text>
+                    </Box>
+                    <Icon name="newWallet" height={{ _: '28%', lg: '60px' }} />
+                  </Flex>
+                </Link>
               </Card>
               <Card
                 variant="card"
@@ -115,32 +121,38 @@ const HomePage = () => {
                 padding={{ _: '0', lg: '25px 30px' }}
                 mb="15px"
               >
-                <Flex
-                  flexDirection={['column-reverse', null, null, null, 'row']}
-                  justifyContent={{ _: 'center', lg: 'space-between' }}
-                  alignItems="center"
-                  height="100%"
+                <Link
+                  href="https://beta.mycrypto.com/add-account"
+                  sx={{ textDecoration: 'none' }}
                 >
-                  <Box>
-                    <Heading
-                      textAlign={{ _: 'center', lg: 'left' }}
-                      variant="title"
-                      my={{ _: '10px', lg: 'inherit' }}
-                    >
-                      I have a wallet
-                    </Heading>
-                    <Text
-                      textAlign={{ _: 'center', lg: 'left' }}
-                      variant="base"
-                    >
-                      Connect wallet to MyCrypto
-                    </Text>
-                  </Box>
-                  <Icon
-                    name="existingWallet"
-                    height={{ _: '28%', lg: '60px' }}
-                  />
-                </Flex>
+                  <Flex
+                    flexDirection={['column-reverse', null, null, null, 'row']}
+                    justifyContent={{ _: 'center', lg: 'space-between' }}
+                    alignItems="center"
+                    height="100%"
+                  >
+                    <Box>
+                      <Heading
+                        textAlign={{ _: 'center', lg: 'left' }}
+                        variant="title"
+                        my={{ _: '10px', lg: 'inherit' }}
+                        color="text"
+                      >
+                        I have a wallet
+                      </Heading>
+                      <Text
+                        textAlign={{ _: 'center', lg: 'left' }}
+                        variant="base"
+                      >
+                        Connect wallet to MyCrypto
+                      </Text>
+                    </Box>
+                    <Icon
+                      name="existingWallet"
+                      height={{ _: '28%', lg: '60px' }}
+                    />
+                  </Flex>
+                </Link>
               </Card>
               <Card
                 variant="card"
@@ -149,29 +161,35 @@ const HomePage = () => {
                 padding={{ _: '0', lg: '25px 30px' }}
                 mb="15px"
               >
-                <Flex
-                  flexDirection={{ _: 'column-reverse', lg: 'row' }}
-                  justifyContent={{ _: 'center', lg: 'space-between' }}
-                  alignItems="center"
-                  height="100%"
+                <Link
+                  href="https://beta.mycrypto.com/dashboard"
+                  sx={{ textDecoration: 'none' }}
                 >
-                  <Box>
-                    <Heading
-                      textAlign={{ _: 'center', lg: 'left' }}
-                      variant="title"
-                      my={{ _: '10px', lg: 'inherit' }}
-                    >
-                      I've used MyCrypto
-                    </Heading>
-                    <Text
-                      textAlign={{ _: 'center', lg: 'left' }}
-                      variant="base"
-                    >
-                      Continue to Dashboard
-                    </Text>
-                  </Box>
-                  <Icon name="signIn" height={{ _: '28%', lg: '60px' }} />
-                </Flex>
+                  <Flex
+                    flexDirection={{ _: 'column-reverse', lg: 'row' }}
+                    justifyContent={{ _: 'center', lg: 'space-between' }}
+                    alignItems="center"
+                    height="100%"
+                  >
+                    <Box>
+                      <Heading
+                        textAlign={{ _: 'center', lg: 'left' }}
+                        variant="title"
+                        my={{ _: '10px', lg: 'inherit' }}
+                        color="text"
+                      >
+                        I've used MyCrypto
+                      </Heading>
+                      <Text
+                        textAlign={{ _: 'center', lg: 'left' }}
+                        variant="base"
+                      >
+                        Continue to Dashboard
+                      </Text>
+                    </Box>
+                    <Icon name="signIn" height={{ _: '28%', lg: '60px' }} />
+                  </Flex>
+                </Link>
               </Card>
             </Flex>
           </Flex>
