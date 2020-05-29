@@ -4,11 +4,12 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-import moreIcon from '@assets/icn-more.svg';
-import { Box, Text, Image } from '@components';
-import { TESTIMONIALS } from './config';
+import { Box, Text, Image, Section } from '@components';
 import { theme } from '@theme';
 
+import { TESTIMONIALS } from './config';
+
+import moreIcon from '@assets/icn-more.svg';
 import sparklesTop from '@assets/icn-sparkles01.svg';
 import sparklesBottom from '@assets/icn-sparkles02.svg';
 import sparklesMiddle from '@assets/icn-sparkles03.svg';
@@ -139,18 +140,20 @@ const Testimonials = () => {
   };
 
   return (
-    <SliderBox mx="50px">
-      <Slider {...settings}>
-        {TESTIMONIALS.map((testimonial, index) => (
-          <Testimonial
-            key={index}
-            sparkles={sparkles[index % 3]}
-            placement={positions[index % 3]}
-            {...testimonial}
-          />
-        ))}
-      </Slider>
-    </SliderBox>
+    <Section bg="muted" py={{ _: '50px', lg: '200px' }}>
+      <SliderBox mx="50px">
+        <Slider {...settings}>
+          {TESTIMONIALS.map((testimonial, index) => (
+            <Testimonial
+              key={index}
+              sparkles={sparkles[index % 3]}
+              placement={positions[index % 3]}
+              {...testimonial}
+            />
+          ))}
+        </Slider>
+      </SliderBox>
+    </Section>
   );
 };
 

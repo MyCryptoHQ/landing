@@ -1,5 +1,5 @@
 import { IconName } from '@components';
-import { URLS } from '@config';
+import { getRoute } from '@utils';
 
 export interface TWalletCard {
   name: string;
@@ -11,31 +11,31 @@ export const WALLET_CARDS: TWalletCard[] = [
   {
     name: 'Metamask',
     icon: 'metamask',
-    path: `${URLS.app}/add-account/web3`,
+    path: `${getRoute('ADD_ACCOUNT')}/web3`,
   },
   {
     name: 'Ledger',
     icon: 'ledger',
-    path: `${URLS.app}/add-account/ledger_nano_s`,
+    path: `${getRoute('ADD_ACCOUNT')}/ledger_nano_s`,
   },
   {
     name: 'Trezor',
     icon: 'trezor',
-    path: `${URLS.app}/add-account/trezor`,
+    path: `${getRoute('ADD_ACCOUNT')}/trezor`,
   },
   {
     name: 'WalletConnect',
     icon: 'walletconnect',
-    path: `${URLS.app}/add-account/walletconnect`,
+    path: `${getRoute('ADD_ACCOUNT')}/walletconnect`,
   },
   {
     name: 'Frame',
     icon: 'frame',
-    path: `${URLS.app}/add-account/web3`,
+    path: `${getRoute('ADD_ACCOUNT')}/web3`,
   },
   {
     name: 'Trust',
     icon: 'trust',
-    path: `${URLS.app}/add-account/web3`,
+    path: `${getRoute('ADD_ACCOUNT')}/web3`,
   },
 ];

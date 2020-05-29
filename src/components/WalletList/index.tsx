@@ -2,7 +2,17 @@ import React from 'react';
 import styled from 'styled-components';
 import Slider from 'react-slick';
 
-import { Flex, Card, Icon, Text, Link, Media, Box } from '@components';
+import {
+  Section,
+  Heading,
+  Flex,
+  Card,
+  Icon,
+  Text,
+  Link,
+  Media,
+  Box,
+} from '@components';
 import { theme } from '@theme';
 import { WALLET_CARDS, TWalletCard } from './config';
 
@@ -73,7 +83,8 @@ const WalletCard = ({ name, icon, path }: TWalletCard) => {
 };
 
 type WalletListProp = { list: TWalletCard[] };
-export const WalletList = ({ list }: WalletListProp) => {
+
+const WalletSlider = ({ list }: WalletListProp) => {
   const settings = {
     dots: true,
     infinite: false,
@@ -128,5 +139,39 @@ export const WalletList = ({ list }: WalletListProp) => {
   );
 };
 
-export { WALLET_CARDS };
-export default WalletCard;
+const WalletList = () => {
+  return (
+    <Section
+      bg="muted"
+      flexDirection="row"
+      py="20px"
+      px={{ _: 0, lg: '140px' }}
+      height={{ _: '350px', lg: 'auto' }}
+      color="text"
+    >
+      <Flex
+        flexDirection={{ _: 'column', lg: 'row' }}
+        justifyContent={{ _: 'space-evenly', lg: 'center' }}
+        alignItems="center"
+        height="100%"
+        width="100%"
+      >
+        <Box width={{ _: 1 / 2, lg: 1 / 5 }}>
+          <Flex flexDirection="column" justifyContent="center" height="100%">
+            <Heading variant="title" textAlign={{ _: 'center', lg: 'left' }}>
+              Fully Compatible
+            </Heading>
+            <Text textAlign={{ _: 'center', lg: 'left' }} variant="base">
+              Use with your favorite hardware and software wallets:
+            </Text>
+          </Flex>
+        </Box>
+        <Box width={{ _: '100%', lg: 4 / 5 }}>
+          <WalletSlider list={WALLET_CARDS} />
+        </Box>
+      </Flex>
+    </Section>
+  );
+};
+
+export default WalletList;
