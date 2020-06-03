@@ -1,3 +1,5 @@
+/* eslint-disable react/display-name */
+
 import React, { useState } from 'react';
 import { Transition } from 'react-spring/renderprops.cjs';
 import { theme } from '@theme';
