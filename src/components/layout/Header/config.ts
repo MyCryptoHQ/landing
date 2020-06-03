@@ -1,29 +1,31 @@
+import { getRoute } from '@utils';
+
 import settingsIcon from '@assets/icn-settings.svg';
 import dashboardIcon from '@assets/icn-dashboard.svg';
 
 export const links = [
   {
     title: 'Dashboard',
-    to: 'https://beta.mycrypto.com/dashboard',
+    to: getRoute('DASHBOARD'),
     icon: { src: dashboardIcon, width: '16px', height: '12px' },
   },
   {
     title: 'Manage Assets',
     subItems: [
       {
-        to: 'https://beta.mycrypto.com/send',
+        to: getRoute('SEND'),
         title: 'Send Assets',
       },
       {
-        to: 'https://beta.mycrypto.com/request',
+        to: getRoute('REQUEST'),
         title: 'Request Assets',
       },
       {
-        to: 'https://beta.mycrypto.com/swap',
+        to: getRoute('SWAP'),
         title: 'Swap Assets',
       },
       {
-        to: 'https://beta.mycrypto.com/add-account/:walletId',
+        to: getRoute('ADD_ACCOUNT'),
         title: 'Add Account',
       },
     ],
@@ -32,38 +34,38 @@ export const links = [
     title: 'Tools',
     subItems: [
       {
-        to: 'https://beta.mycrypto.com/sign-message',
+        to: getRoute('SIGN_MESSAGE'),
         title: 'Sign Message',
       },
       {
-        to: 'https://beta.mycrypto.com/verify-message',
+        to: getRoute('VERIFY_MESSAGE'),
         title: 'Verify Message',
       },
       {
-        to: 'https://beta.mycrypto.com/bradcast-transaction',
+        to: getRoute('BROADCAST_TRANSACTION'),
         title: 'Broadcast Transaction',
       },
       {
-        to: 'https://beta.mycrypto.com/interact-with-contract',
+        to: getRoute('INTERACT_WITH_CONTRACT'),
         title: 'Interact with Contracts',
       },
       {
-        to: 'https://beta.mycrypto.com/deploy-contracts',
+        to: getRoute('DEPLOY_CONTRACT'),
         title: 'Deploy Contracts',
       },
       {
-        to: 'https://beta.mycrypto.com/helpers',
+        to: getRoute('HELPERS'),
         title: 'Helpers',
       },
       {
-        to: 'https://beta.mycrypto.com/ens',
+        to: getRoute('ENS'),
         title: 'ENS',
       },
     ],
   },
   {
     title: 'Settings',
-    to: 'https://beta.mycrypto.com/settings',
+    to: getRoute('SETTINGS'),
     icon: { src: settingsIcon, width: '16px' },
   },
 ];

@@ -2,11 +2,13 @@
 
 import React, { useState } from 'react';
 import { Transition } from 'react-spring/renderprops.cjs';
-import { theme } from '@theme';
-import { Icon } from '@mycrypto/ui';
 import styled from 'styled-components';
+import { Icon } from '@mycrypto/ui';
 
-import { links } from './constants';
+import { getRoute } from '@utils';
+import { theme } from '@theme';
+
+import { links } from './config';
 
 // Legacy
 import logo from '@assets/logo-mycrypto.svg';
@@ -392,10 +394,7 @@ const Header = () => {
           <li onClick={openLatestNews}>Latest News</li>
         </HeaderTopLeft>
         <div>
-          <a
-            href="https://beta/mycrypto.com/dashboard"
-            rel="noopener noreferrer"
-          >
+          <a href={getRoute('DASHBOARD')} rel="noopener noreferrer">
             <CenterImg src={logo} alt="Our logo" />
           </a>
         </div>
