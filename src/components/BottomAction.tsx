@@ -31,7 +31,9 @@ const BottomAction = () => {
       <Button
         width={{ _: '100%', lg: '300px' }}
         variant="primary"
-        onClick={() => window.open(getRoute('DASHBOARD'))}
+        onClick={() =>
+          window.open(getRoute('DASHBOARD'), '_blank', 'noopener noreferrer')
+        }
       >
         Get Started
       </Button>

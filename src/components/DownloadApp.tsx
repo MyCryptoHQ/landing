@@ -19,7 +19,7 @@ const DownloadApp = () => {
 
   const openDownloadLink = (link: string) => {
     const target = link === GITHUB_RELEASE_NOTES_URL ? '_blank' : '_self';
-    window.open(link, target);
+    window.open(link, target, 'noopener noreferrer');
   };
 
   return (

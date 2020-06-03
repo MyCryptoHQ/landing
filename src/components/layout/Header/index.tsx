@@ -286,11 +286,19 @@ const Header = () => {
     });
 
   const openLatestNews = (): void => {
-    window.open('https://medium.com/@mycrypto', '_blank');
+    window.open(
+      'https://medium.com/@mycrypto',
+      '_blank',
+      'noopener noreferrer'
+    );
   };
 
   const openHelpSupportPage = (): void => {
-    window.open('https://medium.com/@mycrypto', '_blank');
+    window.open(
+      'https://medium.com/@mycrypto',
+      '_blank',
+      'noopener noreferrer'
+    );
   };
 
   return (
@@ -315,7 +323,7 @@ const Header = () => {
                         e.stopPropagation();
 
                         if (to) {
-                          window.open(to);
+                          window.open(to, '_blank', 'noopener noreferrer');
                           toggleMenu();
                         } else {
                           toggleMenuDropdown(title);
@@ -342,7 +350,11 @@ const Header = () => {
                                 key={innerTitle}
                                 onClick={() => {
                                   toggleMenu();
-                                  window.open(innerTo);
+                                  window.open(
+                                    innerTo,
+                                    '_blank',
+                                    'noopener noreferrer'
+                                  );
                                 }}
                               >
                                 {innerTitle}
@@ -380,7 +392,10 @@ const Header = () => {
           <li onClick={openLatestNews}>Latest News</li>
         </HeaderTopLeft>
         <div>
-          <a href="https://beta/mycrypto.com/dashboard" rel="noreferrer">
+          <a
+            href="https://beta/mycrypto.com/dashboard"
+            rel="noopener noreferrer"
+          >
             <CenterImg src={logo} alt="Our logo" />
           </a>
         </div>
@@ -390,7 +405,10 @@ const Header = () => {
         <HeaderBottomLinks>
           {links.map(({ title, to, subItems, icon }) => {
             const liProps = to
-              ? { onClick: () => window.open(to) }
+              ? {
+                  onClick: () =>
+                    window.open(to, '_blank', 'noopener noreferrer'),
+                }
               : {
                   onMouseEnter: () => toggleDropdown(title),
                   onMouseLeave: () => toggleDropdown(title),
@@ -408,7 +426,13 @@ const Header = () => {
                       ({ to: innerTo, title: innerTitle }: LinkElement) => (
                         <li
                           key={innerTitle}
-                          onClick={() => window.open(innerTo)}
+                          onClick={() =>
+                            window.open(
+                              innerTo,
+                              '_blank',
+                              'noopener noreferrer'
+                            )
+                          }
                         >
                           {innerTitle}
                         </li>

@@ -54,7 +54,9 @@ const PeaceOfMind = () => {
           mt={{ _: '20px', lg: 0 }}
           width={{ _: '100%', lg: '300px' }}
           variant="primary"
-          onClick={() => window.open(getRoute('DASHBOARD'), '_blank')}
+          onClick={() =>
+            window.open(getRoute('DASHBOARD'), '_blank', 'noopener noreferrer')
+          }
         >
           Get Started on Web
         </Button>
@@ -62,7 +64,9 @@ const PeaceOfMind = () => {
           mt={{ _: '20px', lg: 0 }}
           width={{ _: '100%', lg: '300px' }}
           variant="primary"
-          onClick={() => window.open(getRoute('DOWNLOAD'), '_blank')}
+          onClick={() =>
+            window.open(getRoute('DOWNLOAD'), '_blank', 'noopener noreferrer')
+          }
         >
           Download the Desktop App
         </Button>
