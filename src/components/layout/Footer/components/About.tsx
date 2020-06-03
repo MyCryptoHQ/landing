@@ -29,6 +29,7 @@ const About = () => {
         <Text
           variant="footerSmall"
           color="white"
+          mt="20px"
         >{`© ${new Date().getFullYear()} MyCrypto, Inc.`}</Text>
       </Media>
     </Flex>

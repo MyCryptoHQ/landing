@@ -1,4 +1,11 @@
-import React, { ReactNode, useState, FormEvent, ChangeEvent } from 'react';
+import React, {
+  ReactNode,
+  useState,
+  useEffect,
+  FormEvent,
+  ChangeEvent,
+} from 'react';
+import CopyToClipboard from 'react-copy-to-clipboard';
 import { SUBSCRIBE } from '@config';
 import { useSubscribe } from '@hooks';
 import {
@@ -13,20 +20,26 @@ import {
 
 const DonateButton = ({
   icon,
+  address,
+  onCopy,
   children,
 }: {
   icon: IconName;
   children: ReactNode;
+  address: string;
+  onCopy(): void;
 }) => {
   return (
-    <Button variant="donation" width="auto">
-      <Flex flexDirection="row" justifyContent="s">
-        <Icon name={icon} height="15px" mr="10px" />
-        <Text color="white" fontSize="14px">
-          {children}
-        </Text>
-      </Flex>
-    </Button>
+    <CopyToClipboard text={address} onCopy={onCopy}>
+      <Button variant="donation" width="auto">
+        <Flex flexDirection="row" justifyContent="s">
+          <Icon name={icon} height="15px" mr="10px" />
+          <Text color="white" fontSize="14px">
+            {children}
+          </Text>
+        </Flex>
+      </Button>
+    </CopyToClipboard>
   );
 };
 
@@ -78,6 +91,22 @@ const SubscribeInput = () => {
 };
 
 const DonateAndSubscribe = () => {
+  const [displayMessage, setDisplayMessage] = useState(false);
+
+  useEffect(() => {
+    if (displayMessage) {
+      const id = setTimeout(() => {
+        setDisplayMessage(false);
+      }, 3000);
+
+      return () => clearTimeout(id);
+    }
+  }, [displayMessage]);
+
+  const handleCopy = () => {
+    setDisplayMessage(true);
+  };
+
   return (
     <Flex
       flexDirection="column"
@@ -97,8 +126,33 @@ const DonateAndSubscribe = () => {
           flexDirection={{ _: 'column', lg: 'row' }}
           alignItems={{ _: 'center', lg: 'flex-start' }}
         >
-          <DonateButton icon="ether">Ethereum</DonateButton>
-          <DonateButton icon="bitcoin">Bitcoin</DonateButton>
+          <DonateButton
+            icon="ether"
+            address="0x4bbeEB066eD09B7AEd07bF39EEe0460DFa261520"
+            onCopy={handleCopy}
+          >
+            Ethereum
+          </DonateButton>
+          <DonateButton
+            icon="bitcoin"
+            address="32oirLEzZRhi33RCXDF9WHJjEb8RsrSss3"
+            onCopy={handleCopy}
+          >
+            Bitcoin
+          </DonateButton>
+        </Flex>
+
+        <Flex flexDirection="row" alignItems="baseline" minHeight="20px">
+          {displayMessage && (
+            <>
+              <Text mr="7px" color="#7ad832">
+                ✓
+              </Text>
+              <Text variant="footerLink" color="rgb(187, 194, 203)">
+                Address Copied to Clipboard!
+              </Text>
+            </>
+          )}
         </Flex>
       </Flex>
       <Flex
@@ -114,23 +168,25 @@ const DonateAndSubscribe = () => {
           Get updates from MyCrypto straight to your inbox!
         </Text>
         <SubscribeInput />
-        <Text
-          variant="footerLink"
-          fontSize="12px"
-          color="rgb(187, 194, 203)"
-          mt="10px"
-        >
-          By submitting your email, you <strong>affirmatively</strong> agree to
-          our{' '}
+        <Flex flexDirection="row" alignItems="baseline" flexWrap="wrap">
+          <Text
+            variant="footerLink"
+            fontSize="10px"
+            color="rgb(187, 194, 203)"
+            mt="10px"
+          >
+            By submitting your email, you <strong>affirmatively</strong> agree
+            to our&nbsp;
+          </Text>
           <Link
             href="https://about.mycrypto.com/privacy/"
             sx={{ textDecoration: 'none' }}
           >
-            <Text variant="link" fontSize="12px" color="primary">
+            <Text variant="link" fontSize="10px" color="primary">
               Privacy Policy
             </Text>
           </Link>
-        </Text>
+        </Flex>
       </Flex>
     </Flex>
   );

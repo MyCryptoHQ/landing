@@ -24,7 +24,7 @@
     "gatsby-transformer-sharp": "2.2.14",
     "normalize.css": "8.0.1",
     "react": "16.9.0",
-    "react-copy-to-clipboard": "5.0.2",
+    "react-copy-to-clipboard": "^5.0.2",
     "react-dom": "16.9.0",
     "react-helmet": "5.2.1",
     "react-slick": "0.26.1",
