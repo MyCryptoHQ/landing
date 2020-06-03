@@ -129,9 +129,23 @@ const WalletSlider = ({ list }: WalletListProp) => {
       <Media type="mobile">
         <SliderBox>
           <Slider {...settings}>
-            {list.map((w, idx) => (
-              <WalletCard key={idx} name={w.name} icon={w.icon} path={w.path} />
-            ))}
+            {list.map((w, idx) =>
+              w.mobile ? (
+                <WalletCard
+                  key={idx}
+                  name={w.mobile.name}
+                  icon={w.mobile.icon}
+                  path={w.mobile.path}
+                />
+              ) : (
+                <WalletCard
+                  key={idx}
+                  name={w.name}
+                  icon={w.icon}
+                  path={w.path}
+                />
+              )
+            )}
           </Slider>
         </SliderBox>
       </Media>
@@ -151,12 +165,12 @@ const WalletList = () => {
     >
       <Flex
         flexDirection={{ _: 'column', lg: 'row' }}
-        justifyContent={{ _: 'space-evenly', lg: 'center' }}
+        justifyContent={{ _: 'space-evenly', lg: 'space-between' }}
         alignItems="center"
         height="100%"
         width="100%"
       >
-        <Box width={{ _: 1 / 2, lg: 1 / 5 }}>
+        <Box width={{ _: 1 / 2, lg: 1 / 5, xxl: 2 / 5 }}>
           <Flex flexDirection="column" justifyContent="center" height="100%">
             <Heading variant="title" textAlign={{ _: 'center', lg: 'left' }}>
               Fully Compatible
@@ -166,7 +180,7 @@ const WalletList = () => {
             </Text>
           </Flex>
         </Box>
-        <Box width={{ _: '100%', lg: 4 / 5 }}>
+        <Box width={{ _: '100%', lg: 3 / 5 }}>
           <WalletSlider list={WALLET_CARDS} />
         </Box>
       </Flex>

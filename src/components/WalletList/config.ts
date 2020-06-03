@@ -5,6 +5,11 @@ export interface TWalletCard {
   name: string;
   icon: IconName;
   path: string;
+  mobile?: {
+    name: string;
+    icon: IconName;
+    path: string;
+  };
 }
 
 export const WALLET_CARDS: TWalletCard[] = [
@@ -12,6 +17,11 @@ export const WALLET_CARDS: TWalletCard[] = [
     name: 'Metamask',
     icon: 'metamask',
     path: `${getRoute('ADD_ACCOUNT')}/web3`,
+    mobile: {
+      name: 'Trust',
+      icon: 'trust',
+      path: `${getRoute('ADD_ACCOUNT')}/web3`,
+    },
   },
   {
     name: 'Ledger',
@@ -27,15 +37,20 @@ export const WALLET_CARDS: TWalletCard[] = [
     name: 'WalletConnect',
     icon: 'walletconnect',
     path: `${getRoute('ADD_ACCOUNT')}/walletconnect`,
+    mobile: {
+      name: 'Metamask',
+      icon: 'metamask',
+      path: `${getRoute('ADD_ACCOUNT')}/web3`,
+    },
   },
   {
     name: 'Frame',
     icon: 'frame',
     path: `${getRoute('ADD_ACCOUNT')}/web3`,
-  },
-  {
-    name: 'Trust',
-    icon: 'trust',
-    path: `${getRoute('ADD_ACCOUNT')}/web3`,
+    mobile: {
+      name: 'WalletConnect',
+      icon: 'walletconnect',
+      path: `${getRoute('ADD_ACCOUNT')}/walletconnect`,
+    },
   },
 ];
