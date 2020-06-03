@@ -37,7 +37,7 @@ const BottomAction = () => {
       </Button>
       <Link href={URLS.support} mt="20px" sx={{ textDecoration: 'none' }}>
         <Text variant="link" color="link">
-          Have Questions? We&apos;re Here to Help!
+          Have Questions? We're Here to Help!
         </Text>
       </Link>
       <Media type="mobile">

@@ -20,6 +20,7 @@ module.exports = {
     '@types': path.resolve('src/types'),
     '@theme': path.resolve('src/theme'),
     '@utils': path.resolve('src/utils'),
+    '@hooks': path.resolve('src/hooks'),
     gatsby: '<rootDir>/__tests__/__mocks__/gatsby',
   },
   testPathIgnorePatterns: [

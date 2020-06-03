@@ -1,7 +1,27 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Section, Heading, Text, Box, Flex, Icon, Button } from '@components';
+import { getFeaturedOS, getRelease } from '@utils';
+import { OSNames, GITHUB_RELEASE_NOTES_URL } from '@config';
 
 const DownloadApp = () => {
+  const featuredOS = getFeaturedOS();
+  const [downloadUrl, setDownloadUrl] = useState('');
+
+  useEffect(() => {
+    const getLink = async () => {
+      const { releaseUrls } = await getRelease();
+      const currentPlatformURL =
+        releaseUrls[featuredOS] || GITHUB_RELEASE_NOTES_URL;
+      setDownloadUrl(currentPlatformURL);
+    };
+    getLink();
+  }, []);
+
+  const openDownloadLink = (link: string) => {
+    const target = link === GITHUB_RELEASE_NOTES_URL ? '_blank' : '_self';
+    window.open(link, target);
+  };
+
   return (
     <Section
       type="landing"
@@ -26,8 +46,12 @@ const DownloadApp = () => {
           Keep your keys out of the browser with the MyCrypto Desktop App. You
           get more access to your funds, and scammers get less access to you.
         </Text>
-        <Button width={{ _: '100%', lg: '300px' }} variant="primary">
-          Download for macOS
+        <Button
+          width={{ _: '100%', lg: '300px' }}
+          variant="primary"
+          onClick={() => openDownloadLink(downloadUrl)}
+        >
+          Download for {OSNames[featuredOS]}
         </Button>
       </Box>
       <Box width={{ _: '100%', lg: 1 / 2 }} mb={{ _: '30px', lg: 0 }}>

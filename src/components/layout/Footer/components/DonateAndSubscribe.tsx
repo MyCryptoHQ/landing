@@ -1,6 +1,6 @@
 import React, { ReactNode, useState, FormEvent, ChangeEvent } from 'react';
 import { SUBSCRIBE } from '@config';
-import { useSubscribe } from '.';
+import { useSubscribe } from '@hooks';
 import {
   Flex,
   Button,

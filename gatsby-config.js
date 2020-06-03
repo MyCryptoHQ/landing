@@ -42,6 +42,7 @@ module.exports = {
           '@types': path.resolve(__dirname, 'src/types'),
           '@theme': path.resolve(__dirname, 'src/theme'),
           '@utils': path.resolve(__dirname, 'src/utils'),
+          '@hooks': path.resolve(__dirname, 'src/hooks'),
         },
         extensions: ['tsx', 'ts', 'js', 'jsx'],
       },
