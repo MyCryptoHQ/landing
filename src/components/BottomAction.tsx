@@ -19,17 +19,17 @@ const BottomAction = () => {
       flexDirection="column"
       alignItems="center"
       color="text"
-      py={{ _: '30px', lg: '100px' }}
-      px={{ _: '5%', lg: 0 }}
-      height={{ _: '100vh', lg: 'auto' }}
+      py={{ _: '30px', sm: '100px' }}
+      px={{ _: '5%', sm: 0 }}
+      height={{ _: '100vh', sm: 'auto' }}
       relative
       overflow="hidden"
     >
-      <Heading mt={{ _: '100px', lg: 0 }} mb="60px" textAlign="center">
+      <Heading mt={{ _: '100px', sm: 0 }} mb="60px" textAlign="center">
         Ready to start managing your funds safely and confidently?
       </Heading>
       <Button
-        width={{ _: '100%', lg: '300px' }}
+        width={{ _: '100%', sm: '50%', lg: '300px' }}
         variant="primary"
         onClick={() =>
           window.open(getRoute('DASHBOARD'), '_blank', 'noopener noreferrer')

@@ -23,15 +23,15 @@ type MediaProps = BaseProps & {
   type: 'desktop' | 'mobile';
 };
 
-const Media = ({ type, children, ...props }: MediaProps) => (
+const Media = ({ type, children, ...props }: MediaProps & BoxProps) => (
   <>
     {type === 'mobile' && (
-      <Box display={{ _: 'block', lg: 'none' }} {...props}>
+      <Box display={{ _: 'block', sm: 'none' }} {...props}>
         {children}
       </Box>
     )}
     {type === 'desktop' && (
-      <Box display={{ _: 'none', lg: 'block' }} {...props}>
+      <Box display={{ _: 'none', sm: 'block' }} {...props}>
         {children}
       </Box>
     )}

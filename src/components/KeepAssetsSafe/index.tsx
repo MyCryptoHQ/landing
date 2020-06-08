@@ -4,7 +4,7 @@ import { TIconWithText, ICONS_WITH_TEXT } from './config';
 
 const IconWithText = ({ icon, heading, text }: TIconWithText) => {
   return (
-    <Flex flexDirection="column" alignItems="center">
+    <Flex flexDirection="column" alignItems="center" my="20px">
       <Icon name={icon} />
       <Heading fontWeight="bold" my="20px">
         {heading}
@@ -26,8 +26,8 @@ const KeepAssetsSafe = () => {
     <Section
       type="landing"
       bg="muted"
-      py={{ _: '45px', lg: '100px' }}
-      px={{ _: '5%', lg: 0 }}
+      py={{ _: '45px', md: '100px' }}
+      px={{ _: '5%', md: 0 }}
       color="text"
       alignItems="center"
     >
@@ -36,9 +36,9 @@ const KeepAssetsSafe = () => {
       </Heading>
       <Flex
         width="100%"
-        flexDirection={{ _: 'column', lg: 'row' }}
+        flexDirection={{ _: 'column', md: 'row' }}
         justifyContent="space-evenly"
-        mt={{ _: '65px', lg: '100px' }}
+        mt={{ _: '65px', md: '100px' }}
       >
         {ICONS_WITH_TEXT.map((el, index) => (
           <IconWithText {...el} key={index} />

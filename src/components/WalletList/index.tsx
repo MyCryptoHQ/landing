@@ -96,13 +96,13 @@ const WalletSlider = ({ list }: WalletListProp) => {
     initialSlide: 0,
     responsive: [
       {
-        breakpoint: 820,
+        breakpoint: 1280,
         settings: {
           swipe: true,
           slidesToShow: 1,
           centerMode: true,
           swipeToSlide: false,
-          initialSlide: 0,
+          initialSlide: 2,
         },
       },
       {

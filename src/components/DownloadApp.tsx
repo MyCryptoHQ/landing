@@ -25,43 +25,43 @@ const DownloadApp = () => {
   return (
     <Section
       type="landing"
-      justifyContent={{ _: 'center', lg: 'space-between' }}
-      flexDirection={{ _: 'column-reverse', lg: 'row' }}
+      justifyContent={{ _: 'center', md: 'space-between' }}
+      flexDirection={{ _: 'column-reverse', md: 'row' }}
       bg="accent"
       color="textInvert"
-      py={{ _: '50px', lg: '150px' }}
-      px={{ _: '5%', lg: 0 }}
+      py={{ _: '50px', md: '150px' }}
+      px={{ _: '5%', md: 0 }}
     >
-      <Box width={{ _: '100%', lg: 1 / 2 }}>
-        <Heading textAlign={{ _: 'center', lg: 'inherit' }}>
+      <Box width={{ _: '100%', md: 1 / 2 }}>
+        <Heading textAlign={{ _: 'center', md: 'inherit' }}>
           Everythind is Even More Secure with our Desktop App
         </Heading>
         <Text
-          textAlign={{ _: 'center', lg: 'inherit' }}
+          textAlign={{ _: 'center', md: 'inherit' }}
           variant="subHeading"
           color="textInvert"
           my="20px"
-          mb={{ _: '70px', lg: '20px' }}
+          mb={{ _: '70px', md: '20px' }}
         >
           Keep your keys out of the browser with the MyCrypto Desktop App. You
           get more access to your funds, and scammers get less access to you.
         </Text>
         <Button
-          width={{ _: '100%', lg: '300px' }}
+          width={{ _: '100%', md: '300px' }}
           variant="primary"
           onClick={() => openDownloadLink(downloadUrl)}
         >
           Download for {OSNames[featuredOS]}
         </Button>
       </Box>
-      <Box width={{ _: '100%', lg: 1 / 2 }} mb={{ _: '30px', lg: 0 }}>
+      <Box width={{ _: '100%', md: 1 / 2 }} mb={{ _: '30px', md: 0 }}>
         <Flex
           justifyContent="center"
           alignItems="center"
           width="100%"
           height="100%"
         >
-          <Icon name="bottle" width={{ _: '50%', lg: 'auto' }} />
+          <Icon name="bottle" width={{ _: '50%', md: 'auto' }} />
         </Flex>
       </Box>
     </Section>

@@ -27,7 +27,7 @@ const Features = () => {
         flexDirection={{ _: 'column', lg: 'row' }}
         justifyContent={{ _: 'center', lg: 'space-between' }}
         alignItems={{ _: 'center', lg: 'flex-start' }}
-        my={{ _: '20px', lg: '65px' }}
+        my={{ _: '20px', sm: '50px', lg: '65px' }}
         width="100%"
       >
         <Box
@@ -48,31 +48,38 @@ const Features = () => {
             you'll ever need.
           </Text>
         </Box>
-        <Box width={{ _: '100%', lg: 2 / 3 }}>
-          <Media type="desktop">
-            <Icon name="manageYourWallets" width="100%" />
+        <Flex width={{ _: '100%', lg: 2 / 3 }} justifyContent="center">
+          <Media type="desktop" width={{ sm: '70%', lg: '100%' }}>
+            <Flex width="100%" justifyContent="center">
+              <Icon name="manageYourWallets" />
+            </Flex>
           </Media>
           <Media type="mobile">
             <Icon name="manageYourWalletsMobile" width="100%" />
           </Media>
-        </Box>
+        </Flex>
       </Flex>
       <Flex
         flexDirection={{ _: 'column-reverse', lg: 'row' }}
         justifyContent={{ _: 'center', lg: 'space-between' }}
         alignItems={{ _: 'center', lg: 'flex-start' }}
-        my={{ _: '20px', lg: '65px' }}
+        my={{ _: '20px', sm: '50px', lg: '65px' }}
         mb="20px"
         width="100%"
       >
-        <Box width={{ _: '100%', lg: 3 / 4 }}>
-          <Media type="desktop">
-            <Icon name="dashboard" width="100%" />
+        <Flex
+          width={{ _: '100%', lg: 3 / 4 }}
+          justifyContent={{ _: 'center', lg: 'flex-start' }}
+        >
+          <Media type="desktop" width={{ sm: '70%', lg: '100%' }}>
+            <Flex width="100%" justifyContent="center">
+              <Icon name="dashboard" />
+            </Flex>
           </Media>
           <Media type="mobile">
             <Icon name="dashboardMobile" width="100%" />
           </Media>
-        </Box>
+        </Flex>
         <Box
           width={{ _: '90%', lg: 1 / 4 }}
           mt={{ _: '0', lg: '150px' }}
@@ -96,7 +103,7 @@ const Features = () => {
         flexDirection={{ _: 'column', lg: 'row' }}
         justifyContent={{ _: 'center', lg: 'space-between' }}
         alignItems={{ _: 'center', lg: 'flex-start' }}
-        my={{ _: '20px', lg: '65px' }}
+        my={{ _: '20px', sm: '50px', lg: '65px' }}
         width="100%"
       >
         <Box
@@ -117,14 +124,19 @@ const Features = () => {
             fear.
           </Text>
         </Box>
-        <Box width={{ _: '100%', lg: 2 / 3 }}>
-          <Media type="desktop">
-            <Icon name="controlCrypto" width="80%" />
+        <Flex
+          width={{ _: '100%', lg: 2 / 3 }}
+          justifyContent={{ _: 'center', lg: 'flex-start' }}
+        >
+          <Media type="desktop" height={{ sm: '70%', lg: '100%' }}>
+            <Flex width="100%" justifyContent="center">
+              <Icon name="controlCrypto" />
+            </Flex>
           </Media>
           <Media type="mobile">
             <Icon name="controlCryptoMobile" width="100%" />
           </Media>
-        </Box>
+        </Flex>
       </Flex>
     </Section>
   );

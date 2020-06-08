@@ -20,13 +20,13 @@ const ActionCard = ({ icon, title, subTitle, url }: TStartCta) => {
     <Card
       variant="card"
       width={{ _: '30%', lg: '400px' }}
-      height={{ _: '160px', lg: '110px' }}
+      height={{ _: '180px', lg: '110px' }}
       padding={{ _: '0', lg: '25px 30px' }}
       mb="15px"
     >
       <Link href={url} sx={{ textDecoration: 'none' }}>
         <Flex
-          flexDirection={['column-reverse', null, null, null, 'row']}
+          flexDirection={{ _: 'column-reverse', lg: 'row' }}
           justifyContent={{ _: 'center', lg: 'space-between' }}
           alignItems="center"
           height="100%"
@@ -37,10 +37,15 @@ const ActionCard = ({ icon, title, subTitle, url }: TStartCta) => {
               variant="title"
               my={{ _: '10px', lg: 'inherit' }}
               color="text"
+              minHeight={{ _: '3rem', sm: 'auto' }}
             >
               {title}
             </Heading>
-            <Text textAlign={{ _: 'center', lg: 'left' }} variant="base">
+            <Text
+              textAlign={{ _: 'center', lg: 'left' }}
+              variant="base"
+              minHeight={{ _: '2rem', sm: 'auto' }}
+            >
               {subTitle}
             </Text>
           </Box>
@@ -61,13 +66,13 @@ const GetStarted = () => {
       sx={{
         backgroundImage: `url(${users})`,
         backgroundRepeat: 'no-repeat',
-        backgroundSize: ['85%', null, null, null, 'contain'],
+        backgroundSize: ['85%', '65%', '50%', '40%', 'contain'],
         backgroundPosition: [
           'center center',
           null,
           null,
-          'right center',
           null,
+          'right center',
           '80% center',
         ],
       }}

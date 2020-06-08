@@ -48,11 +48,12 @@ const PeaceOfMind = () => {
         width={{ _: '100%', lg: 2 / 3 }}
         flexDirection={{ _: 'column', lg: 'row' }}
         justifyContent="space-between"
+        alignItems="center"
         order={{ _: 1, lg: 2 }}
       >
         <Button
           mt={{ _: '20px', lg: 0 }}
-          width={{ _: '100%', lg: '300px' }}
+          width={{ _: '100%', sm: '50%', lg: '300px' }}
           variant="primary"
           onClick={() =>
             window.open(getRoute('DASHBOARD'), '_blank', 'noopener noreferrer')
@@ -62,7 +63,7 @@ const PeaceOfMind = () => {
         </Button>
         <Button
           mt={{ _: '20px', lg: 0 }}
-          width={{ _: '100%', lg: '300px' }}
+          width={{ _: '100%', sm: '50%', lg: '300px' }}
           variant="primary"
           onClick={() =>
             window.open(getRoute('DOWNLOAD'), '_blank', 'noopener noreferrer')
