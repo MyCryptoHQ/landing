@@ -31,7 +31,7 @@ export const getRelease = async () => {
 
   const releaseUrls: ReleaseURLs = {};
   Object.entries(ASSET_REG_EXPS).forEach(([key, regex]) => {
-    const asset = assets.find((a: any) => regex.test(a.name));
+    const asset = assets.find((a: ReleaseInfo) => regex.test(a.name));
     if (asset) {
       releaseUrls[key] = asset.browser_download_url;
     }
