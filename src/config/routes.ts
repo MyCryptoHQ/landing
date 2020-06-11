@@ -3,6 +3,7 @@ export interface TRoutes {
     path: string;
   };
 }
+export const TRoutes = undefined;
 
 export const APP_ROUTES: TRoutes = {
   DASHBOARD: {
@@ -50,3 +51,4 @@ export const APP_ROUTES: TRoutes = {
 };
 
 export type RouteName = keyof TRoutes;
+export const RouteName = undefined;

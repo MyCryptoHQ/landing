@@ -12,11 +12,11 @@ import {
 const Footer = () => {
   return (
     <Flex
-      height={{ _: '800px', lg: '300px' }}
+      height={{ _: '900px', lg: '300px' }}
       flexDirection={{ _: 'column', lg: 'row' }}
       justifyContent="center"
       alignItems="center"
-      padding={{ _: '40px 30px', lg: '40px 115px' }}
+      padding={{ _: '40px 30px', lg: '40px 50px', xl: '40px 115px' }}
       backgroundColor="accent"
     >
       <About />

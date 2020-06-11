@@ -1,18 +1,18 @@
 import React from 'react';
 import { Socials, SOCIAL_LINKS } from '.';
-import { Media, Text, Flex } from '@components';
+import { Box, Text, Flex } from '@components';
 
 const MobileBottom = () => {
   return (
     <Flex flexDirection="column" alignItems="center" order={6}>
-      <Media type="mobile">
+      <Box display={{ _: 'block', lg: 'none' }}>
         <Socials socials={SOCIAL_LINKS} />
         <Text
           variant="footerSmall"
           color="white"
           textAlign="center"
         >{`© ${new Date().getFullYear()} MyCrypto, Inc.`}</Text>
-      </Media>
+      </Box>
     </Flex>
   );
 };

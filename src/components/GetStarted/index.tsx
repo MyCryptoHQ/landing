@@ -23,6 +23,10 @@ const ActionCard = ({ icon, title, subTitle, url }: TStartCta) => {
       height={{ _: '180px', lg: '110px' }}
       padding={{ _: '0', lg: '25px 30px' }}
       mb="15px"
+      sx={{
+        ':hover': { transform: 'scale(1.03)', transition: 'all .3s' },
+        transition: 'all .3s',
+      }}
     >
       <Link href={url} sx={{ textDecoration: 'none' }}>
         <Flex
@@ -66,7 +70,7 @@ const GetStarted = () => {
       sx={{
         backgroundImage: `url(${users})`,
         backgroundRepeat: 'no-repeat',
-        backgroundSize: ['85%', '65%', '50%', '40%', 'contain'],
+        backgroundSize: ['65%', '65%', '50%', '40%', '60%', 'contain'],
         backgroundPosition: [
           'center center',
           null,

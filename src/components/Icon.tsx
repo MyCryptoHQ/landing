@@ -90,6 +90,7 @@ const IconMap = {
 };
 
 export type IconName = keyof typeof IconMap;
+export const IconName = undefined;
 
 type IconProps = {
   name: IconName;
@@ -104,5 +105,4 @@ const Icon = ({
   const SVGIcon = IconMap[name as IconName];
   return <Image src={SVGIcon} width={width} height={height} {...props} />;
 };
-
 export default Icon;

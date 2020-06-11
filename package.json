@@ -36,6 +36,7 @@
     "typeface-roboto-mono": "0.0.75"
   },
   "devDependencies": {
+    "@testing-library/react": "^10.2.1",
     "@types/jest": "25.2.1",
     "@types/react-dom": "16.9.6",
     "@types/react-helmet": "5.0.15",

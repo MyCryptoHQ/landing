@@ -59,6 +59,8 @@ const WalletCard = ({ name, icon, path }: TWalletCard) => {
         width: '130px',
         height: '130px',
         marginX: '5px',
+        ':hover': { transform: 'scale(1.05)', transition: 'all .3s' },
+        transition: 'all .3s',
       }}
     >
       <Link
@@ -180,7 +182,7 @@ const WalletList = () => {
             </Text>
           </Flex>
         </Box>
-        <Box width={{ _: '100%', lg: 3 / 5 }}>
+        <Box width={{ _: '100%', lg: 3.5 / 5 }}>
           <WalletSlider list={WALLET_CARDS} />
         </Box>
       </Flex>

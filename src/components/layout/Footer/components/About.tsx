@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flex, Text, Icon, Media } from '@components';
+import { Flex, Text, Icon, Box } from '@components';
 import { Socials, SOCIAL_LINKS } from '.';
 
 const About = () => {
@@ -16,6 +16,7 @@ const About = () => {
       <Text
         variant="footerSmall"
         color="white"
+        width={{ _: '80%', lg: 'auto' }}
         textAlign={{ _: 'center', lg: 'left' }}
       >
         MyCrypto is an open-source, client-side tool for generating ether
@@ -24,14 +25,14 @@ const About = () => {
         focused on building awesome products that put the power in people’s
         hands.
       </Text>
-      <Media type="desktop">
+      <Box display={{ _: 'none', lg: 'block' }}>
         <Socials socials={SOCIAL_LINKS} />
         <Text
           variant="footerSmall"
           color="white"
           mt="20px"
         >{`© ${new Date().getFullYear()} MyCrypto, Inc.`}</Text>
-      </Media>
+      </Box>
     </Flex>
   );
 };

@@ -22,6 +22,7 @@ const Menu = styled.div`
   position: fixed;
   left: 0;
   overflow: auto;
+  font-size: 16px;
   width: 375px;
   height: 100%;
   z-index: 9999;
