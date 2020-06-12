@@ -87,10 +87,10 @@ export const LINK_COLUMNS: TLink[] = [
 const Links = ({ links }: { links: TLink[] }) => {
   return (
     <Flex
-      flexDirection="row"
+      flexDirection={{ _: 'column', sm: 'row' }}
       justifyContent={{ _: 'center', lg: 'space-between' }}
+      alignItems="center"
       width={{ _: '100%', lg: '40%' }}
-      flexWrap="wrap-reverse"
       order={{ _: 4, lg: 2 }}
     >
       {links.map((column, index) => (
@@ -100,6 +100,7 @@ const Links = ({ links }: { links: TLink[] }) => {
           flexDirection="column"
           alignItems="center"
           width={1 / 3}
+          my={{ _: '20px', sm: 'auto' }}
         >
           <Text fontWeight="500" color="white" mb="10px">
             {column.heading}

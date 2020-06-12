@@ -16,6 +16,7 @@ const About = () => {
       <Text
         variant="footerSmall"
         color="white"
+        mt="20px"
         width={{ _: '80%', lg: 'auto' }}
         textAlign={{ _: 'center', lg: 'left' }}
       >

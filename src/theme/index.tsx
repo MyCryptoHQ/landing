@@ -16,7 +16,7 @@ const GlobalStyle = createGlobalStyle`
   }
   @media screen and (max-width: 600px){
     html, body {
-    font-size: 12px;
+    font-size: 13px;
   }
   }
 `;
