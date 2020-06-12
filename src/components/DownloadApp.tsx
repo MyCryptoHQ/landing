@@ -15,7 +15,7 @@ const DownloadApp = () => {
       setDownloadUrl(currentPlatformURL);
     };
     getLink();
-  }, []);
+  }, [featuredOS]);
 
   const openDownloadLink = (link: string) => {
     const target = link === GITHUB_RELEASE_NOTES_URL ? '_blank' : '_self';
