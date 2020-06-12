@@ -62,63 +62,64 @@ const ActionCard = ({ icon, title, subTitle, url }: TStartCta) => {
 
 const GetStarted = () => {
   return (
-    <Section
-      color="text"
-      pl={{ _: 0, lg: '7%' }}
-      my={{ _: '0', lg: '20px' }}
-      height={{ _: '90vh', lg: 'auto' }}
-      sx={{
-        backgroundImage: `url(${users})`,
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: ['65%', '65%', '50%', '40%', '60%', 'contain'],
-        backgroundPosition: [
-          'center center',
-          null,
-          null,
-          null,
-          'right center',
-          '80% center',
-        ],
-      }}
-    >
+    <Section color="text">
       <Box
-        width={{ _: '100%', lg: 1 / 2 }}
-        height="100%"
-        py={{ _: '20px', lg: '55px' }}
+        height={{ _: '90vh', lg: 'auto' }}
+        pl={{ _: 0, lg: '7%' }}
+        my={{ _: '0', lg: '20px' }}
+        sx={{
+          backgroundImage: `url(${users})`,
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: ['65%', '65%', '50%', '40%', '60%', 'contain'],
+          backgroundPosition: [
+            'center center',
+            null,
+            null,
+            null,
+            'right center',
+            '80% center',
+          ],
+        }}
       >
-        <Flex
-          flexDirection="column"
-          alignItems={{ _: 'center', lg: 'flex-start' }}
-          justifyContent={{ _: 'space-between', lg: 'flex-start' }}
+        <Box
+          width={{ _: '100%', lg: 1 / 2 }}
           height="100%"
+          py={{ _: '20px', lg: '55px' }}
         >
-          <Box>
-            <Heading
-              textAlign={{ _: 'center', lg: 'left' }}
-              variant="largeHeading"
-            >
-              You're In The Right Place.
-            </Heading>
-            <Heading
-              textAlign={{ _: 'center', lg: 'left' }}
-              sx={{ marginTop: '10px' }}
-            >
-              It's Time To Use MyCrypto
-              <br />
-              For Your Crypto.
-            </Heading>
-          </Box>
           <Flex
-            flexDirection={{ _: 'row', lg: 'column' }}
-            justifyContent={{ _: 'space-evenly', lg: 'flex-start' }}
-            sx={{ marginTop: '70px' }}
-            width="100%"
+            flexDirection="column"
+            alignItems={{ _: 'center', lg: 'flex-start' }}
+            justifyContent={{ _: 'space-between', lg: 'flex-start' }}
+            height="100%"
           >
-            {START_CTAS.map((CTA, index) => (
-              <ActionCard {...CTA} key={index} />
-            ))}
+            <Box>
+              <Heading
+                textAlign={{ _: 'center', lg: 'left' }}
+                variant="largeHeading"
+              >
+                You're In The Right Place.
+              </Heading>
+              <Heading
+                textAlign={{ _: 'center', lg: 'left' }}
+                sx={{ marginTop: '10px' }}
+              >
+                It's Time To Use MyCrypto
+                <br />
+                For Your Crypto.
+              </Heading>
+            </Box>
+            <Flex
+              flexDirection={{ _: 'row', lg: 'column' }}
+              justifyContent={{ _: 'space-evenly', lg: 'flex-start' }}
+              sx={{ marginTop: '70px' }}
+              width="100%"
+            >
+              {START_CTAS.map((CTA, index) => (
+                <ActionCard {...CTA} key={index} />
+              ))}
+            </Flex>
           </Flex>
-        </Flex>
+        </Box>
       </Box>
     </Section>
   );

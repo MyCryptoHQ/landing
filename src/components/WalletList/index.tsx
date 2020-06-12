@@ -157,35 +157,34 @@ const WalletSlider = ({ list }: WalletListProp) => {
 
 const WalletList = () => {
   return (
-    <Section
-      bg="muted"
-      flexDirection="row"
-      py="20px"
-      px={{ _: 0, lg: '140px' }}
-      height={{ _: '350px', lg: 'auto' }}
-      color="text"
-    >
-      <Flex
-        flexDirection={{ _: 'column', lg: 'row' }}
-        justifyContent={{ _: 'space-evenly', lg: 'space-between' }}
-        alignItems="center"
-        height="100%"
-        width="100%"
+    <Section bg="muted" flexDirection="row" color="text">
+      <Box
+        py="20px"
+        px={{ _: 0, lg: '140px' }}
+        height={{ _: '350px', lg: 'auto' }}
       >
-        <Box width={{ _: 1 / 2, lg: 1 / 5, xxl: 2 / 5 }}>
-          <Flex flexDirection="column" justifyContent="center" height="100%">
-            <Heading variant="title" textAlign={{ _: 'center', lg: 'left' }}>
-              Fully Compatible
-            </Heading>
-            <Text textAlign={{ _: 'center', lg: 'left' }} variant="base">
-              Use with your favorite hardware and software wallets:
-            </Text>
-          </Flex>
-        </Box>
-        <Box width={{ _: '100%', lg: 3.5 / 5 }}>
-          <WalletSlider list={WALLET_CARDS} />
-        </Box>
-      </Flex>
+        <Flex
+          flexDirection={{ _: 'column', lg: 'row' }}
+          justifyContent={{ _: 'space-evenly', lg: 'space-between' }}
+          alignItems="center"
+          height="100%"
+          width="100%"
+        >
+          <Box width={{ _: 1 / 2, lg: 1 / 5, xxl: 2 / 5 }}>
+            <Flex flexDirection="column" justifyContent="center" height="100%">
+              <Heading variant="title" textAlign={{ _: 'center', lg: 'left' }}>
+                Fully Compatible
+              </Heading>
+              <Text textAlign={{ _: 'center', lg: 'left' }} variant="base">
+                Use with your favorite hardware and software wallets:
+              </Text>
+            </Flex>
+          </Box>
+          <Box width={{ _: '100%', lg: 3.5 / 5 }}>
+            <WalletSlider list={WALLET_CARDS} />
+          </Box>
+        </Flex>
+      </Box>
     </Section>
   );
 };

@@ -20,6 +20,7 @@ const Section = ({
     <Box bg={bg}>
       <Box
         width={{ _: '100%', md: '80%', lg: '75%' }}
+        maxWidth="1920px"
         margin="0 auto"
         sx={{ position: relative ? 'relative' : '' }}
       >
@@ -29,9 +30,11 @@ const Section = ({
       </Box>
     </Box>
   ) : (
-    <Box width={'100%'} bg={bg} {...props}>
-      {children}
-    </Box>
+    <Flex justifyContent="center" bg={bg} width={'100%'} {...props}>
+      <Box width={'100%'} maxWidth="1920px">
+        {children}
+      </Box>
+    </Flex>
   );
 };
 
