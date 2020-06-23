@@ -10,6 +10,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-typescript`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -28,7 +29,7 @@ module.exports = {
         background_color: `#fff`,
         theme_color: `#007896`,
         display: `minimal-ui`,
-        icon: `src/assets/favicon.png`, // This path is relative to the root of the site.
+        icon: `src/assets/favicon.png`,
       },
     },
     {
@@ -47,17 +48,5 @@ module.exports = {
         extensions: ['tsx', 'ts', 'js', 'jsx'],
       },
     },
-    {
-      resolve: `gatsby-plugin-styled-components`,
-      options: {
-        // Change plugin default options here, e.g.:
-        // ssr: false
-        // displayName: false,
-        // minify: false
-      },
-    },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
   ],
 };
