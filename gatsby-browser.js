@@ -4,10 +4,6 @@
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
 
-import { Root } from './src/Root';
-
 // Include theme fonts.
-require('typeface-lato');
-require('typeface-roboto-mono');
-
-export const wrapRootElement = Root;
+import 'typeface-lato';
+import 'typeface-roboto-mono';

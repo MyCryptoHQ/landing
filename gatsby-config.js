@@ -48,5 +48,11 @@ module.exports = {
         extensions: ['tsx', 'ts', 'js', 'jsx'],
       },
     },
+    {
+      resolve: 'gatsby-plugin-layout',
+      options: {
+        component: require.resolve('./src/Root.tsx'),
+      },
+    },
   ],
 };
