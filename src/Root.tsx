@@ -7,10 +7,12 @@ import Theme from './theme';
  * Root component that we provide to Gatsby to wrap all our
  * components in.
  */
-export const Root: React.SFC<{ element: React.ReactNode }> = ({ element }) => {
+const Root: React.FunctionComponent = ({ children }) => {
   return (
     <Theme>
-      <Layout>{element}</Layout>
+      <Layout>{children}</Layout>
     </Theme>
   );
 };
+
+export default Root;
