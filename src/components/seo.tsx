@@ -24,10 +24,10 @@ function SEO({ description = '', lang = 'en', meta = [], title = '' }) {
     `
   );
 
-  const { image } = useStaticQuery(
+  const { file } = useStaticQuery(
     graphql`
       query {
-        image(relativePath: { eq: "assets/link-preview.png" }) {
+        file(relativePath: { eq: "assets/link-preview.png" }) {
           childImageSharp {
             resize(width: 1200) {
               src
@@ -41,8 +41,9 @@ function SEO({ description = '', lang = 'en', meta = [], title = '' }) {
   );
 
   const metaDescription = description || site.siteMetadata.description;
+  const image = file.childImageSharp.resize;
   const metaImage =
-    image && image.childImageSharp.resize
+    image && image.src
       ? `${site.siteMetadata.siteUrl}${image.childImageSharp.resize.src}`
       : null;
 
