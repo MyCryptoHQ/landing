@@ -27,8 +27,8 @@ function SEO({ description = '', lang = 'en', meta = [], title = '' }) {
   const { image } = useStaticQuery(
     graphql`
       query {
-        file(relativePath: { eq: "assets/link-preview.png" }) {
-          image: childImageSharp {
+        image(relativePath: { eq: "assets/link-preview.png" }) {
+          childImageSharp {
             resize(width: 1200) {
               src
               height
@@ -42,7 +42,9 @@ function SEO({ description = '', lang = 'en', meta = [], title = '' }) {
 
   const metaDescription = description || site.siteMetadata.description;
   const metaImage =
-    image && image.src ? `${site.siteMetadata.siteUrl}${image.src}` : null;
+    image && image.childImageSharp.resize
+      ? `${site.siteMetadata.siteUrl}${image.childImageSharp.resize.src}`
+      : null;
 
   return (
     <Helmet
