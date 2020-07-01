@@ -24,7 +24,25 @@ function SEO({ description = '', lang = 'en', meta = [], title = '' }) {
     `
   );
 
+  const { image } = useStaticQuery(
+    graphql`
+      query {
+        file(relativePath: { eq: "assets/link-preview.png" }) {
+          image: childImageSharp {
+            resize(width: 1200) {
+              src
+              height
+              width
+            }
+          }
+        }
+      }
+    `
+  );
+
   const metaDescription = description || site.siteMetadata.description;
+  const metaImage =
+    image && image.src ? `${site.siteMetadata.siteUrl}${image.src}` : null;
 
   return (
     <Helmet
@@ -59,6 +77,10 @@ function SEO({ description = '', lang = 'en', meta = [], title = '' }) {
           content: site.siteMetadata.author,
         },
         {
+          name: `twitter:site`,
+          content: site.siteMetadata.author,
+        },
+        {
           name: `twitter:title`,
           content: title,
         },
@@ -66,7 +88,35 @@ function SEO({ description = '', lang = 'en', meta = [], title = '' }) {
           name: `twitter:description`,
           content: metaDescription,
         },
-      ].concat(meta)}
+      ]
+        .concat(
+          metaImage
+            ? [
+                {
+                  property: 'og:image',
+                  content: image,
+                },
+                {
+                  property: 'og:image:width',
+                  content: image.width,
+                },
+                {
+                  property: 'og:image:height',
+                  content: image.height,
+                },
+                {
+                  name: 'twitter:card',
+                  content: 'summary_large_image',
+                },
+              ]
+            : [
+                {
+                  name: 'twitter:card',
+                  content: 'summary',
+                },
+              ]
+        )
+        .concat(meta)}
     />
   );
 }

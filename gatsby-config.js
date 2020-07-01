@@ -5,12 +5,14 @@ module.exports = {
   siteMetadata: {
     title: `MyCrypto`,
     description: `MyCrypto is a free, open-source interface for interacting with the blockchain.`,
-    author: `@mycryptohq`,
+    author: `@MyCrypto`,
+    siteUrl: `https://www.beta.mycrypto.com`,
   },
   plugins: [
     `gatsby-plugin-typescript`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -23,7 +25,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
+        name: `MyCrypto`,
         short_name: `mycrypto`,
         start_url: `/`,
         background_color: `#fff`,
