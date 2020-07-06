@@ -6,7 +6,7 @@ module.exports = {
     title: `MyCrypto`,
     description: `MyCrypto is a free, open-source interface for interacting with the blockchain.`,
     author: `@MyCrypto`,
-    siteUrl: `https://www.beta.mycrypto.com`,
+    siteUrl: `https://myc-landing.netlify.app`,
   },
   plugins: [
     `gatsby-plugin-typescript`,
