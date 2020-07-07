@@ -2,7 +2,13 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 
-function SEO({ description = '', lang = 'en', meta = [], title = '' }) {
+function SEO({
+  description = '',
+  lang = 'en',
+  meta = [],
+  title = '',
+  pathname = '/',
+}) {
   const { site, file } = useStaticQuery(
     graphql`
       query {
@@ -11,6 +17,9 @@ function SEO({ description = '', lang = 'en', meta = [], title = '' }) {
             title
             description
             author
+            social {
+              twitter
+            }
           }
         }
         file(relativePath: { eq: "link-preview.png" }) {
@@ -27,7 +36,11 @@ function SEO({ description = '', lang = 'en', meta = [], title = '' }) {
   );
 
   const metaDescription = description || site.siteMetadata.description;
-  const image = file.childImageSharp;
+  const metaUrl = `${site.siteMetadata.siteUrl}${pathname}`;
+  const image =
+    file && file.childImageSharp && file.childImageSharp.src
+      ? file.childImageSharp
+      : null;
   return (
     <Helmet
       htmlAttributes={{
@@ -53,12 +66,16 @@ function SEO({ description = '', lang = 'en', meta = [], title = '' }) {
           content: `website`,
         },
         {
+          property: `og:url`,
+          content: metaUrl,
+        },
+        {
           name: `twitter:card`,
           content: `summary`,
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata.author,
+          content: site.siteMetadata.social.twitter,
         },
         {
           name: `twitter:site`,
@@ -73,16 +90,37 @@ function SEO({ description = '', lang = 'en', meta = [], title = '' }) {
           content: metaDescription,
         },
       ]
-        .concat([
-          {
-            property: 'og:image',
-            content: `${site.siteMetadata.siteUrl}${image.src}`,
-          },
-          {
-            name: 'twitter:card',
-            content: 'summary_large_image',
-          },
-        ])
+        .concat(
+          image
+            ? [
+                {
+                  property: 'og:image',
+                  content: `${site.siteMetadata.siteUrl}${image.src}`,
+                },
+                {
+                  property: `og:image:alt`,
+                  content: title,
+                },
+                {
+                  property: 'og:image:width',
+                  content: image.width,
+                },
+                {
+                  property: 'og:image:height',
+                  content: image.height,
+                },
+                {
+                  name: 'twitter:card',
+                  content: 'summary_large_image',
+                },
+              ]
+            : [
+                {
+                  name: `twitter:card`,
+                  content: `summary`,
+                },
+              ]
+        )
         .concat(meta)}
     />
   );

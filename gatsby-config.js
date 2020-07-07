@@ -5,8 +5,11 @@ module.exports = {
   siteMetadata: {
     title: `MyCrypto`,
     description: `MyCrypto is a free, open-source interface for interacting with the blockchain.`,
-    author: `@MyCrypto`,
+    author: `MyCrypto`,
     siteUrl: `https://myc-landing.netlify.app`,
+    social: {
+      twitter: `@MyCrypto`,
+    },
   },
   plugins: [
     `gatsby-plugin-typescript`,
@@ -56,5 +59,14 @@ module.exports = {
         component: require.resolve('./src/Root.tsx'),
       },
     },
+    // TODO: Update when we have Matomo config
+    // {
+    //   resolve: 'gatsby-plugin-matomo',
+    //   options: {
+    //     siteId: 'YOUR_SITE_ID',
+    //     matomoUrl: 'https://YOUR_MATOMO_URL.COM',
+    //     siteUrl: 'https://YOUR_LIVE_SITE_URL.COM',
+    //   },
+    // },
   ],
 };
