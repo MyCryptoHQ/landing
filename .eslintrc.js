@@ -12,6 +12,7 @@ module.exports = {
     'prettier/@typescript-eslint',
     'plugin:prettier/recommended',
     'plugin:jest/recommended',
+    'plugin:testcafe/recommended',
   ],
   globals: {
     Atomics: 'readonly',
@@ -24,10 +25,12 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module',
   },
-  plugins: ['@typescript-eslint', 'react', 'jest'],
+  plugins: ['@typescript-eslint', 'react', 'jest', 'testcafe'],
   rules: {
     '@typescript-eslint/explicit-function-return-type': 'off',
     'react/prop-types': 0,
+    'jest/no-test-callback': 'off',
+    'jest/expect-expect': 'off',
     'react/no-unescaped-entities': 'off',
     'no-console': ['warn', { allow: ['warn', 'error', 'debug'] }],
   },
