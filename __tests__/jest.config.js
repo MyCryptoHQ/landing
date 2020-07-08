@@ -8,7 +8,7 @@ module.exports = {
     '^.+\\.[jt]sx?$': `<rootDir>/__tests__/jest-preprocess.js`,
   },
   testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$',
-  moduleDirectories: ['node_modules', 'src'],
+  moduleDirectories: ['node_modules', 'src', '<rootDir>/__tests__'],
   moduleNameMapper: {
     // A map from regular expressions to module names that allow to stub out resources with a single module
     '.+\\.(css|styl|less|sass|scss)$': `identity-obj-proxy`,
