@@ -68,22 +68,6 @@ function SEO({
           content: metaUrl,
         },
         {
-          name: `twitter:creator`,
-          content: site.siteMetadata.social.twitter,
-        },
-        {
-          name: `twitter:site`,
-          content: site.siteMetadata.author,
-        },
-        {
-          name: `twitter:title`,
-          content: title,
-        },
-        {
-          name: `twitter:description`,
-          content: metaDescription,
-        },
-        {
           property: 'og:image',
           content: `${site.siteMetadata.siteUrl}${image.src}`,
         },
@@ -98,6 +82,22 @@ function SEO({
         {
           property: 'og:image:height',
           content: image.height,
+        },
+        {
+          name: `twitter:creator`,
+          content: site.siteMetadata.social.twitter,
+        },
+        {
+          name: `twitter:site`,
+          content: site.siteMetadata.author,
+        },
+        {
+          name: `twitter:title`,
+          content: title,
+        },
+        {
+          name: `twitter:description`,
+          content: metaDescription,
         },
         {
           property: 'twitter:image',

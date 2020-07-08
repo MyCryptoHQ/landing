@@ -59,14 +59,13 @@ module.exports = {
         component: require.resolve('./src/Root.tsx'),
       },
     },
-    // TODO: Update when we have Matomo config
-    // {
-    //   resolve: 'gatsby-plugin-matomo',
-    //   options: {
-    //     siteId: 'YOUR_SITE_ID',
-    //     matomoUrl: 'https://YOUR_MATOMO_URL.COM',
-    //     siteUrl: 'https://YOUR_LIVE_SITE_URL.COM',
-    //   },
-    // },
+    {
+      resolve: 'gatsby-plugin-matomo',
+      options: {
+        siteId: '15',
+        matomoUrl: 'https://analytics.mycryptoapi.com/',
+        siteUrl: 'https://myc-landing.netlify.app/',
+      },
+    },
   ],
 };
