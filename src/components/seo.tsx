@@ -1,16 +1,15 @@
-/**
- * SEO component that queries for data with
- *  Gatsby's useStaticQuery React hook
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from 'react';
 import Helmet from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 
-function SEO({ description = '', lang = 'en', meta = [], title = '' }) {
-  const { site } = useStaticQuery(
+function SEO({
+  description = '',
+  lang = 'en',
+  meta = [],
+  title = '',
+  pathname = '/',
+}) {
+  const { site, file } = useStaticQuery(
     graphql`
       query {
         site {
@@ -18,6 +17,18 @@ function SEO({ description = '', lang = 'en', meta = [], title = '' }) {
             title
             description
             author
+            social {
+              twitter
+            }
+          }
+        }
+        file(relativePath: { eq: "link-preview.png" }) {
+          childImageSharp {
+            resize(width: 1200) {
+              src
+              height
+              width
+            }
           }
         }
       }
@@ -25,7 +36,11 @@ function SEO({ description = '', lang = 'en', meta = [], title = '' }) {
   );
 
   const metaDescription = description || site.siteMetadata.description;
-
+  const metaUrl = `${site.siteMetadata.siteUrl}${pathname}`;
+  const image =
+    file && file.childImageSharp && file.childImageSharp.src
+      ? file.childImageSharp
+      : null;
   return (
     <Helmet
       htmlAttributes={{
@@ -51,11 +66,19 @@ function SEO({ description = '', lang = 'en', meta = [], title = '' }) {
           content: `website`,
         },
         {
+          property: `og:url`,
+          content: metaUrl,
+        },
+        {
           name: `twitter:card`,
           content: `summary`,
         },
         {
           name: `twitter:creator`,
+          content: site.siteMetadata.social.twitter,
+        },
+        {
+          name: `twitter:site`,
           content: site.siteMetadata.author,
         },
         {
@@ -66,7 +89,39 @@ function SEO({ description = '', lang = 'en', meta = [], title = '' }) {
           name: `twitter:description`,
           content: metaDescription,
         },
-      ].concat(meta)}
+      ]
+        .concat(
+          image
+            ? [
+                {
+                  property: 'og:image',
+                  content: `${site.siteMetadata.siteUrl}${image.src}`,
+                },
+                {
+                  property: `og:image:alt`,
+                  content: title,
+                },
+                {
+                  property: 'og:image:width',
+                  content: image.width,
+                },
+                {
+                  property: 'og:image:height',
+                  content: image.height,
+                },
+                {
+                  name: 'twitter:card',
+                  content: 'summary_large_image',
+                },
+              ]
+            : [
+                {
+                  name: `twitter:card`,
+                  content: `summary`,
+                },
+              ]
+        )
+        .concat(meta)}
     />
   );
 }

@@ -5,12 +5,17 @@ module.exports = {
   siteMetadata: {
     title: `MyCrypto`,
     description: `MyCrypto is a free, open-source interface for interacting with the blockchain.`,
-    author: `@mycryptohq`,
+    author: `MyCrypto`,
+    siteUrl: `https://myc-landing.netlify.app`,
+    social: {
+      twitter: `@MyCrypto`,
+    },
   },
   plugins: [
     `gatsby-plugin-typescript`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -23,7 +28,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
+        name: `MyCrypto`,
         short_name: `mycrypto`,
         start_url: `/`,
         background_color: `#fff`,
@@ -54,5 +59,14 @@ module.exports = {
         component: require.resolve('./src/Root.tsx'),
       },
     },
+    // TODO: Update when we have Matomo config
+    // {
+    //   resolve: 'gatsby-plugin-matomo',
+    //   options: {
+    //     siteId: 'YOUR_SITE_ID',
+    //     matomoUrl: 'https://YOUR_MATOMO_URL.COM',
+    //     siteUrl: 'https://YOUR_LIVE_SITE_URL.COM',
+    //   },
+    // },
   ],
 };
