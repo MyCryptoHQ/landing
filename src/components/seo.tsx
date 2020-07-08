@@ -17,6 +17,7 @@ function SEO({
             title
             description
             author
+            siteUrl
             social {
               twitter
             }
@@ -87,37 +88,28 @@ function SEO({
           content: metaDescription,
         },
       ]
-        .concat(
-          image
-            ? [
-                {
-                  property: 'og:image',
-                  content: `${site.siteMetadata.siteUrl}${image.src}`,
-                },
-                {
-                  property: `og:image:alt`,
-                  content: title,
-                },
-                {
-                  property: 'og:image:width',
-                  content: image.width,
-                },
-                {
-                  property: 'og:image:height',
-                  content: image.height,
-                },
-                {
-                  name: 'twitter:card',
-                  content: 'summary_large_image',
-                },
-              ]
-            : [
-                {
-                  name: `twitter:card`,
-                  content: `summary`,
-                },
-              ]
-        )
+        .concat([
+          {
+            property: 'og:image',
+            content: `${site.siteMetadata.siteUrl}${image.src}`,
+          },
+          {
+            property: `og:image:alt`,
+            content: title,
+          },
+          {
+            property: 'og:image:width',
+            content: image.width,
+          },
+          {
+            property: 'og:image:height',
+            content: image.height,
+          },
+          {
+            name: 'twitter:card',
+            content: 'summary_large_image',
+          },
+        ])
         .concat(meta)}
     />
   );
