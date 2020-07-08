@@ -68,10 +68,6 @@ function SEO({
           content: metaUrl,
         },
         {
-          name: `twitter:card`,
-          content: `summary`,
-        },
-        {
           name: `twitter:creator`,
           content: site.siteMetadata.social.twitter,
         },
@@ -87,30 +83,43 @@ function SEO({
           name: `twitter:description`,
           content: metaDescription,
         },
-      ]
-        .concat([
-          {
-            property: 'og:image',
-            content: `${site.siteMetadata.siteUrl}${image.src}`,
-          },
-          {
-            property: `og:image:alt`,
-            content: title,
-          },
-          {
-            property: 'og:image:width',
-            content: image.width,
-          },
-          {
-            property: 'og:image:height',
-            content: image.height,
-          },
-          {
-            name: 'twitter:card',
-            content: 'summary_large_image',
-          },
-        ])
-        .concat(meta)}
+        {
+          property: 'og:image',
+          content: `${site.siteMetadata.siteUrl}${image.src}`,
+        },
+        {
+          property: `og:image:alt`,
+          content: title,
+        },
+        {
+          property: 'og:image:width',
+          content: image.width,
+        },
+        {
+          property: 'og:image:height',
+          content: image.height,
+        },
+        {
+          property: 'twitter:image',
+          content: `${site.siteMetadata.siteUrl}${image.src}`,
+        },
+        {
+          property: `twitter:image:alt`,
+          content: title,
+        },
+        {
+          property: 'twitter:image:width',
+          content: image.width,
+        },
+        {
+          property: 'twitter:image:height',
+          content: image.height,
+        },
+        {
+          name: 'twitter:card',
+          content: 'summary_large_image',
+        },
+      ].concat(meta)}
     />
   );
 }
