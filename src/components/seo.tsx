@@ -37,10 +37,7 @@ function SEO({
 
   const metaDescription = description || site.siteMetadata.description;
   const metaUrl = `${site.siteMetadata.siteUrl}${pathname}`;
-  const image =
-    file && file.childImageSharp && file.childImageSharp.src
-      ? file.childImageSharp
-      : null;
+  const image = file.childImageSharp.resize;
   return (
     <Helmet
       htmlAttributes={{
