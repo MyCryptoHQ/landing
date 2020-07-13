@@ -34,6 +34,7 @@ import medium from '@assets/socials/social-medium.svg';
 import MYCLogo from '@assets/logo-mycrypto.svg';
 import bitcoin from '@assets/bitcoin.svg';
 import ether from '@assets/ether.svg';
+import sadWallet from '@assets/icn-sad-wallet.svg';
 
 /**
  * Wallets
@@ -87,6 +88,7 @@ const IconMap = {
   frame,
   trust,
   web3Default,
+  sadWallet,
 };
 
 export type IconName = keyof typeof IconMap;
