@@ -17,6 +17,8 @@ const GlobalStyle = createGlobalStyle`
   @media screen and (max-width: 600px){
     html, body {
     font-size: 13px;
+    overflow: scroll;
+    overflow-x: hidden;
   }
   }
 `;
