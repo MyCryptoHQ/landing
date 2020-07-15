@@ -6,6 +6,7 @@ import { Transition } from 'react-spring/renderprops.cjs';
 import styled from 'styled-components';
 import { Icon } from '@mycrypto/ui';
 
+import { URLS } from '@config';
 import { getRoute } from '@utils';
 import { theme } from '@theme';
 
@@ -298,11 +299,7 @@ const Header = () => {
   };
 
   const openHelpSupportPage = (): void => {
-    window.open(
-      'https://medium.com/@mycrypto',
-      '_blank',
-      'noopener noreferrer'
-    );
+    window.open(URLS.support, '_blank', 'noopener noreferrer');
   };
 
   return (
