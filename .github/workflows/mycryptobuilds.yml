@@ -21,13 +21,13 @@ jobs:
     steps:
       - name: Checkout PR
         uses: actions/checkout@v1
-        
+
       # Fetch the PR number to use it with AWS
       - name: Set PR_NUMBER
         run: |
           PR_NUMBER=$(echo $GITHUB_REF | awk 'BEGIN { FS = "/" } ; { print $3 }')
           echo "::set-env name=PR_NUMBER::$PR_NUMBER"
-          
+
       - name: Retrieve engines' versions from package.json to env variables
         id: engines
         run: echo "##[set-output name=NVMRC;]$(cat package.json | grep '\"node\":' | sed 's/^ *//;s/ *$//;s/\"node\":\ \"//;s/\",//' )"
@@ -55,6 +55,8 @@ jobs:
 
       - name: yarn build
         run: yarn build
+        env:
+          PATH_PREFIX: ${GITHUB_SHA}
 
       - name: S3 Sync - SHA Push
         uses: jakejarvis/s3-sync-action@v0.5.1
