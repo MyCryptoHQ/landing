@@ -53,8 +53,15 @@ jobs:
         if: steps.cache.outputs.cache-hit != 'true'
         run: yarn
 
-      - name: yarn build
+      - name: Install cross-env
+        ## If no cache is found, install dependencies
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: yarn add --global cross-env
+
+      - name: yarn build sha-build
         run: yarn build
+        env:
+          PATH_PREFIX: '/${{ github.event.pull_request.head.sha }}'
 
       - name: S3 Sync - SHA Push
         uses: jakejarvis/s3-sync-action@v0.5.1

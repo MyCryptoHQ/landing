@@ -1,7 +1,7 @@
 /* eslint-disable */
 const path = require('path');
 
-console.log('path prefix: ', process.env.PR_NUMBER);
+console.log('path prefix: ', process.env.PATH_PREFIX);
 
 module.exports = {
   siteMetadata: {
@@ -13,7 +13,7 @@ module.exports = {
       twitter: `@MyCrypto`,
     },
   },
-  pathPrefix: process.env.PR_NUMBER ? `/${process.env.PR_NUMBER}` : '/',
+  pathPrefix: process.env.PATH_PREFIX || '',
   plugins: [
     `gatsby-plugin-typescript`,
     `gatsby-plugin-react-helmet`,
