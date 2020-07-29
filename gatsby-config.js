@@ -11,7 +11,7 @@ module.exports = {
       twitter: `@MyCrypto`,
     },
   },
-  pathPRefix: './',
+  pathPrefix: './',
   plugins: [
     `gatsby-plugin-typescript`,
     `gatsby-plugin-react-helmet`,
