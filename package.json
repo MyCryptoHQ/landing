@@ -78,7 +78,7 @@
   "scripts": {
     "lint": "eslint --ignore-path .gitignore . --ext ts --ext tsx --ext js --ext jsx",
     "lint:fix": "yarn lint --fix",
-    "build": "gatsby build",
+    "build": "gatsby build --prefix-paths",
     "develop": "gatsby develop --https",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
