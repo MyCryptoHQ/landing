@@ -15,7 +15,7 @@ on:
       - master
 
 jobs:
-  build - sha:
+  BUILD_SHA:
     runs-on: ubuntu-latest
 
     steps:
@@ -33,7 +33,7 @@ jobs:
         run: echo "##[set-output name=NVMRC;]$(cat package.json | grep '\"node\":' | sed 's/^ *//;s/ *$//;s/\"node\":\ \"//;s/\",//' )"
 
       - name: Setup node ${{ steps.engines.outputs.NODE_VERSION }}
-        uses: actions/setup-node@master
+        uses: actions/setup-node@main
         with:
           node-version: ${{ steps.engines.outputs.NODE_VERSION }}
 
@@ -100,7 +100,7 @@ jobs:
         env:
           DEST_DIR: ${{ github.head_ref }}
           SOURCE_DIR: 'public'
-  build - pr:
+  BUILD_PR:
     runs-on: ubuntu-latest
 
     steps:
@@ -118,7 +118,7 @@ jobs:
         run: echo "##[set-output name=NVMRC;]$(cat package.json | grep '\"node\":' | sed 's/^ *//;s/ *$//;s/\"node\":\ \"//;s/\",//' )"
 
       - name: Setup node ${{ steps.engines.outputs.NODE_VERSION }}
-        uses: actions/setup-node@master
+        uses: actions/setup-node@main
         with:
           node-version: ${{ steps.engines.outputs.NODE_VERSION }}
 
@@ -153,7 +153,7 @@ jobs:
           DEST_DIR: 'pr/${PR_NUMBER}'
           SOURCE_DIR: 'public'
 
-  build - branch:
+  BUILD_BRANCH:
     runs-on: ubuntu-latest
 
     steps:
