@@ -1,8 +1,6 @@
 /* eslint-disable */
 const path = require('path');
 
-console.log('path prefix: ', process.env.PATH_PREFIX);
-
 module.exports = {
   siteMetadata: {
     title: `MyCrypto`,
