@@ -17,6 +17,6 @@ export const PEACE_OF_MIND: TPeaceOfMind[] = [
   },
   {
     icon: 'vault',
-    text: 'Open-source, fully audited, and fully verifiable.',
+    text: 'Open-source and fully verifiable.',
   },
 ];

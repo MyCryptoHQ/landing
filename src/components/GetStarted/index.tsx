@@ -97,15 +97,16 @@ const GetStarted = () => {
                 textAlign={{ _: 'center', lg: 'left' }}
                 variant="largeHeading"
               >
-                You're In The Right Place.
+                Everything In One Place.
+                <br />
+                Finally.
               </Heading>
               <Heading
                 textAlign={{ _: 'center', lg: 'left' }}
                 sx={{ marginTop: '10px' }}
               >
-                It's Time To Use MyCrypto
-                <br />
-                For Your Crypto.
+                One simple dashboard to manage
+                <br /> all of your Ethereum accounts.
               </Heading>
             </Box>
             <Flex

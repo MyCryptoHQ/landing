@@ -21,7 +21,7 @@ const Features = () => {
         my={{ _: '15px', lg: '0' }}
         width={{ _: '90%', lg: 'auto' }}
       >
-        The MyCrypto apps put your safety & security first.
+        The MyCrypto apps give you control of your crypto.
       </Text>
       <Flex
         flexDirection={{ _: 'column', lg: 'row' }}
