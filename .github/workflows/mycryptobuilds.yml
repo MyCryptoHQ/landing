@@ -171,7 +171,7 @@ jobs:
         run: echo "##[set-output name=NVMRC;]$(cat package.json | grep '\"node\":' | sed 's/^ *//;s/ *$//;s/\"node\":\ \"//;s/\",//' )"
 
       - name: Setup node ${{ steps.engines.outputs.NODE_VERSION }}
-        uses: actions/setup-node@master
+        uses: actions/setup-node@main
         with:
           node-version: ${{ steps.engines.outputs.NODE_VERSION }}
 
