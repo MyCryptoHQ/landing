@@ -119,7 +119,7 @@ jobs:
         if: github.event_name == 'pull_request'
         run: yarn build
         env:
-          PATH_PREFIX: '/pr/${PR_NUMBER}'
+          PATH_PREFIX: '/pr/${{ PR_NUMBER }}'
 
       - name: S3 Sync - PR Number
         uses: jakejarvis/s3-sync-action@v0.5.1
@@ -127,7 +127,7 @@ jobs:
         with:
           args: --acl public-read --cache-control max-age=0 --follow-symlinks --delete --exclude '.git/*'
         env:
-          DEST_DIR: '/pr/${PR_NUMBER}'
+          DEST_DIR: '/pr/${{ PR_NUMBER }}'
           SOURCE_DIR: 'public'
 
   BUILD_BRANCH:
