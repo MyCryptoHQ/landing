@@ -22,12 +22,6 @@ jobs:
       - name: Checkout PR
         uses: actions/checkout@v1
 
-      # Fetch the PR number to use it with AWS
-      - name: Set PR_NUMBER
-        run: |
-          PR_NUMBER=$(echo $GITHUB_REF | awk 'BEGIN { FS = "/" } ; { print $3 }')
-          echo "::set-env name=PR_NUMBER::$PR_NUMBER"
-
       - name: Retrieve engines' versions from package.json to env variables
         id: engines
         run: echo "##[set-output name=NVMRC;]$(cat package.json | grep '\"node\":' | sed 's/^ *//;s/ *$//;s/\"node\":\ \"//;s/\",//' )"
@@ -92,7 +86,9 @@ jobs:
 
       # Fetch the PR number to use it with AWS
       - name: Set PR_NUMBER
-        run: echo "##[set-output name=branch;]${GITHUB_REF#refs/heads/}"
+        run: |
+          PR_NUMBER=$(echo $GITHUB_REF | awk 'BEGIN { FS = "/" } ; { print $3 }')
+          echo "::set-env name=PR_NUMBER::$PR_NUMBER"
 
       - name: Retrieve engines' versions from package.json to env variables
         id: engines
