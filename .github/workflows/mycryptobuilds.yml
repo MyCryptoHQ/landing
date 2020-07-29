@@ -55,8 +55,6 @@ jobs:
 
       - name: yarn build
         run: yarn build
-        env:
-          PATH_PREFIX: ${PR_NUMBER}
 
       - name: S3 Sync - SHA Push
         uses: jakejarvis/s3-sync-action@v0.5.1
