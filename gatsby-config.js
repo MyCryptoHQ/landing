@@ -13,7 +13,7 @@ module.exports = {
       twitter: `@MyCrypto`,
     },
   },
-  pathPrefix: process.env.PATH_PREFIX ? `/${process.env.PATH_PREFIX}` : '',
+  pathPrefix: process.env.PATH_PREFIX ? `/${process.env.PATH_PREFIX}` : '/',
   plugins: [
     `gatsby-plugin-typescript`,
     `gatsby-plugin-react-helmet`,
