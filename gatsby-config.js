@@ -3,8 +3,8 @@ const path = require('path');
 
 module.exports = {
   siteMetadata: {
-    title: `MyCrypto`,
-    description: `MyCrypto is a free, open-source interface for interacting with the blockchain.`,
+    title: `MyCrypto - Ethereum Wallet Manager`,
+    description: `Securely manage ALL of your crypto accounts with MyCrypto. Swap, send, and buy crypto with your favorite wallets like Ledger, Metamask, and Trezor.`,
     author: `MyCrypto`,
     siteUrl: `https://myc-landing.netlify.app`,
     social: {

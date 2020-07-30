@@ -49,13 +49,13 @@ jobs:
 
       - name: yarn build sha-build - pr
         if: github.event_name == 'pull_request'
-        run: yarn build
+        run: yarn build:staging
         env:
           PATH_PREFIX: '/${{ github.event.pull_request.head.sha }}'
 
       - name: yarn build sha-build - push
         if: github.event_name == 'push'
-        run: yarn build
+        run: yarn build:staging
         env:
           PATH_PREFIX: '/${GITHUB_SHA}'
 
@@ -115,7 +115,7 @@ jobs:
 
       - name: yarn build pr
         if: github.event_name == 'pull_request'
-        run: yarn build
+        run: yarn build:staging
         env:
           PATH_PREFIX: '/pr/${{ env.PR_NUMBER }}'
 
@@ -162,7 +162,7 @@ jobs:
 
       - name: yarn build branch
         if: github.event_name == 'pull_request'
-        run: yarn build
+        run: yarn build:staging
         env:
           PATH_PREFIX: '/${{ github.head_ref }}'
 

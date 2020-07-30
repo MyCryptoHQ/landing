@@ -16,10 +16,7 @@ import {
 const HomePage = () => {
   return (
     <Flex flexDirection="column">
-      <SEO
-        title="MyCrypto - Ethereum Wallet Manager"
-        description="Securely manage ALL of your crypto accounts with MyCrypto. Swap, send, and buy crypto with your favorite wallets like Ledger, Metamask, and Trezor."
-      />
+      <SEO />
       <GetStarted />
       <WalletList />
       <Features />
