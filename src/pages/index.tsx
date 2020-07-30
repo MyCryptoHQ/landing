@@ -16,7 +16,7 @@ import {
 const HomePage = () => {
   return (
     <Flex flexDirection="column">
-      <SEO title="MyCrypto" />
+      <SEO />
       <GetStarted />
       <WalletList />
       <Features />

@@ -35,7 +35,7 @@ function SEO({
       }
     `
   );
-
+  const metaTitle = title || site.siteMetadata.title;
   const metaDescription = description || site.siteMetadata.description;
   const metaUrl = `${site.siteMetadata.siteUrl}${pathname}`;
   const image = file.childImageSharp.resize;
@@ -44,7 +44,7 @@ function SEO({
       htmlAttributes={{
         lang,
       }}
-      title={title}
+      title={metaTitle}
       titleTemplate={`${site.siteMetadata.title}`}
       meta={[
         {
