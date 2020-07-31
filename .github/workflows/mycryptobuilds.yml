@@ -57,7 +57,7 @@ jobs:
         if: github.event_name == 'push'
         run: yarn build:staging
         env:
-          PATH_PREFIX: '/${GITHUB_SHA}'
+          PATH_PREFIX: '/${{ env.GITHUB_SHA }}'
 
       - name: S3 Sync - SHA Push
         uses: jakejarvis/s3-sync-action@v0.5.1
@@ -65,7 +65,7 @@ jobs:
         with:
           args: --acl public-read --cache-control max-age=0 --follow-symlinks --exclude '.git/*'
         env:
-          DEST_DIR: ${GITHUB_SHA}
+          DEST_DIR: ${{ env.GITHUB_SHA }}
           SOURCE_DIR: 'public'
 
       - name: S3 Sync - SHA PR
