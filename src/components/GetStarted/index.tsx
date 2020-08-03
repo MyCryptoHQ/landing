@@ -70,7 +70,7 @@ const GetStarted = () => {
         sx={{
           backgroundImage: `url(${users})`,
           backgroundRepeat: 'no-repeat',
-          backgroundSize: ['65%', '65%', '50%', '40%', '60%', 'contain'],
+          backgroundSize: ['65%', '65%', '50%', '40%', '60%', '50%'],
           backgroundPosition: [
             'center center',
             null,
@@ -97,16 +97,15 @@ const GetStarted = () => {
                 textAlign={{ _: 'center', lg: 'left' }}
                 variant="largeHeading"
               >
-                Everything In One Place.
-                <br />
-                Finally.
+                Everything in One Place. Finally.
               </Heading>
               <Heading
                 textAlign={{ _: 'center', lg: 'left' }}
                 sx={{ marginTop: '10px' }}
               >
                 One simple dashboard to manage
-                <br /> all of your Ethereum accounts.
+                <br />
+                all of your Ethereum accounts.
               </Heading>
             </Box>
             <Flex
