@@ -39,9 +39,6 @@ export const APP_ROUTES: TRoutes = {
   DEPLOY_CONTRACT: {
     path: '/deploy-contracts',
   },
-  HELPERS: {
-    path: '/helpers',
-  },
   ENS: {
     path: '/ens',
   },

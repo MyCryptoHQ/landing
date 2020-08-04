@@ -54,10 +54,6 @@ export const links = [
         title: 'Deploy Contracts',
       },
       {
-        to: getRoute('HELPERS'),
-        title: 'Helpers',
-      },
-      {
         to: getRoute('ENS'),
         title: 'ENS',
       },
