@@ -7,7 +7,7 @@ module.exports = {
     title: `MyCrypto - Ethereum Wallet Manager`,
     description: `Securely manage ALL of your crypto accounts with MyCrypto. Swap, send, and buy crypto with your favorite wallets like Ledger, Metamask, and Trezor.`,
     author: `MyCrypto`,
-    siteUrl: `https://myc-landing.netlify.app`,
+    siteUrl: `https://beta.mycrypto.com`,
     social: {
       twitter: `@MyCrypto`,
     },
@@ -66,7 +66,7 @@ module.exports = {
       options: {
         siteId: '15',
         matomoUrl: 'https://analytics.mycryptoapi.com/',
-        siteUrl: 'https://myc-landing.netlify.app/',
+        siteUrl: 'https://beta.mycrypto.com/',
       },
     },
   ],
