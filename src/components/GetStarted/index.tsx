@@ -102,6 +102,7 @@ const GetStarted = () => {
               <Heading
                 textAlign={{ _: 'center', lg: 'left' }}
                 sx={{ marginTop: '10px' }}
+                fontSize={{ _: '1.8rem', sm: '2.2rem' }}
               >
                 One simple dashboard to manage
                 <br />
