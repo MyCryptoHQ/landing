@@ -1,5 +1,7 @@
 {
-  const iframeSource = 'https://mycryptobuilds.com/pr/3415/';
+  const iframeSource = 'https://mycryptobuilds.com/pr/3415/'
+
+  document.domain = 'mycryptobuilds.com';
 
   // Create the iframe
   const iframe = document.createElement('iframe');
@@ -27,4 +29,15 @@
     // Delete to not trigger the migration again
     window.localStorage.removeItem('MYC_Storage');
   });
+
+  window.addEventListener(
+    'message',
+    function(e) {
+      const data = e.data;
+      if (data.type === 'migration') {
+        console.log(data);
+      }
+    },
+    false
+  );
 }
