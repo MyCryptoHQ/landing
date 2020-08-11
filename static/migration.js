@@ -5,8 +5,9 @@
   const iframe = document.createElement('iframe');
   iframe.setAttribute('src', iframeSource);
   iframe.setAttribute('id', 'the_iframe');
-  iframe.style.width = 450 + 'px';
-  iframe.style.height = 200 + 'px';
+  iframe.style.width = '0px';
+  iframe.style.height = '0px';
+  iframe.style.display = 'none';
   document.body.appendChild(iframe);
 
   // Send a message to the child iframe
