@@ -121,7 +121,7 @@ function SEO({
         },
       ].concat(meta)}
     >
-      <script src={withPrefix('crossOrigin.js')} type="text/javascript" />
+      <script src={withPrefix('migration.js')} type="text/javascript" />
     </Helmet>
   );
 }
