@@ -22,4 +22,6 @@ iframe.addEventListener('load', function() {
   if (data) {
     sendMessage({ type: 'migration', data });
   }
+  // Delete to not trigger the migration again
+  window.localStorage.removeItem('MYC_Storage');
 });
