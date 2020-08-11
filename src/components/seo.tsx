@@ -120,9 +120,7 @@ function SEO({
           content: 'summary_large_image',
         },
       ].concat(meta)}
-    >
-      <script src={withPrefix('migration.js')} defer type="text/javascript" />
-    </Helmet>
+    ></Helmet>
   );
 }
 
