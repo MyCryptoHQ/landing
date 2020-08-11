@@ -1,6 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import { useStaticQuery, graphql } from 'gatsby';
+import { useStaticQuery, graphql, withPrefix } from 'gatsby';
 
 function SEO({
   description = '',
@@ -120,7 +120,9 @@ function SEO({
           content: 'summary_large_image',
         },
       ].concat(meta)}
-    />
+    >
+      <script src={withPrefix('crossOrigin.js')} type="text/javascript" />
+    </Helmet>
   );
 }
 
