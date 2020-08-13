@@ -70,7 +70,7 @@ const GetStarted = () => {
         sx={{
           backgroundImage: `url(${users})`,
           backgroundRepeat: 'no-repeat',
-          backgroundSize: ['65%', '65%', '50%', '40%', '60%', 'contain'],
+          backgroundSize: ['65%', '65%', '50%', '40%', '60%', '50%'],
           backgroundPosition: [
             'center center',
             null,
@@ -97,15 +97,16 @@ const GetStarted = () => {
                 textAlign={{ _: 'center', lg: 'left' }}
                 variant="largeHeading"
               >
-                You're In The Right Place.
+                Everything in One Place. Finally.
               </Heading>
               <Heading
                 textAlign={{ _: 'center', lg: 'left' }}
                 sx={{ marginTop: '10px' }}
+                fontSize={{ _: '1.8rem', sm: '2.2rem' }}
               >
-                It's Time To Use MyCrypto
+                One simple dashboard to manage
                 <br />
-                For Your Crypto.
+                all of your Ethereum accounts.
               </Heading>
             </Box>
             <Flex
