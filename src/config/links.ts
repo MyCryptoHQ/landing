@@ -1,5 +1,5 @@
 export const URLS = {
-  app: 'https://beta.mycrypto.com',
+  app: 'https://app.mycrypto.com',
   support: 'https://support.mycrypto.com',
 };
 
