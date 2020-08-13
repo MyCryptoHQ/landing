@@ -2,7 +2,7 @@
 const path = require('path');
 
 module.exports = {
-  pathPrefix: process.env.DEST_DIR,
+  pathPrefix: process.env.PATH_PREFIX || '',
   siteMetadata: {
     title: `MyCrypto - Ethereum Wallet Manager`,
     description: `Securely manage ALL of your crypto accounts with MyCrypto. Swap, send, and buy crypto with your favorite wallets like Ledger, Metamask, and Trezor.`,
