@@ -39,6 +39,22 @@ yarn build
 
 The static build is located inside the `public` folder
 
+## Staging Environment
+
+### Master Build
+
+A preview of the Landing is hosted on [MyCryptoBuild](https://landing.mycryptobuilds.com/).
+
+Build is triggered when code is pushed on the master branch or when a pull request is submitted.
+
+### PR Build
+
+A preview of a PR is hosted on [MyCryptoBuild](https://landing.mycryptobuilds.com/). It can be found at `https://landing.mycryptobuilds.com/pr/PR_NUMBER`
+
+### Commit Bulid
+
+A preview of a commit is hosted on [MyCryptoBuild](https://landing.mycryptobuilds.com/). It can be found at `https://landing.mycryptobuilds.com/COMMIT_SHA`
+
 ## License
 
 The landing page is [MIT licensed](./LICENSE).
