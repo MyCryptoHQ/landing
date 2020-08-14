@@ -12,6 +12,12 @@ test('it handles localhost', () => {
   expect(res).toEqual(hostname);
 });
 
+test('it handles naked domain', () => {
+  const hostname = 'example.com';
+  const res = getRootDomain(hostname);
+  expect(res).toEqual(hostname);
+});
+
 test('it removes the subdomain from a host name', () => {
   const hostname = 'sub.root.com';
   const res = getRootDomain(hostname);
