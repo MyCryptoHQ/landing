@@ -69,5 +69,20 @@ module.exports = {
         siteUrl: 'https://beta.mycrypto.com/',
       },
     },
+    {
+      resolve: `gatsby-plugin-csp`,
+      options: {
+        disableOnDev: true,
+        reportOnly: false, // Changes header to Content-Security-Policy-Report-Only for csp testing purposes
+        mergeScriptHashes: true, // you can disable scripts sha256 hashes
+        mergeStyleHashes: true, // you can disable styles sha256 hashes
+        mergeDefaultDirectives: true,
+        directives: {
+          'frame-ancestors':
+            "'self' mycryptobuilds.com app.mycrypto.com mycrypto.com",
+          // you can add your directives or override defaults
+        },
+      },
+    },
   ],
 };
