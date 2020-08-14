@@ -1,7 +1,7 @@
 {
   "browsers": ["chrome"],
   "src": ["./__tests__/*.test.js"],
-  "proxyByPass": ["localhost:3000"],
+  "proxyByPass": ["localhost:8000"],
   "clientScripts": [
     { "module": "@testing-library/dom/dist/@testing-library/dom.umd.js" }
   ],
