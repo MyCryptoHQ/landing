@@ -142,6 +142,7 @@ jobs:
 
       # Launch E2E tests. When in pull request it runs against the PR's mycryptobuilds url.
       - name: E2E - run
+        if: github.event_name == 'pull_request'
         run: yarn test:e2e
 
   BUILD_BRANCH:
