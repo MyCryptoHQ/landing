@@ -8,6 +8,8 @@
 import 'typeface-lato';
 import 'typeface-roboto-mono';
 
+import { getRootDomain } from '@utils';
+
 /**
  * We use an iframe to migrate user storage from landing to app ie. <MigrateLS/>.
  * 1. Since an origin is defined as `<protocol>://<host>:<port>` and the websites have different sub-domains,
@@ -20,4 +22,5 @@ import 'typeface-roboto-mono';
  *     https://developer.mozilla.org/en-US/docs/Web/API/Document/domain)
  * 4. Since we need run 3 environments we dynamically set the domain to the appropriate hostname.
  */
-document.domain = document.location.hostname || 'localhost';
+
+document.domain = getRootDomain(document.location.hostname);
