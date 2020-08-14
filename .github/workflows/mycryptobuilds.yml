@@ -199,4 +199,5 @@ jobs:
 
       # Launch E2E tests. When in pull request it runs against the PR's mycryptobuilds url.
       - name: E2E - run
+        if: github.ref == 'refs/heads/master'
         run: yarn test:e2e
