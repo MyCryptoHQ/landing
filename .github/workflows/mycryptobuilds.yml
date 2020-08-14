@@ -22,6 +22,11 @@ jobs:
       - name: Checkout PR
         uses: actions/checkout@v1
 
+      ## Set sha in env for pathPrefix
+      - name: Set SHA number
+        run: echo ::set-env name=GITHUB_SHA::$(echo "$GITHUB_SHA")
+        shell: bash
+
       - name: Retrieve engines' versions from package.json to env variables
         id: engines
         run: echo "##[set-output name=NVMRC;]$(cat package.json | grep '\"node\":' | sed 's/^ *//;s/ *$//;s/\"node\":\ \"//;s/\",//' )"
