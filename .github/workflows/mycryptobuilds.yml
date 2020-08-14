@@ -140,6 +140,10 @@ jobs:
           DEST_DIR: 'pr/${{ env.PR_NUMBER }}'
           SOURCE_DIR: 'public'
 
+      # Launch E2E tests. When in pull request it runs against the PR's mycryptobuilds url.
+      - name: E2E - run
+        run: yarn test:e2e
+
   BUILD_BRANCH:
     runs-on: ubuntu-latest
 
@@ -192,3 +196,7 @@ jobs:
         env:
           DEST_DIR: ${{ github.head_ref }}
           SOURCE_DIR: 'public'
+
+      # Launch E2E tests. When in pull request it runs against the PR's mycryptobuilds url.
+      - name: E2E - run
+        run: yarn test:e2e
