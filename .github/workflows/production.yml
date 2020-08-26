@@ -1,0 +1,42 @@
+name: Beta
+
+env:
+  AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET_BUILDS_APP }}
+  AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID_BETA }}
+  AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY_BETA }}
+  AWS_REGION: 'us-east-1'
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Retrieve node version from .nvmrc
+        run: echo "##[set-output name=NVMRC;]$(cat package.json | grep '\"node\":' | sed 's/^ *//;s/ *$//;s/\"node\":\ \"//;s/\",//')"
+        id: nvm
+
+      - name: Setup node ${{ steps.nvm.outputs.NVMRC }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: '${{ steps.nvm.outputs.NVMRC }}'
+
+      - name: Install Dependencies
+        run: yarn install
+
+      - name: yarn build
+        run: yarn build
+
+      - name: Zip standalone build folder
+        run: zip -r standalone_landing.zip public
+
+      - name: 'Save standalone_landing.zip to artifacts'
+        uses: actions/upload-artifact@v1
+        with:
+          name: 'standalone_landing'
+          path: 'public'
