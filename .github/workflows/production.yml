@@ -1,4 +1,4 @@
-name: Beta
+name: Production
 
 env:
   AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET_BUILDS_APP }}
