@@ -38,8 +38,8 @@ const useAnalytics = ({
         eventParams: undefined,
       }
     ) => {
-      const trackCategory = (callbackCategory || category)!;
-      const trackActionName = (callbackActionName || actionName)!;
+      const trackCategory = callbackCategory || category;
+      const trackActionName = callbackActionName || actionName;
       const shouldBeTracking = shouldTrack();
       if (
         !trackPageViews &&
