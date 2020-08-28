@@ -9,6 +9,8 @@ import { Icon } from '@mycrypto/ui';
 import { URLS } from '@config';
 import { getRoute } from '@utils';
 import { theme } from '@theme';
+import { ANALYTICS_CATEGORIES } from '@services';
+import { useAnalytics } from '@hooks';
 
 import { links } from './config';
 
@@ -275,6 +277,10 @@ const Header = () => {
     initVisibleDropdowns
   );
 
+  const trackHeader = useAnalytics({
+    category: ANALYTICS_CATEGORIES.HEADER,
+  });
+
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
@@ -291,6 +297,9 @@ const Header = () => {
     });
 
   const openLatestNews = (): void => {
+    trackHeader({
+      actionName: 'Latest news clicked',
+    });
     window.open(
       'https://medium.com/@mycrypto',
       '_blank',
@@ -299,6 +308,9 @@ const Header = () => {
   };
 
   const openHelpSupportPage = (): void => {
+    trackHeader({
+      actionName: 'Help & Support clicked',
+    });
     window.open(URLS.support, '_blank', 'noopener noreferrer');
   };
 

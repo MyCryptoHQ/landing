@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useLocation } from '@reach/router';
 
 import {
   SEO,
@@ -12,8 +13,19 @@ import {
   PeaceOfMind,
   BottomAction,
 } from '@components';
+import { useAnalytics } from '@hooks';
 
 const HomePage = () => {
+  const location = useLocation();
+  const trackPageVisit = useAnalytics({
+    trackPageViews: true,
+  });
+
+  useEffect(() => {
+    trackPageVisit({
+      actionName: location.href,
+    });
+  }, []);
   return (
     <Flex flexDirection="column">
       <SEO />
