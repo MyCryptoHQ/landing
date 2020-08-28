@@ -62,13 +62,5 @@ module.exports = {
         component: require.resolve('./src/Root.tsx'),
       },
     },
-    {
-      resolve: 'gatsby-plugin-matomo',
-      options: {
-        siteId: '15',
-        matomoUrl: 'https://analytics.mycryptoapi.com/',
-        siteUrl: 'https://beta.mycrypto.com/',
-      },
-    },
   ],
 };
