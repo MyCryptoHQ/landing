@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Section, Heading, Text, Box, Flex, Icon, Button } from '@components';
 import { getFeaturedOS, getRelease } from '@utils';
 import { OSNames, GITHUB_RELEASE_NOTES_URL } from '@config';
+import { useAnalytics } from '@hooks';
+import { ANALYTICS_CATEGORIES } from '@services';
 
 const DownloadApp = () => {
   const featuredOS = getFeaturedOS();
@@ -17,7 +19,14 @@ const DownloadApp = () => {
     getLink();
   }, [featuredOS]);
 
+  const trackDownloadDesktop = useAnalytics({
+    category: ANALYTICS_CATEGORIES.DOWNLOAD_DESKTOP,
+  });
+
   const openDownloadLink = (link: string) => {
+    trackDownloadDesktop({
+      actionName: `${link} download button clicked`,
+    });
     const target = link === GITHUB_RELEASE_NOTES_URL ? '_blank' : '_self';
     window.open(link, target, 'noopener noreferrer');
   };

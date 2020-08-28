@@ -51,6 +51,7 @@ module.exports = {
           '@theme': path.resolve(__dirname, 'src/theme'),
           '@utils': path.resolve(__dirname, 'src/utils'),
           '@hooks': path.resolve(__dirname, 'src/hooks'),
+          '@services': path.resolve(__dirname, 'src/services'),
         },
         extensions: ['tsx', 'ts', 'js', 'jsx'],
       },
@@ -59,14 +60,6 @@ module.exports = {
       resolve: 'gatsby-plugin-layout',
       options: {
         component: require.resolve('./src/Root.tsx'),
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-matomo',
-      options: {
-        siteId: '15',
-        matomoUrl: 'https://analytics.mycryptoapi.com/',
-        siteUrl: 'https://beta.mycrypto.com/',
       },
     },
   ],
