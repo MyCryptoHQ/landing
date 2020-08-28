@@ -35,14 +35,6 @@ export default class AnalyticsService {
     }
   }
 
-  public trackLegacy(
-    category: string,
-    eventAction: string,
-    eventParams?: object
-  ): Promise<any> {
-    return this.track(category, `Legacy_${eventAction}`, eventParams);
-  }
-
   public track(
     category: string,
     eventAction: string,

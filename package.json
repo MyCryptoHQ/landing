@@ -88,7 +88,7 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "jest --passWithNoTests --config=./__tests__/jest.config.js",
+    "test": "jest --passWithNoTests --config=./jest_config/jest.config.js",
     "test:single": "yarn test --coverage=false --watch",
     "test:e2e": "testcafe chrome:headless __tests__/*.test.js",
     "test:e2e:dev": "testcafe \"chrome --start-maximized --disk-cache-size=1\" __tests__/*.test.js --live",
