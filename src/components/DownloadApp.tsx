@@ -43,7 +43,7 @@ const DownloadApp = () => {
     >
       <Box width={{ _: '100%', md: 1 / 2 }}>
         <Heading textAlign={{ _: 'center', md: 'inherit' }}>
-          Everythind is Even More Secure with our Desktop App
+          Everything is Even More Secure with our Desktop App
         </Heading>
         <Text
           textAlign={{ _: 'center', md: 'inherit' }}
