@@ -7,7 +7,7 @@ export const TESTIMONIALS: TTestimonials[] = [
   {
     author: 'AtLeastSignificant',
     text:
-      'I love the MyCrypto team, with their focus on education and security for the entire community.  Friendly, responsive, passionate and generous.',
+      'MyCrypto is the definition of a successful grass-roots movement for the community, by the community.',
   },
   {
     author: 'Nick Johnson',
