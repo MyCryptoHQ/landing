@@ -209,6 +209,12 @@ jobs:
         env:
           DEST_DIR: ${{ github.head_ref }}
           SOURCE_DIR: 'public'
+          
+          
+      - name: Mycrypto-bot trigger
+        if: github.event_name == 'pull_request'
+        run: aws sns publish --topic-arn ${{ secrets.SNS_TOPIC_MYCRYPTO_BOT }} --region us-east-2 --message $(echo $GITHUB_REF | awk 'BEGIN { FS = "/" } ; { print $3 }')
+        
 
       # Launch E2E tests. When in pull request it runs against the PR's mycryptobuilds url.
       - name: E2E - run
