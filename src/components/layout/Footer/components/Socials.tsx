@@ -35,6 +35,10 @@ export const SOCIAL_LINKS: TSocial[] = [
     url: 'https://discord.gg/VSaTXEA',
     icon: 'discord',
   },
+  {
+    url: 'https://t.me/mycryptohq',
+    icon: 'telegram',
+  },
 ];
 
 const Socials = ({ socials }: { socials: TSocial[] }) => {
