@@ -14,7 +14,7 @@
     "@testing-library/react-hooks": "3.4.1",
     "@types/react-slick": "0.23.4",
     "axios": "0.20.0",
-    "gatsby": "2.15.15",
+    "gatsby": "2.23.20",
     "gatsby-image": "2.2.19",
     "gatsby-plugin-alias-imports": "1.0.5",
     "gatsby-plugin-manifest": "2.2.16",
@@ -38,7 +38,8 @@
     "slick-carousel": "1.8.1",
     "styled-components": "5.1.0",
     "typeface-lato": "0.0.75",
-    "typeface-roboto-mono": "0.0.75"
+    "typeface-roboto-mono": "0.0.75",
+    "snyk": "^1.419.1"
   },
   "devDependencies": {
     "@testing-library/react": "^10.2.1",
@@ -91,7 +92,9 @@
     "test:single": "yarn test --coverage=false --watch",
     "test:e2e": "testcafe chrome:headless __tests__/*.test.js",
     "test:e2e:dev": "testcafe \"chrome --start-maximized --disk-cache-size=1\" __tests__/*.test.js --live",
-    "tsc": "tsc -p ./tsconfig.json"
+    "tsc": "tsc -p ./tsconfig.json",
+    "snyk-protect": "snyk protect",
+    "prepare": "yarn run snyk-protect"
   },
   "husky": {
     "hooks": {
@@ -105,5 +108,6 @@
   },
   "bugs": {
     "url": "https://github.com/MyCryptoHQ/landing/issues"
-  }
+  },
+  "snyk": true
 }
