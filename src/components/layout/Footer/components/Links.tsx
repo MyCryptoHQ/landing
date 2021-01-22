@@ -32,6 +32,7 @@ export const LINK_COLUMNS: TLink[] = [
       {
         title: 'Privacy Policy',
         url: '/privacy',
+        internal: true,
       },
     ],
   },
@@ -108,9 +109,10 @@ const Links = ({ links }: { links: TLink[] }) => {
           {column.links.map((link, index) => (
             <Link
               key={index}
-              href={link.url}
               sx={{ textDecoration: 'none' }}
               mb="10px"
+              href={link.internal ? null : link.url}
+              to={link.internal ? link.url : null}
             >
               <Text variant="footerLink" color="rgb(187, 194, 203)">
                 {link.title}
