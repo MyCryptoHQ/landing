@@ -31,7 +31,7 @@ export const LINK_COLUMNS: TLink[] = [
       },
       {
         title: 'Privacy Policy',
-        url: 'https://about.mycrypto.com/privacy/',
+        url: '/privacy',
       },
     ],
   },
