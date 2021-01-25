@@ -12,9 +12,13 @@ export interface Params {
   [key: string]: any;
 }
 
+export const Params = undefined;
+
 export interface CvarEntry {
   [key: string]: [string, string];
 }
+
+export const CvarEntry = undefined;
 
 let instantiated = false;
 

@@ -9,6 +9,7 @@ import React from 'react';
 import { Flex } from '../';
 import Header from './Header';
 import Footer from './Footer';
+import { Banner } from './Banner';
 
 type Props = {
   children: React.ReactNode;
@@ -18,7 +19,8 @@ const Layout = ({ children }: Props) => {
   return (
     <>
       <Header />
-      <Flex sx={{}}>
+      <Banner />
+      <Flex>
         <main role="main">{children}</main>
       </Flex>
       <Footer />

@@ -60,6 +60,7 @@ export const theme = {
      */
     white: '#fff',
     grey: '#E9E9E9',
+    banner: '#55B6E2',
   },
   buttons: {
     primary: {
