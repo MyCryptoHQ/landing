@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/camelcase */
-
 /**
  * A function that takes an email address and returns a Promise with the subscription status: true for success, false
  * for failure.

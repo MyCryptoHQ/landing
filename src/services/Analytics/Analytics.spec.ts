@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/camelcase */
-
 import mockAxios from 'jest-mock-axios';
 import { waitFor } from '@testing-library/react';
 

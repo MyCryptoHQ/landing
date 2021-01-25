@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/camelcase */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 import { AxiosInstance } from 'axios';
@@ -38,15 +37,15 @@ export default class AnalyticsService {
   public track(
     category: string,
     eventAction: string,
-    eventParams?: object
+    eventParams?: Record<string, unknown>
   ): Promise<any> {
     const customParams: Params = {
       ...eventParams,
     };
 
-    const cvar: object = this.mapParamsToCvars(customParams);
+    const cvar: Record<string, unknown> = this.mapParamsToCvars(customParams);
 
-    const params: object = {
+    const params: Record<string, unknown> = {
       action_name: eventAction,
       e_c: category,
       e_a: eventAction,
@@ -59,7 +58,7 @@ export default class AnalyticsService {
   }
 
   public trackPageVisit(pageUrl: string): Promise<any> {
-    const params: object = {
+    const params: Record<string, unknown> = {
       action_name: 'Page navigation',
       url: pageUrl,
       idsite: ANALYTICS_ID_SITE,
@@ -69,7 +68,7 @@ export default class AnalyticsService {
     return this.service.get('', { params }).catch();
   }
 
-  private mapParamsToCvars(params: Params): object {
+  private mapParamsToCvars(params: Params): Record<string, unknown> {
     return Object.keys(params).reduce((tempObject: CvarEntry, key, index) => {
       tempObject[index + 1] = [key, params[key].toString()];
       return tempObject;
