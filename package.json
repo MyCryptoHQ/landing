@@ -42,7 +42,8 @@
     "styled-components": "5.2.0",
     "styled-system": "5.1.5",
     "typeface-lato": "0.0.75",
-    "typeface-roboto-mono": "0.0.75"
+    "typeface-roboto-mono": "0.0.75",
+    "snyk": "^1.439.0"
   },
   "devDependencies": {
     "@testing-library/react": "^10.2.1",
@@ -96,7 +97,9 @@
     "test:single": "yarn test --coverage=false --watch",
     "test:e2e": "testcafe chrome:headless __tests__/*.test.js",
     "test:e2e:dev": "testcafe \"chrome --start-maximized --disk-cache-size=1\" __tests__/*.test.js --live",
-    "tsc": "tsc -p ./tsconfig.json"
+    "tsc": "tsc -p ./tsconfig.json",
+    "snyk-protect": "snyk protect",
+    "prepare": "yarn run snyk-protect"
   },
   "husky": {
     "hooks": {
@@ -110,5 +113,6 @@
   },
   "bugs": {
     "url": "https://github.com/MyCryptoHQ/landing/issues"
-  }
+  },
+  "snyk": true
 }
