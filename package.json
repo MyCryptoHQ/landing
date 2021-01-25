@@ -88,7 +88,7 @@
     "build:staging": "gatsby build --prefix-paths",
     "develop": "gatsby develop --https",
     "format": "prettier --write src/**/*.{js,jsx}",
-    "start": "npm run develop",
+    "start": "yarn develop",
     "serve": "gatsby serve",
     "test": "jest --passWithNoTests --config=./jest_config/jest.config.js",
     "test:single": "yarn test --coverage=false --watch",
