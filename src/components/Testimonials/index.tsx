@@ -72,7 +72,7 @@ interface TestimonialProps {
   text: string;
   author: string;
   sparkles: string;
-  placement: object;
+  placement: Record<string, unknown>;
 }
 
 const sparkles = [sparklesTop, sparklesBottom, sparklesMiddle];
