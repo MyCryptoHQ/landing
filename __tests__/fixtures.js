@@ -18,6 +18,7 @@ const FIXTURES_CONST = {
 
 const PAGES = {
   HOME: `${FIXTURES_CONST.BASE_URL}/`,
+  PRIVACY: `${FIXTURES_CONST.BASE_URL}/privacy`,
 };
 
 export { ENV, FIXTURES_CONST, PAGES };
