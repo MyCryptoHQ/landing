@@ -6,6 +6,7 @@ interface TLink {
   links: {
     title: string;
     url: string;
+    internal?: boolean;
   }[];
 }
 
@@ -111,8 +112,8 @@ const Links = ({ links }: { links: TLink[] }) => {
               key={index}
               sx={{ textDecoration: 'none' }}
               mb="10px"
-              href={link.internal ? null : link.url}
-              to={link.internal ? link.url : null}
+              href={link.url}
+              internal={link.internal}
             >
               <Text variant="footerLink" color="rgb(187, 194, 203)">
                 {link.title}
