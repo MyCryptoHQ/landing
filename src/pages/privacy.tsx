@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 
 import { SEO, Flex, Heading, Text } from '@components';
 
-const md = (data: any) => {
+const md = (data: QueryResult) => {
   const { html } = data.data.allMarkdownRemark.edges[0].node;
 
   return (
@@ -13,7 +13,7 @@ const md = (data: any) => {
   );
 };
 
-const getHeading = (data: any) => {
+const getHeading = (data: QueryResult) => {
   const { frontmatter } = data.data.allMarkdownRemark.edges[0].node;
   return (
     <>
@@ -25,7 +25,7 @@ const getHeading = (data: any) => {
   );
 };
 
-const PrivacyPolicyPage = ({ data }: any) => (
+const PrivacyPolicyPage = ({ data }: QueryResult) => (
   <>
     <SEO title="Privacy Policy" />
     <Flex
@@ -50,6 +50,16 @@ const PrivacyPolicyPage = ({ data }: any) => (
     </Flex>
   </>
 );
+
+interface QueryResult {
+  data: {
+    allMarkdownRemark: {
+      edges: Array<{
+        node: { frontmatter: Record<string, string>; html: string };
+      }>;
+    };
+  };
+}
 
 export const query = graphql`
   query {
