@@ -300,11 +300,7 @@ const Header = () => {
     trackHeader({
       actionName: 'Latest news clicked',
     });
-    window.open(
-      'https://medium.com/@mycrypto',
-      '_blank',
-      'noopener noreferrer'
-    );
+    window.open('https://medium.com/mycrypto', '_blank', 'noopener noreferrer');
   };
 
   const openHelpSupportPage = (): void => {
