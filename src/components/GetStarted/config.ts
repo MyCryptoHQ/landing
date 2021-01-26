@@ -11,20 +11,21 @@ export interface TStartCta {
 export const START_CTAS: TStartCta[] = [
   {
     icon: 'newWallet',
-    title: 'I need a wallet',
-    subTitle: 'Download app to create wallet',
-    url: getRoute('DOWNLOAD'),
+    title: "I've been here before",
+    subTitle: 'Go directly to your dashboard.',
+    url: getRoute('DASHBOARD'),
   },
   {
     icon: 'existingWallet',
-    title: 'I have a wallet',
-    subTitle: 'Connect wallet to MyCrypto',
-    url: getRoute('ADD_ACCOUNT'),
+    title: "I don't have an Ethereum address",
+    subTitle: 'Create a new account that is yours and yours only.',
+    url: getRoute('DOWNLOAD'),
   },
   {
     icon: 'signIn',
-    title: "I've used MyCrypto",
-    subTitle: 'Continue to Dashboard',
-    url: getRoute('DASHBOARD'),
+    title: 'I have an Ethereum address',
+    subTitle:
+      'Create a MyCrypto dashboard by connecting your existing Ethereum account(s).',
+    url: getRoute('ADD_ACCOUNT'),
   },
 ];

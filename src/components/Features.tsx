@@ -36,7 +36,7 @@ const Features = () => {
           mb="20px"
         >
           <Heading textAlign={{ _: 'center', lg: 'inherit' }}>
-            Manage Your Wallets
+            Manage Your Accounts
           </Heading>
           <Text
             textAlign={{ _: 'center', lg: 'inherit' }}
@@ -44,8 +44,8 @@ const Features = () => {
             color="accent"
             my={{ _: '15px', lg: '0' }}
           >
-            MyCrypto allows you to create, import, and manage all the wallets
-            you'll ever need.
+            MyCrypto allows you to import and manage all of the Ethereum
+            accounts that you have control of.
           </Text>
         </Box>
         <Flex width={{ _: '100%', lg: 2 / 3 }} justifyContent="center">
@@ -62,31 +62,24 @@ const Features = () => {
       <Flex
         flexDirection={{ _: 'column-reverse', lg: 'row' }}
         justifyContent={{ _: 'center', lg: 'space-between' }}
-        alignItems={{ _: 'center', lg: 'flex-start' }}
+        alignItems="center"
         my={{ _: '20px', sm: '50px', lg: '65px' }}
         mb="20px"
         width="100%"
       >
-        <Flex
-          width={{ _: '100%', lg: 3 / 4 }}
-          justifyContent={{ _: 'center', lg: 'flex-start' }}
-        >
+        <Flex width={{ _: '100%', lg: 3 / 4 }} justifyContent="center">
           <Media type="desktop" width={{ sm: '70%', lg: '100%' }}>
             <Flex width="100%" justifyContent="center">
-              <Icon name="dashboard" />
+              <Icon name="dashboard" width="70%" />
             </Flex>
           </Media>
           <Media type="mobile">
-            <Icon name="dashboardMobile" width="100%" />
+            <Icon name="dashboard" width="100%" />
           </Media>
         </Flex>
-        <Box
-          width={{ _: '90%', lg: 1 / 4 }}
-          mt={{ _: '0', lg: '150px' }}
-          mb="20px"
-        >
+        <Box width={{ _: '90%', lg: 1 / 4 }}>
           <Heading textAlign={{ _: 'center', lg: 'right' }}>
-            View Your Dashboard
+            View All Your Transactions
           </Heading>
           <Text
             textAlign={{ _: 'center', lg: 'right' }}
@@ -94,25 +87,21 @@ const Features = () => {
             color="accent"
             my={{ _: '15px', lg: '0' }}
           >
-            See a detailed breakdown of all your wallets, tokens, and
-            transactions.
+            One combined view for all of the transaction histories across all of
+            your accounts.
           </Text>
         </Box>
       </Flex>
       <Flex
         flexDirection={{ _: 'column', lg: 'row' }}
         justifyContent={{ _: 'center', lg: 'space-between' }}
-        alignItems={{ _: 'center', lg: 'flex-start' }}
+        alignItems={{ _: 'center', lg: 'center' }}
         my={{ _: '20px', sm: '50px', lg: '65px' }}
         width="100%"
       >
-        <Box
-          width={{ _: '90%', lg: 1 / 3 }}
-          mt={{ _: '0', lg: '280px' }}
-          mb="20px"
-        >
+        <Box width={{ _: '90%', lg: 1 / 3 }} mt={{ _: '0' }} mb="20px">
           <Heading textAlign={{ _: 'center', lg: 'inherit' }}>
-            Control Your Crypto
+            Keep It Safe
           </Heading>
           <Text
             textAlign={{ _: 'center', lg: 'inherit' }}
@@ -120,21 +109,18 @@ const Features = () => {
             color="accent"
             my={{ _: '15px', lg: '0' }}
           >
-            Manage your information and your cryptocurrency easily and without
-            fear.
+            Check your transaction recipient against 50M+ labeled Ethereum
+            accounts to be sure you're sending to the right place.
           </Text>
         </Box>
-        <Flex
-          width={{ _: '100%', lg: 2 / 3 }}
-          justifyContent={{ _: 'center', lg: 'flex-start' }}
-        >
+        <Flex width={{ _: '100%', lg: 2 / 3 }} justifyContent="center">
           <Media type="desktop" height={{ sm: '70%', lg: '100%' }}>
             <Flex width="100%" justifyContent="center">
-              <Icon name="controlCrypto" />
+              <Icon name="controlCrypto" width="100%" />
             </Flex>
           </Media>
           <Media type="mobile">
-            <Icon name="controlCryptoMobile" width="100%" />
+            <Icon name="controlCrypto" width="100%" />
           </Media>
         </Flex>
       </Flex>

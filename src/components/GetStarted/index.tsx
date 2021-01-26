@@ -19,9 +19,9 @@ const ActionCard = ({ icon, title, subTitle, url }: TStartCta) => {
   return (
     <Card
       variant="card"
-      width={{ _: '30%', lg: '400px' }}
-      height={{ _: '180px', lg: '110px' }}
-      padding={{ _: '0', lg: '25px 30px' }}
+      width={{ _: '30%', lg: '500px' }}
+      height={{ _: '270px', lg: '140px' }}
+      padding={{ _: '10px 0', lg: '25px 30px' }}
       mb="15px"
       sx={{
         ':hover': { transform: 'scale(1.03)', transition: 'all .3s' },
@@ -31,17 +31,17 @@ const ActionCard = ({ icon, title, subTitle, url }: TStartCta) => {
       <Link href={url} sx={{ textDecoration: 'none' }}>
         <Flex
           flexDirection={{ _: 'column-reverse', lg: 'row' }}
-          justifyContent={{ _: 'center', lg: 'space-between' }}
+          justifyContent={{ _: 'flex-end', lg: 'space-between' }}
           alignItems="center"
           height="100%"
         >
-          <Box>
+          <Box width={{ lg: '75%' }}>
             <Heading
               textAlign={{ _: 'center', lg: 'left' }}
               variant="title"
               my={{ _: '10px', lg: 'inherit' }}
               color="text"
-              minHeight={{ _: '3rem', sm: 'auto' }}
+              minHeight={{ _: '6.5rem', sm: 'auto' }}
             >
               {title}
             </Heading>
@@ -53,7 +53,7 @@ const ActionCard = ({ icon, title, subTitle, url }: TStartCta) => {
               {subTitle}
             </Text>
           </Box>
-          <Icon name={icon} height={{ _: '28%', lg: '60px' }} />
+          <Icon name={icon} height={{ _: '4rem', lg: '60px' }} />
         </Flex>
       </Link>
     </Card>
@@ -64,7 +64,7 @@ const GetStarted = () => {
   return (
     <Section color="text">
       <Box
-        height={{ _: '90vh', lg: 'auto' }}
+        height={{ _: '110vh', lg: 'auto' }}
         pl={{ _: 0, lg: '7%' }}
         my={{ _: '0', lg: '20px' }}
         sx={{
@@ -72,7 +72,7 @@ const GetStarted = () => {
           backgroundRepeat: 'no-repeat',
           backgroundSize: ['65%', '65%', '50%', '40%', '60%', '50%'],
           backgroundPosition: [
-            'center center',
+            'center 40%',
             null,
             null,
             null,
@@ -97,16 +97,16 @@ const GetStarted = () => {
                 textAlign={{ _: 'center', lg: 'left' }}
                 variant="largeHeading"
               >
-                Everything in One Place. Finally.
+                Welcome to the new MyCrypto
               </Heading>
               <Heading
                 textAlign={{ _: 'center', lg: 'left' }}
                 sx={{ marginTop: '10px' }}
                 fontSize={{ _: '1.8rem', sm: '2.2rem' }}
               >
-                One simple dashboard to manage
+                Unify all your Ethereum accounts
                 <br />
-                all of your Ethereum accounts.
+                without giving up your privacy or security.
               </Heading>
             </Box>
             <Flex
