@@ -26,12 +26,12 @@ export const WALLET_CARDS: TWalletCard[] = [
   {
     name: 'Ledger',
     icon: 'ledger',
-    path: `${getRoute('ADD_ACCOUNT')}/ledger_nano_s`,
+    path: `${getRoute('ADD_ACCOUNT')}/ledger_nano_s_new`,
   },
   {
     name: 'Trezor',
     icon: 'trezor',
-    path: `${getRoute('ADD_ACCOUNT')}/trezor`,
+    path: `${getRoute('ADD_ACCOUNT')}/trezor_new`,
   },
   {
     name: 'WalletConnect',
