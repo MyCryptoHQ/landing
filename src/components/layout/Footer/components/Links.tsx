@@ -15,10 +15,6 @@ export const LINK_COLUMNS: TLink[] = [
     heading: 'Company',
     links: [
       {
-        title: 'MyCrypto.com',
-        url: 'https://www.mycrypto.com/',
-      },
-      {
         title: 'Help & Support',
         url: 'https://support.mycrypto.com/',
       },
