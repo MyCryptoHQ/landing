@@ -1,4 +1,5 @@
-const TEAM = [
+// Migrate content from `about.mycrypto.com`
+const TEAM_MEMBERS = [
   {
     profileUrl: 'taylor.jpg',
     name: 'Taylor',
@@ -265,3 +266,5 @@ const TEAM = [
     ],
   },
 ];
+
+export default TEAM_MEMBERS;
