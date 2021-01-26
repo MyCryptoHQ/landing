@@ -49,6 +49,7 @@ export const theme = {
     text: '#424242',
     link: '#1EB8E7',
     textInvert: '#fff',
+    greyed: '#BBC2CB',
     // background: '',
     primary: '#007896',
     // secondary: '',
