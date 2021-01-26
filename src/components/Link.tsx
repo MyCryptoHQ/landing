@@ -22,8 +22,12 @@ const SGatsbyLink = styled(GatsbyLink)<LinkProps>`
   ${alignSelf}
 `;
 
-const Link = ({ href, ...props }: LinkProps & { internal?: boolean }) => {
-  if (props.internal && href) {
+const Link = ({
+  href,
+  internal,
+  ...props
+}: LinkProps & { internal?: boolean }) => {
+  if (internal && href) {
     return (
       <SGatsbyLink to={href} style={{ textDecoration: 'none' }} {...props}>
         {props.children}
