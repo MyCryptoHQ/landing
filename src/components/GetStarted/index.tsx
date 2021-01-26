@@ -14,6 +14,7 @@ import {
 import { START_CTAS, TStartCta } from './config';
 
 import users from '@assets/title-illustration.svg';
+import { URLS } from '@config';
 
 const ActionCard = ({ icon, title, subTitle, url }: TStartCta) => {
   return (
@@ -83,7 +84,7 @@ const GetStarted = () => {
       >
         <Box
           width={{ _: '100%', lg: 1 / 2 }}
-          height="100%"
+          height="95%"
           py={{ _: '20px', lg: '55px' }}
         >
           <Flex
@@ -121,6 +122,14 @@ const GetStarted = () => {
             </Flex>
           </Flex>
         </Box>
+        <Text mb={'40px'} color="greyed" px={{ _: '10px', sm: '20px', lg: 0 }}>
+          We know change is hard. If you are a MyCrypto pro, update your
+          bookmark to{' '}
+          <Link variant="link" color="link" href={URLS.app}>
+            {URLS.app}
+          </Link>{' '}
+          and never see this page full of marketing stuff ever again. 💖
+        </Text>
       </Box>
     </Section>
   );
