@@ -16,7 +16,7 @@ export const PEACE_OF_MIND: TPeaceOfMind[] = [
     text: 'Protect yourself from phishing attacks and malicious extensions.',
   },
   {
-    icon: 'vault',
+    icon: 'opensource',
     text: 'Open-source and fully verifiable.',
   },
 ];
