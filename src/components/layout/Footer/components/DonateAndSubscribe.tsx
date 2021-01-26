@@ -178,10 +178,7 @@ const DonateAndSubscribe = () => {
             By submitting your email, you <strong>affirmatively</strong> agree
             to our&nbsp;
           </Text>
-          <Link
-            href="https://about.mycrypto.com/privacy/"
-            sx={{ textDecoration: 'none' }}
-          >
+          <Link href="/privacy" internal={true} sx={{ textDecoration: 'none' }}>
             <Text variant="link" fontSize="10px" color="primary">
               Privacy Policy
             </Text>
