@@ -34,7 +34,7 @@ export const APP_ROUTES: TRoutes = {
     path: '/broadcast-transaction',
   },
   INTERACT_WITH_CONTRACT: {
-    path: '/interact-with-contract',
+    path: '/interact-with-contracts',
   },
   DEPLOY_CONTRACT: {
     path: '/deploy-contracts',
