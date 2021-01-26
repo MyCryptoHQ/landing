@@ -68,9 +68,9 @@ const Features = () => {
         width="100%"
       >
         <Flex width={{ _: '100%', lg: 3 / 4 }} justifyContent="center">
-          <Media type="desktop" width={{ sm: '70%', lg: '100%' }}>
+          <Media type="desktop" width={{ sm: '100%' }}>
             <Flex width="100%" justifyContent="center">
-              <Icon name="dashboard" width="70%" />
+              <Icon name="dashboard" width="90%" />
             </Flex>
           </Media>
           <Media type="mobile">
@@ -114,7 +114,7 @@ const Features = () => {
           </Text>
         </Box>
         <Flex width={{ _: '100%', lg: 2 / 3 }} justifyContent="center">
-          <Media type="desktop" height={{ sm: '70%', lg: '100%' }}>
+          <Media type="desktop" height={{ sm: '100%' }}>
             <Flex width="100%" justifyContent="center">
               <Icon name="controlCrypto" width="100%" />
             </Flex>
