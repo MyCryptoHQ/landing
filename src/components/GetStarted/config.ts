@@ -10,22 +10,15 @@ export interface TStartCta {
 
 export const START_CTAS: TStartCta[] = [
   {
-    icon: 'newWallet',
-    title: "I've been here before",
-    subTitle: 'Go directly to your dashboard.',
+    icon: 'existingWallet',
+    title: 'Take me to MyCrypto',
+    subTitle: 'The fast track to accessing your accounts.',
     url: getRoute('DASHBOARD'),
   },
   {
-    icon: 'existingWallet',
+    icon: 'newWallet',
     title: "I don't have an Ethereum address",
-    subTitle: 'Create a new account that is yours and yours only.',
+    subTitle: 'Create a new account that is all yours.',
     url: getRoute('DOWNLOAD'),
-  },
-  {
-    icon: 'signIn',
-    title: 'I have an Ethereum address',
-    subTitle:
-      'Create a MyCrypto dashboard by connecting your existing Ethereum account(s).',
-    url: getRoute('ADD_ACCOUNT'),
   },
 ];
