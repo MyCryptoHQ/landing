@@ -13,3 +13,4 @@ export { default as PeaceOfMind } from './PeaceOfMind';
 export { default as Testimonials } from './Testimonials';
 export { default as BottomAction } from './BottomAction';
 export { default as SubInput } from './SubInput';
+export { ComingSoon } from './ComingSoon';
