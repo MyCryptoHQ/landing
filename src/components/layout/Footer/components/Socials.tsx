@@ -16,7 +16,7 @@ export const SOCIAL_LINKS: TSocial[] = [
     icon: 'facebook',
   },
   {
-    url: 'https://medium.com/@mycrypto',
+    url: 'https://medium.com/mycrypto',
     icon: 'medium',
   },
   {
