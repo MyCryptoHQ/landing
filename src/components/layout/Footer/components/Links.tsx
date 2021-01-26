@@ -24,7 +24,8 @@ export const LINK_COLUMNS: TLink[] = [
       },
       {
         title: 'Our Team',
-        url: 'https://about.mycrypto.com/',
+        url: '/about',
+        internal: true,
       },
       {
         title: 'Press',
