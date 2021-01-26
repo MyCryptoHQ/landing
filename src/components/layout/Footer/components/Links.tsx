@@ -36,6 +36,11 @@ export const LINK_COLUMNS: TLink[] = [
         url: '/privacy',
         internal: true,
       },
+      {
+        title: 'Jobs',
+        url: '/jobs',
+        internal: true,
+      },
     ],
   },
   {
