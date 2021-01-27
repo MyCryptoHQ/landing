@@ -1,27 +1,37 @@
-name: Jest
+name: MyCryptoBuilds Master
+
+env:
+  AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
+  AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+  AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+  AWS_REGION: 'us-east-1'
 
 on:
   push:
     branches:
       - master
-  pull_request:
-    branches:
-      - master
 
 jobs:
-  setup:
-    name: Setup
-    runs-on: ubuntu-16.04
+  Master:
+    runs-on: ubuntu-latest
+
     steps:
       - name: Checkout PR
         uses: actions/checkout@v1
+
+      # Define url as env var to be used by TestCafe.
+      - name: Set E2E_BASE_URL
+        run: |
+          E2E_BASE_URL=$( echo https://landing.mycryptobuilds.com )
+          echo $E2E_BASE_URL
+          echo "E2E_BASE_URL=$E2E_BASE_URL" >> $GITHUB_ENV
 
       - name: Retrieve engines' versions from package.json to env variables
         id: engines
         run: echo "##[set-output name=NVMRC;]$(cat package.json | grep '\"node\":' | sed 's/^ *//;s/ *$//;s/\"node\":\ \"//;s/\",//' )"
 
       - name: Setup node ${{ steps.engines.outputs.NODE_VERSION }}
-        uses: actions/setup-node@master
+        uses: actions/setup-node@main
         with:
           node-version: ${{ steps.engines.outputs.NODE_VERSION }}
 
@@ -36,31 +46,21 @@ jobs:
             ${{ runner.os }}-yarn-${{ env.cache-name }}-
             ${{ runner.os }}-yarn-
             ${{ runner.os }}-
-
       - name: Install dependencies
         ## If no cache is found, install dependencies
         if: steps.cache.outputs.cache-hit != 'true'
         run: yarn
 
-  test:
-    name: Test
-    needs: [setup]
-    runs-on: ubuntu-16.04
-    steps:
-      - name: Checkout PR
-        uses: actions/checkout@v1
+      - name: yarn build master
+        run: yarn build
 
-      - name: Restore cache
-        uses: actions/cache@v1
+      - name: S3 Sync - Master
+        uses: jakejarvis/s3-sync-action@v0.5.1
         with:
-          path: node_modules
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          args: --acl public-read --cache-control max-age=0 --follow-symlinks --delete --exclude '.git/*'
+        env:
+          SOURCE_DIR: 'public'
 
-      - name: Lint
-        run: yarn lint
-
-      - name: Typescript
-        run: yarn tsc
-
-      - name: Test
-        run: yarn test
+      # Launch E2E tests. When in pull request it runs against the PR's mycryptobuilds url.
+      - name: E2E - run
+        run: yarn test:e2e
