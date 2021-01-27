@@ -1,4 +1,4 @@
-name: MyCryptoBuilds
+name: MyCryptoBuilds PR
 
 env:
   AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
@@ -15,7 +15,7 @@ on:
       - master
 
 jobs:
-  BUILD_SHA:
+  Sha:
     runs-on: ubuntu-latest
 
     steps:
@@ -82,7 +82,7 @@ jobs:
           DEST_DIR: ${{ github.event.pull_request.head.sha }}
           SOURCE_DIR: 'public'
 
-  BUILD_PR:
+  Pr:
     runs-on: ubuntu-latest
 
     steps:
@@ -149,61 +149,4 @@ jobs:
       # Launch E2E tests. When in pull request it runs against the PR's mycryptobuilds url.
       - name: E2E - run
         if: github.event_name == 'pull_request'
-        run: yarn test:e2e
-
-  BUILD_MASTER:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout PR
-        uses: actions/checkout@v1
-
-      # Define url as env var to be used by TestCafe.
-      - name: Set E2E_BASE_URL
-        if: github.ref == 'refs/heads/master'
-        run: |
-          E2E_BASE_URL=$( echo https://landing.mycryptobuilds.com )
-          echo $E2E_BASE_URL
-          echo "E2E_BASE_URL=$E2E_BASE_URL" >> $GITHUB_ENV
-
-      - name: Retrieve engines' versions from package.json to env variables
-        id: engines
-        run: echo "##[set-output name=NVMRC;]$(cat package.json | grep '\"node\":' | sed 's/^ *//;s/ *$//;s/\"node\":\ \"//;s/\",//' )"
-
-      - name: Setup node ${{ steps.engines.outputs.NODE_VERSION }}
-        uses: actions/setup-node@main
-        with:
-          node-version: ${{ steps.engines.outputs.NODE_VERSION }}
-
-      - name: Cache depedendencies
-        id: cache
-        uses: actions/cache@v1
-        with:
-          path: node_modules
-          ## Check cache based on yarn.lock hashfile
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-${{ env.cache-name }}-
-            ${{ runner.os }}-yarn-
-            ${{ runner.os }}-
-      - name: Install dependencies
-        ## If no cache is found, install dependencies
-        if: steps.cache.outputs.cache-hit != 'true'
-        run: yarn
-
-      - name: yarn build master
-        if: github.ref == 'refs/heads/master'
-        run: yarn build
-
-      - name: S3 Sync - Master
-        uses: jakejarvis/s3-sync-action@v0.5.1
-        if: github.ref == 'refs/heads/master'
-        with:
-          args: --acl public-read --cache-control max-age=0 --follow-symlinks --delete --exclude '.git/*'
-        env:
-          SOURCE_DIR: 'public'
-
-      # Launch E2E tests. When in pull request it runs against the PR's mycryptobuilds url.
-      - name: E2E - run
-        if: github.ref == 'refs/heads/master'
         run: yarn test:e2e
