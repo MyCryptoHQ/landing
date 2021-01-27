@@ -192,9 +192,8 @@ jobs:
         run: yarn
 
       - name: yarn build master
+        if: github.ref == 'refs/heads/master'
         run: yarn build
-        env:
-          PATH_PREFIX: '/${{ github.head_ref }}'
 
       - name: S3 Sync - Master
         uses: jakejarvis/s3-sync-action@v0.5.1
