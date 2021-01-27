@@ -1,0 +1,66 @@
+name: Test
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - '*'
+
+jobs:
+  setup:
+    name: Setup
+    runs-on: ubuntu-16.04
+    steps:
+      - name: Checkout PR
+        uses: actions/checkout@v1
+
+      - name: Retrieve engines' versions from package.json to env variables
+        id: engines
+        run: echo "##[set-output name=NVMRC;]$(cat package.json | grep '\"node\":' | sed 's/^ *//;s/ *$//;s/\"node\":\ \"//;s/\",//' )"
+
+      - name: Setup node ${{ steps.engines.outputs.NODE_VERSION }}
+        uses: actions/setup-node@master
+        with:
+          node-version: ${{ steps.engines.outputs.NODE_VERSION }}
+
+      - name: Cache depedendencies
+        id: cache
+        uses: actions/cache@v1
+        with:
+          path: node_modules
+          ## Check cache based on yarn.lock hashfile
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-${{ env.cache-name }}-
+            ${{ runner.os }}-yarn-
+            ${{ runner.os }}-
+
+      - name: Install dependencies
+        ## If no cache is found, install dependencies
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: yarn
+
+  run:
+    name: Run
+    needs: [setup]
+    runs-on: ubuntu-16.04
+    steps:
+      - name: Checkout PR
+        uses: actions/checkout@v1
+
+      - name: Restore cache
+        uses: actions/cache@v1
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+
+      - name: Lint
+        run: yarn lint
+
+      - name: Typescript
+        run: yarn tsc
+
+      - name: Test
+        run: yarn test

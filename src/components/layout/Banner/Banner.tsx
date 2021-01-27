@@ -14,20 +14,19 @@ export const Banner = () => (
   >
     <Image src={IcnAnnouncement} mr="15px" />
     <Text color="white">
-      You're on the landing page for the new MyCrypto. Clicking any buttons on
-      this page will open{' '}
-      <Link color="white" sx={{ fontWeight: 700 }} href={URLS.app}>
-        https://app.mycrypto.com
-      </Link>{' '}
-      in a new tab. For more information, visit the{' '}
+      Change can be hard but{' '}
       <Link
         color="white"
         sx={{ fontWeight: 700 }}
         href="https://medium.com/@MyCrypto/7020f919f792"
       >
-        release post
+        it’s really worth it
       </Link>
-      .
+      . If you are a MyCrypto pro, update your bookmark to{' '}
+      <Link color="white" sx={{ fontWeight: 700 }} href={URLS.app}>
+        {URLS.app}
+      </Link>{' '}
+      and skip this page in the future. 💖
     </Text>
   </Flex>
 );

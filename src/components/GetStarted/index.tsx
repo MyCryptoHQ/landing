@@ -14,14 +14,13 @@ import {
 import { START_CTAS, TStartCta } from './config';
 
 import users from '@assets/title-illustration.svg';
-import { URLS } from '@config';
 
 const ActionCard = ({ icon, title, subTitle, url }: TStartCta) => {
   return (
     <Card
       variant="card"
-      width={{ _: '30%', lg: '500px' }}
-      height={{ _: '270px', lg: '140px' }}
+      width={{ _: '45%', lg: '500px' }}
+      height={{ _: '200px', lg: '140px' }}
       padding={{ _: '10px 0', lg: '25px 30px' }}
       mb="15px"
       sx={{
@@ -42,7 +41,7 @@ const ActionCard = ({ icon, title, subTitle, url }: TStartCta) => {
               variant="title"
               my={{ _: '10px', lg: 'inherit' }}
               color="text"
-              minHeight={{ _: '6.5rem', sm: 'auto' }}
+              minHeight={{ _: '4rem', lg: 'auto' }}
             >
               {title}
             </Heading>
@@ -65,7 +64,7 @@ const GetStarted = () => {
   return (
     <Section color="text">
       <Box
-        height={{ _: '110vh', lg: 'auto' }}
+        height={{ _: '110vh', lg: '80vh' }}
         pl={{ _: 0, lg: '7%' }}
         my={{ _: '0', lg: '20px' }}
         sx={{
@@ -104,6 +103,7 @@ const GetStarted = () => {
                 textAlign={{ _: 'center', lg: 'left' }}
                 sx={{ marginTop: '10px' }}
                 fontSize={{ _: '1.8rem', sm: '2.2rem' }}
+                width={{ lg: '95%', xxl: 'auto' }}
               >
                 Unify all your Ethereum accounts
                 <br />
@@ -122,14 +122,6 @@ const GetStarted = () => {
             </Flex>
           </Flex>
         </Box>
-        <Text mb={'40px'} color="greyed" px={{ _: '10px', sm: '20px', lg: 0 }}>
-          We know change is hard. If you are a MyCrypto pro, update your
-          bookmark to{' '}
-          <Link variant="link" color="link" href={URLS.app}>
-            {URLS.app}
-          </Link>{' '}
-          and never see this page full of marketing stuff ever again. 💖
-        </Text>
       </Box>
     </Section>
   );
