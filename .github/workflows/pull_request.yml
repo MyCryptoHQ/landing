@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout PR
+      - name: Checkout
         uses: actions/checkout@v1
 
       ## Set sha in env for pathPrefix
@@ -86,7 +86,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout PR
+      - name: Checkout
         uses: actions/checkout@v1
 
       # Fetch the PR number to use it with AWS
