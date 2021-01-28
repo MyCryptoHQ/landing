@@ -53,7 +53,7 @@ function SEO({
         },
         {
           property: `og:title`,
-          content: title,
+          content: metaTitle,
         },
         {
           property: `og:description`,
@@ -73,7 +73,7 @@ function SEO({
         },
         {
           property: `og:image:alt`,
-          content: title,
+          content: metaTitle,
         },
         {
           property: 'og:image:width',
@@ -93,7 +93,7 @@ function SEO({
         },
         {
           name: `twitter:title`,
-          content: title,
+          content: metaTitle,
         },
         {
           name: `twitter:description`,
@@ -105,7 +105,7 @@ function SEO({
         },
         {
           property: `twitter:image:alt`,
-          content: title,
+          content: metaTitle,
         },
         {
           property: 'twitter:image:width',
