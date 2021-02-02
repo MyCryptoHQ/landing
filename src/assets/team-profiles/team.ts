@@ -128,6 +128,20 @@ const TEAM_MEMBERS: ITeamMember[] = [
     picture: frederik,
     name: 'Frederik',
     title: 'Developer',
+    socials: [
+      {
+        type: 'team-linkedin',
+        url: 'https://www.linkedin.com/in/frederikbolding',
+      },
+      {
+        type: 'team-github',
+        url: 'https://github.com/FrederikBolding',
+      },
+      {
+        type: 'team-twitter',
+        url: 'https://twitter.com/frederikbolding',
+      },
+    ],
   },
   {
     picture: guillaume,
