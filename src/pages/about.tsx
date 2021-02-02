@@ -1,9 +1,9 @@
 import React from 'react';
 import { Text, Flex, Image, Link, Icon } from '@components';
-import { IMember } from '@types';
+import { ITeamMember } from '@types';
 import TEAM_MEMBERS from '@assets/team-profiles/team';
 
-const Member = ({ name, profileUrl, title, socials }: IMember) => (
+const Member = ({ name, picture, title, socials }: ITeamMember) => (
   <Flex
     flexDirection="column"
     alignItems="center"
@@ -13,7 +13,7 @@ const Member = ({ name, profileUrl, title, socials }: IMember) => (
   >
     <Image
       alt={name}
-      src={profileUrl}
+      src={picture}
       width="220px"
       height="220px"
       mb="20px"

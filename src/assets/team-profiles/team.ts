@@ -1,4 +1,4 @@
-import { IMember } from '@types';
+import { ITeamMember } from '@types';
 
 import avani from './avani.jpg';
 import emmanuel from './emmanuel.jpg';
@@ -21,9 +21,9 @@ import wietze from './wietze.jpg';
 import jordan from './jordan.jpg';
 
 // Migrate content from `about.mycrypto.com`
-const TEAM_MEMBERS: IMember[] = [
+const TEAM_MEMBERS: ITeamMember[] = [
   {
-    profileUrl: taylor,
+    picture: taylor,
     name: 'Taylor',
     title: 'Chief Executive Officer',
     socials: [
@@ -42,7 +42,7 @@ const TEAM_MEMBERS: IMember[] = [
     ],
   },
   {
-    profileUrl: jordan,
+    picture: jordan,
     name: 'Jordan',
     title: 'Chief Marketing Officer',
     socials: [
@@ -57,7 +57,7 @@ const TEAM_MEMBERS: IMember[] = [
     ],
   },
   {
-    profileUrl: luker,
+    picture: luker,
     name: 'Luker',
     title: 'Project Manager',
     socials: [
@@ -72,7 +72,7 @@ const TEAM_MEMBERS: IMember[] = [
     ],
   },
   {
-    profileUrl: michael,
+    picture: michael,
     name: 'Michael',
     title: 'Developer',
     socials: [
@@ -91,7 +91,7 @@ const TEAM_MEMBERS: IMember[] = [
     ],
   },
   {
-    profileUrl: emmanuel,
+    picture: emmanuel,
     name: 'Emmanuel',
     title: 'Developer',
     socials: [
@@ -106,7 +106,7 @@ const TEAM_MEMBERS: IMember[] = [
     ],
   },
   {
-    profileUrl: luit,
+    picture: luit,
     name: 'Luit',
     title: 'Developer',
     socials: [
@@ -125,12 +125,12 @@ const TEAM_MEMBERS: IMember[] = [
     ],
   },
   {
-    profileUrl: frederik,
+    picture: frederik,
     name: 'Frederik',
     title: 'Developer',
   },
   {
-    profileUrl: guillaume,
+    picture: guillaume,
     name: 'Guillaume',
     title: 'Developer',
     socials: [
@@ -149,7 +149,7 @@ const TEAM_MEMBERS: IMember[] = [
     ],
   },
   {
-    profileUrl: mia,
+    picture: mia,
     name: 'Mia',
     title: 'Cloud / DevOps Engineer',
     socials: [
@@ -160,7 +160,7 @@ const TEAM_MEMBERS: IMember[] = [
     ],
   },
   {
-    profileUrl: harry,
+    picture: harry,
     name: 'Harry',
     title: 'Director of Security',
     socials: [
@@ -175,7 +175,7 @@ const TEAM_MEMBERS: IMember[] = [
     ],
   },
   {
-    profileUrl: wietze,
+    picture: wietze,
     name: 'Wietze',
     title: 'Education & Support / Analytics',
     socials: [
@@ -194,7 +194,7 @@ const TEAM_MEMBERS: IMember[] = [
     ],
   },
   {
-    profileUrl: maarten,
+    picture: maarten,
     name: 'Maarten',
     title: 'Education & Support / Analytics',
     socials: [
@@ -209,17 +209,17 @@ const TEAM_MEMBERS: IMember[] = [
     ],
   },
   {
-    profileUrl: jai,
+    picture: jai,
     name: 'Jai',
     title: 'Strategy / Mobile',
   },
   {
-    profileUrl: jack,
+    picture: jack,
     name: 'Jack',
     title: 'Director of Business Development / Ambo Mobile and Web Products',
   },
   {
-    profileUrl: avani,
+    picture: avani,
     name: 'Avani',
     title: 'UX & Design',
     socials: [
@@ -230,12 +230,12 @@ const TEAM_MEMBERS: IMember[] = [
     ],
   },
   {
-    profileUrl: petra,
+    picture: petra,
     name: 'Petra',
     title: 'UX & Design',
   },
   {
-    profileUrl: ryon,
+    picture: ryon,
     name: 'Ryon',
     title: 'General Counsel',
     socials: [
@@ -250,7 +250,7 @@ const TEAM_MEMBERS: IMember[] = [
     ],
   },
   {
-    profileUrl: jason,
+    picture: jason,
     name: 'Jason',
     title: 'Compliance',
     socials: [
@@ -265,7 +265,7 @@ const TEAM_MEMBERS: IMember[] = [
     ],
   },
   {
-    profileUrl: george,
+    picture: george,
     name: 'George',
     title: 'Operations',
     socials: [
