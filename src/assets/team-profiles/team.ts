@@ -1,266 +1,284 @@
+import { ITeamMember } from '@types';
+
+import avani from './avani.jpg';
+import emmanuel from './emmanuel.jpg';
+import frederik from './frederik.jpg';
+import george from './george.jpg';
+import guillaume from './guroux.jpg';
+import harry from './harry.jpg';
+import jack from './jack.jpg';
+import jai from './jai.jpg';
+import jason from './jason.jpg';
+import luit from './luit.jpg';
+import luker from './luker.jpg';
+import maarten from './maarten.jpg';
+import mia from './mia.jpg';
+import michael from './michael.jpg';
+import petra from './petra.jpg';
+import ryon from './ryon.jpg';
+import taylor from './taylor.jpg';
+import wietze from './wietze.jpg';
+import jordan from './jordan.jpg';
+
 // Migrate content from `about.mycrypto.com`
-const TEAM_MEMBERS = [
+const TEAM_MEMBERS: ITeamMember[] = [
   {
-    profileUrl: 'taylor.jpg',
+    picture: taylor,
     name: 'Taylor',
     title: 'Chief Executive Officer',
     socials: [
       {
-        type: 'linkedin',
+        type: 'team-linkedin',
         url: 'https://www.linkedin.com/in/tayvano/',
       },
       {
-        type: 'github',
+        type: 'team-github',
         url: 'https://github.com/tayvano',
       },
       {
-        type: 'twitter',
+        type: 'team-twitter',
         url: 'https://twitter.com/tayvano_',
       },
     ],
   },
   {
-    profileUrl: 'jordan.jpg',
+    picture: jordan,
     name: 'Jordan',
     title: 'Chief Marketing Officer',
     socials: [
       {
-        type: 'linkedin',
+        type: 'team-linkedin',
         url: 'https://www.linkedin.com/in/jordanspence/',
       },
       {
-        type: 'twitter',
+        type: 'team-twitter',
         url: 'https://twitter.com/spencecoin',
       },
     ],
   },
   {
-    profileUrl: 'luker.jpg',
+    picture: luker,
     name: 'Luker',
     title: 'Project Manager',
     socials: [
       {
-        type: 'linkedin',
+        type: 'team-linkedin',
         url: 'https://www.linkedin.com/in/jen-luker-243411156',
       },
       {
-        type: 'twitter',
+        type: 'team-twitter',
         url: 'https://twitter.com/LuckyLuker2',
       },
     ],
   },
   {
-    profileUrl: 'michael.jpg',
+    picture: michael,
     name: 'Michael',
     title: 'Developer',
     socials: [
       {
-        type: 'linkedin',
+        type: 'team-linkedin',
         url: 'https://www.linkedin.com/in/michael--hahn/',
       },
       {
-        type: 'github',
+        type: 'team-github',
         url: 'https://github.com/blurpesec',
       },
       {
-        type: 'twitter',
+        type: 'team-twitter',
         url: 'https://twitter.com/blurpesec',
       },
     ],
   },
   {
-    profileUrl: 'emmanuel.jpg',
+    picture: emmanuel,
     name: 'Emmanuel',
     title: 'Developer',
     socials: [
       {
-        type: 'github',
+        type: 'team-github',
         url: 'https://github.com/vilsbole',
       },
       {
-        type: 'twitter',
+        type: 'team-twitter',
         url: 'https://twitter.com/vilsbole',
       },
     ],
   },
   {
-    profileUrl: 'luit.jpg',
+    picture: luit,
     name: 'Luit',
     title: 'Developer',
     socials: [
       {
-        type: 'linkedin',
+        type: 'team-linkedin',
         url: 'https://www.linkedin.com/in/luit',
       },
       {
-        type: 'github',
+        type: 'team-github',
         url: 'https://github.com/MrLuit',
       },
       {
-        type: 'twitter',
+        type: 'team-twitter',
         url: 'https://twitter.com/Luit_H',
       },
     ],
   },
   {
-    profileUrl: 'frederik.jpg',
+    picture: frederik,
     name: 'Frederik',
     title: 'Developer',
-    socials: [],
   },
   {
-    profileUrl: 'guroux.jpg',
+    picture: guillaume,
     name: 'Guillaume',
     title: 'Developer',
     socials: [
       {
-        type: 'linkedin',
+        type: 'team-linkedin',
         url: 'https://www.linkedin.com/in/guillaumerx/',
       },
       {
-        type: 'github',
+        type: 'team-github',
         url: 'https://github.com/GuillaumeRx',
       },
       {
-        type: 'twitter',
+        type: 'team-twitter',
         url: 'https://twitter.com/Guiiiiiiillaume',
       },
     ],
   },
   {
-    profileUrl: 'mia.jpg',
+    picture: mia,
     name: 'Mia',
     title: 'Cloud / DevOps Engineer',
     socials: [
       {
-        type: 'linkedin',
+        type: 'team-linkedin',
         url: 'https://linkedin.com/in/mia-alexander',
       },
     ],
   },
   {
-    profileUrl: 'harry.jpg',
+    picture: harry,
     name: 'Harry',
     title: 'Director of Security',
     socials: [
       {
-        type: 'github',
+        type: 'team-github',
         url: 'https://github.com/409H/',
       },
       {
-        type: 'twitter',
+        type: 'team-twitter',
         url: 'https://twitter.com/sniko_',
       },
     ],
   },
   {
-    profileUrl: 'wietze.jpg',
+    picture: wietze,
     name: 'Wietze',
-    title: 'Education &amp; Support / Analytics',
+    title: 'Education & Support / Analytics',
     socials: [
       {
-        type: 'linkedin',
+        type: 'team-linkedin',
         url: 'https://www.linkedin.com/in/wietzebronkema/',
       },
       {
-        type: 'github',
+        type: 'team-github',
         url: 'https://github.com/wtzb',
       },
       {
-        type: 'twitter',
+        type: 'team-twitter',
         url: 'https://twitter.com/wtzb_',
       },
     ],
   },
   {
-    profileUrl: 'maarten.jpg',
+    picture: maarten,
     name: 'Maarten',
-    title: 'Education &amp; Support / Analytics',
+    title: 'Education & Support / Analytics',
     socials: [
       {
-        type: 'github',
+        type: 'team-github',
         url: 'https://github.com/Mrtenz',
       },
       {
-        type: 'twitter',
+        type: 'team-twitter',
         url: 'https://twitter.com/Mrten_',
       },
     ],
   },
   {
-    profileUrl: 'jai.jpg',
+    picture: jai,
     name: 'Jai',
     title: 'Strategy / Mobile',
-    socials: [],
   },
   {
-    profileUrl: 'jack.jpg',
+    picture: jack,
     name: 'Jack',
     title: 'Director of Business Development / Ambo Mobile and Web Products',
-    socials: [],
   },
   {
-    profileUrl: 'avani.jpg',
+    picture: avani,
     name: 'Avani',
     title: 'UX & Design',
     socials: [
       {
-        type: 'twitter',
+        type: 'team-twitter',
         url: 'https://twitter.com/avanimiriyala',
       },
     ],
   },
   {
-    profileUrl: 'petra.jpg',
+    picture: petra,
     name: 'Petra',
     title: 'UX & Design',
-    socials: [],
   },
   {
-    profileUrl: 'ryon.jpg',
+    picture: ryon,
     name: 'Ryon',
     title: 'General Counsel',
     socials: [
       {
-        type: 'linkedin',
+        type: 'team-linkedin',
         url: 'https://www.linkedin.com/in/ryonnixon/',
       },
       {
-        type: 'twitter',
+        type: 'team-twitter',
         url: 'https://twitter.com/ryonnixon',
       },
     ],
   },
   {
-    profileUrl: 'jason.jpg',
+    picture: jason,
     name: 'Jason',
     title: 'Compliance',
     socials: [
       {
-        type: 'linkedin',
+        type: 'team-linkedin',
         url: 'https://linkedin.com/in/jasoncivalleri',
       },
       {
-        type: 'twitter',
+        type: 'team-twitter',
         url: 'https://twitter.com/jasonthehealer',
       },
     ],
   },
   {
-    profileUrl: 'george.jpg',
+    picture: george,
     name: 'George',
     title: 'Operations',
     socials: [
       {
-        type: 'linkedin',
+        type: 'team-linkedin',
         url: 'https://linkedin.com/in/george-m-balolong-2a166913',
       },
       {
-        type: 'github',
+        type: 'team-github',
         url: 'https://github.com/Balozar',
       },
       {
-        type: 'twitter',
+        type: 'team-twitter',
         url: 'https://twitter.com/mycryptomeister',
       },
     ],
