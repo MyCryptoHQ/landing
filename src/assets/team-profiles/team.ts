@@ -1,20 +1,18 @@
 import { ITeamMember } from '@types';
 
 import avani from './avani.jpg';
+import allison from './allison.jpg';
 import emmanuel from './emmanuel.jpg';
 import frederik from './frederik.jpg';
 import george from './george.jpg';
 import guillaume from './guroux.jpg';
 import harry from './harry.jpg';
-import jack from './jack.jpg';
-import jai from './jai.jpg';
 import jason from './jason.jpg';
 import luit from './luit.jpg';
 import luker from './luker.jpg';
 import maarten from './maarten.jpg';
 import mia from './mia.jpg';
 import michael from './michael.jpg';
-import petra from './petra.jpg';
 import ryon from './ryon.jpg';
 import taylor from './taylor.jpg';
 import wietze from './wietze.jpg';
@@ -223,16 +221,6 @@ const TEAM_MEMBERS: ITeamMember[] = [
     ],
   },
   {
-    picture: jai,
-    name: 'Jai',
-    title: 'Strategy / Mobile',
-  },
-  {
-    picture: jack,
-    name: 'Jack',
-    title: 'Director of Business Development / Ambo Mobile and Web Products',
-  },
-  {
     picture: avani,
     name: 'Avani',
     title: 'UX & Design',
@@ -244,8 +232,8 @@ const TEAM_MEMBERS: ITeamMember[] = [
     ],
   },
   {
-    picture: petra,
-    name: 'Petra',
+    picture: allison,
+    name: 'Allison',
     title: 'UX & Design',
   },
   {
