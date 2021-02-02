@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, Flex, Image, Link, Icon } from '@components';
+import { Text, Flex, Image, Link, Icon, SEO } from '@components';
 import { ITeamMember } from '@types';
 import TEAM_MEMBERS from '@assets/team-profiles/team';
 
@@ -43,6 +43,7 @@ const About = () => (
     flexDirection="column"
     alignItems="center"
   >
+    <SEO title="About" />
     <Text variant="base" mb="50px">
       MyCrypto is an open-source, client-side tool for interacting with the
       blockchain. Developed by and for the community beginning in 2015, we’re
