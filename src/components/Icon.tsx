@@ -35,6 +35,9 @@ import MYCLogo from '@assets/logo-mycrypto.svg';
 import bitcoin from '@assets/bitcoin.svg';
 import ether from '@assets/ether.svg';
 import sadWallet from '@assets/icn-sad-wallet.svg';
+import teamTwitter from '@assets/socials/team-twitter.svg';
+import teamLinkedin from '@assets/socials/team-linkedin.svg';
+import teamGithub from '@assets/socials/team-github.svg';
 
 /**
  * Wallets
@@ -89,6 +92,9 @@ const IconMap = {
   trust,
   web3Default,
   sadWallet,
+  'team-twitter': teamTwitter,
+  'team-github': teamGithub,
+  'team-linkedin': teamLinkedin,
 };
 
 export type IconName = keyof typeof IconMap;
@@ -102,9 +108,18 @@ const Icon = ({
   name,
   width = 'auto',
   height = 'auto',
+  color,
   ...props
 }: IconProps & ImageProps) => {
   const SVGIcon = IconMap[name as IconName];
-  return <Image src={SVGIcon} width={width} height={height} {...props} />;
+  return (
+    <Image
+      src={SVGIcon}
+      width={width}
+      height={height}
+      color={color}
+      {...props}
+    />
+  );
 };
 export default Icon;
