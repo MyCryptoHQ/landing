@@ -42,6 +42,8 @@ Some MyCrypto products have server-side functions that are hosted by a third-par
 
 Some MyCrypto products collect minimal usage analytics on the client side in order to better understand how people are using the product. We use an open-source analytics platform called [Matomo](https://matomo.org/why-matomo/) (previously Piwik), which we host on our own servers and have customized extensively to limit the information gathered. This ensures no third party, including Matomo, has access to your data. We protect your information using the latest technology and best practices for technical and administrative security. This data is not personally identifiable and is collected solely to improve our products.
 
+Our main product offering ([MyCrypto App](https://app.mycrypto.com)) makes use of [Segment](https://segment.com/) for a data warehouse for anonymised analytics data. We collect the data grouped by the user using a randomly generated identification string. You can disable this and refresh your unique ID string whenever you like in your [app settings](https://app.mycrypto.com/settings) (see "Product Analytics"). We route the data collection requests through our own instance of [blockstack/stats](https://github.com/MyCryptoHQ/stats).
+
 Some examples of data we **do** collect:
 
 - Date and time of the request
@@ -69,6 +71,8 @@ Some examples of data we **do not** collect:
 We do not utilize any tracking cookies. Any individualized (though anonymized) records collected by Matomo (as described above) are automatically purged after one year. We may retain anonymized, aggregated reports perpetually as part of our ongoing business operations and optimization.
 
 You can learn about how dedicated Matomo is to creating an open-source analytics platform that enables companies, like MyCrypto, to respect users' privacy [here](https://matomo.org/docs/privacy/), [here](https://matomo.org/faq/general/faq_18254/), and [here](https://matomo.org/blog/2018/04/how-to-not-process-any-personal-data-with-matomo-and-what-it-means-for-you/).
+
+You can learn about how Segment is privacy-first data storage warehouse platform that enables companies, like MyCrypto, to respect users' privacy [here](https://segment.com/legal/privacy/).
 
 #### MyCrypto Email, Telephone, or Other Two-Way Communications
 
