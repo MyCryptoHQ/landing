@@ -234,6 +234,8 @@ Users may use other third-party services while visiting MyCrypto's services to c
 
 - [CoinGecko](https://www.coingecko.com/) (used for pricing API): Gecko Labs Pte. Ltd.'s [Terms of Use](https://www.coingecko.com/en/terms) and [Privacy Policy](https://www.coingecko.com/en/privacy)
 
+- [TheGraph](https://thegraph.com/) (used for some api requests): Graph Protocol Inc.'s [Terms of Use](https://thegraph.com/termsofuse/) and [Privacy Policy](https://thegraph.com/privacy/)
+
 The above list only includes third-party providers whose information practices we could obtain after reasonable research and solicitation. Please be aware that the use of any non-listed third-party services (such as alternate node providers, even via the "AUTO" selection) is at the User's risk own discretion, and (like any other third-party services) MyCrypto will not be liable to Users for any use or harm caused by the use of those products as permitted by law.
 
 Notwithstanding the above, some third-party relationships (including, but not limited to, web hosting or DDoS prevention services) may require confidential relationships and data disclosure practices due to emergent security or other practical concerns, and therefore are not listed in this Privacy Policy. MyCrypto reserves the right to determine whether confidentiality is necessary, and, if so, how to operate in such circumstances at its own discretion. Nonetheless, no such relationship will involve knowingly disclosing personally identifiable information for marketing purposes or in any other way inconsistent with this Policy.
