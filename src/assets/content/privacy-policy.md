@@ -40,7 +40,9 @@ Using [your own node](https://support.mycrypto.com/developers/run-your-own-node-
 
 Some MyCrypto products have server-side functions that are hosted by a third-party provider and employ third-party security and functionality services. While MyCrypto and its third-party providers may collect limited information as is standard and appropriate to secure our Services and provide the best user experience, no personally identifiable information content associated with such information is stored. For example, we do not store information in a way that can track a private key, public address, or inputted transaction to a specific IP address or username.
 
-Some MyCrypto products collect minimal usage analytics on the client side in order to better understand how people are using the product. We use an open-source analytics platform called [Matomo](https://matomo.org/why-matomo/) (previously Piwik), which we host on our own servers and have customized extensively to limit the information gathered. This ensures no third party, including Matomo, has access to your data. We protect your information using the latest technology and best practices for technical and administrative security. This data is not personally identifiable and is collected solely to improve our products.
+Our main product offering ([MyCrypto App](https://app.mycrypto.com)) makes use of [Segment](https://segment.com/) as a data warehouse for anonymized analytics data. We collect the data grouped by the user using a randomly generated identification string. You can disable this and refresh your unique ID string whenever you like in your [app settings](https://app.mycrypto.com/settings) (see "Product Analytics"). We route the data collection requests through our own instance of [blockstack/stats](https://github.com/MyCryptoHQ/stats).
+
+Some other MyCrypto products collect minimal usage analytics on the client side in order to better understand how people are using the product. We use an open-source analytics platform called [Matomo](https://matomo.org/why-matomo/) (previously Piwik), which we host on our own servers and have customized extensively to limit the information gathered. This ensures no third party, including Matomo, has access to your data. We protect your information using the latest technology and best practices for technical and administrative security. This data is not personally identifiable and is collected solely to improve our products.
 
 Some examples of data we **do** collect:
 
@@ -69,6 +71,8 @@ Some examples of data we **do not** collect:
 We do not utilize any tracking cookies. Any individualized (though anonymized) records collected by Matomo (as described above) are automatically purged after one year. We may retain anonymized, aggregated reports perpetually as part of our ongoing business operations and optimization.
 
 You can learn about how dedicated Matomo is to creating an open-source analytics platform that enables companies, like MyCrypto, to respect users' privacy [here](https://matomo.org/docs/privacy/), [here](https://matomo.org/faq/general/faq_18254/), and [here](https://matomo.org/blog/2018/04/how-to-not-process-any-personal-data-with-matomo-and-what-it-means-for-you/).
+
+You can learn about how Segment is a privacy-first data storage warehouse platform that enables companies, like MyCrypto, to respect users' privacy [here](https://segment.com/legal/privacy/).
 
 #### MyCrypto Email, Telephone, or Other Two-Way Communications
 
@@ -229,6 +233,8 @@ Users may use other third-party services while visiting MyCrypto's services to c
 - [CryptoCompare](https://www.cryptocompare.com/) (used for pricing API): Crypto Coin Comparison LTD's [Terms & Conditions](https://www.cryptocompare.com/terms-conditions/) and [Privacy Policy](https://www.cryptocompare.com/privacy-policy/)
 
 - [CoinGecko](https://www.coingecko.com/) (used for pricing API): Gecko Labs Pte. Ltd.'s [Terms of Use](https://www.coingecko.com/en/terms) and [Privacy Policy](https://www.coingecko.com/en/privacy)
+
+- [TheGraph](https://thegraph.com/) (used for some api requests): Graph Protocol Inc.'s [Terms of Use](https://thegraph.com/termsofuse/) and [Privacy Policy](https://thegraph.com/privacy/)
 
 The above list only includes third-party providers whose information practices we could obtain after reasonable research and solicitation. Please be aware that the use of any non-listed third-party services (such as alternate node providers, even via the "AUTO" selection) is at the User's risk own discretion, and (like any other third-party services) MyCrypto will not be liable to Users for any use or harm caused by the use of those products as permitted by law.
 
