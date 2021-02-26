@@ -20,11 +20,10 @@ const About = () => {
         width={{ _: '80%', lg: 'auto' }}
         textAlign={{ _: 'center', lg: 'left' }}
       >
-        MyCrypto is an open-source, client-side tool for generating ether
-        wallets, handling ERC-20 tokens, and interacting with the blockchain
-        more easily. Developed by and for the community since 2015, we’re
-        focused on building awesome products that put the power in people’s
-        hands.
+        MyCrypto is an open-source tool that allows you to manage your Ethereum
+        accounts privately and securely. Developed by and for the community
+        since 2015, we’re focused on building awesome products that put the
+        power in people’s hands.
       </Text>
       <Box display={{ _: 'none', lg: 'block' }}>
         <Socials socials={SOCIAL_LINKS} />
