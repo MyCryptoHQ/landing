@@ -59,6 +59,7 @@ jobs:
         with:
           args: --acl public-read --cache-control max-age=0 --follow-symlinks --delete --exclude '.git/*'
         env:
+          DEST_DIR: 'master'
           SOURCE_DIR: 'public'
 
       # Launch E2E tests. When in pull request it runs against the PR's mycryptobuilds url.
