@@ -70,6 +70,8 @@ Some examples of data we **do not** collect:
 
 We do not utilize any tracking cookies. Any individualized (though anonymized) records collected by Matomo (as described above) are automatically purged after one year. We may retain anonymized, aggregated reports perpetually as part of our ongoing business operations and optimization.
 
+Some of our non-proxied third-party providers (such as [The Graph](https://thegraph.com/) and [CoinGecko](https://www.coingecko.com/)) will have access to your IP address, various asset tickers, and ethereum address in the request to their APIs. You can find their Terms of Service and Privacy Policy near the bottom of this document. Generally we proxy requests to third-party providers, which would mask your originating IP to the end third-party provider as our API server IP - we do not store these requests.
+
 You can learn about how dedicated Matomo is to creating an open-source analytics platform that enables companies, like MyCrypto, to respect users' privacy [here](https://matomo.org/docs/privacy/), [here](https://matomo.org/faq/general/faq_18254/), and [here](https://matomo.org/blog/2018/04/how-to-not-process-any-personal-data-with-matomo-and-what-it-means-for-you/).
 
 You can learn about how Segment is a privacy-first data storage warehouse platform that enables companies, like MyCrypto, to respect users' privacy [here](https://segment.com/legal/privacy/).
@@ -235,6 +237,8 @@ Users may use other third-party services while visiting MyCrypto's services to c
 - [CoinGecko](https://www.coingecko.com/) (used for pricing API): Gecko Labs Pte. Ltd.'s [Terms of Use](https://www.coingecko.com/en/terms) and [Privacy Policy](https://www.coingecko.com/en/privacy)
 
 - [TheGraph](https://thegraph.com/) (used for some api requests): Graph Protocol Inc.'s [Terms of Use](https://thegraph.com/termsofuse/) and [Privacy Policy](https://thegraph.com/privacy/)
+
+- [0x](https://0x.org) (used for swapping assets): ZEROEX, Inc.'s [Terms of Service](https://0x.org/terms) and [Privacy Policy](https://0x.org/privacy)
 
 The above list only includes third-party providers whose information practices we could obtain after reasonable research and solicitation. Please be aware that the use of any non-listed third-party services (such as alternate node providers, even via the "AUTO" selection) is at the User's risk own discretion, and (like any other third-party services) MyCrypto will not be liable to Users for any use or harm caused by the use of those products as permitted by law.
 
