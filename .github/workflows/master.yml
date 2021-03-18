@@ -52,7 +52,9 @@ jobs:
         run: yarn
 
       - name: yarn build master
-        run: yarn build
+        run: yarn build:staging
+        env:
+          PATH_PREFIX: '/master'
 
       - name: S3 Sync - Master
         uses: jakejarvis/s3-sync-action@v0.5.1
