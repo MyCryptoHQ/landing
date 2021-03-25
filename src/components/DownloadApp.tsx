@@ -1,5 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import { Section, Heading, Text, Box, Flex, Icon, Button } from '@components';
+import {
+  Section,
+  Heading,
+  Text,
+  Box,
+  Flex,
+  Icon,
+  Button,
+  Link,
+} from '@components';
 import { getFeaturedOS, getRelease } from '@utils';
 import { OSNames, GITHUB_RELEASE_NOTES_URL } from '@config';
 import { useAnalytics } from '@hooks';
@@ -43,7 +52,7 @@ const DownloadApp = () => {
     >
       <Box width={{ _: '100%', md: 1 / 2 }}>
         <Heading textAlign={{ _: 'center', md: 'inherit' }}>
-          Everything is Even More Secure with our Desktop App
+          Get the Original MyCrypto Desktop App
         </Heading>
         <Text
           textAlign={{ _: 'center', md: 'inherit' }}
@@ -52,8 +61,15 @@ const DownloadApp = () => {
           my="20px"
           mb={{ _: '70px', md: '20px' }}
         >
-          Keep your keys out of the browser with the MyCrypto Desktop App. You
-          get more access to your funds, and scammers get less access to you.
+          A fan favorite since 2018, the MyCrypto Desktop App continues to
+          provide an additional layer of security for your Ethereum assets.{' '}
+          <Link
+            href="https://download.mycrypto.com/"
+            mt="20px"
+            sx={{ textDecoration: 'underline', color: '#FFFFFF' }}
+          >
+            Want more info?
+          </Link>
         </Text>
         <Button
           width={{ _: '100%', md: '300px' }}
