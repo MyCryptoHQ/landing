@@ -10,7 +10,7 @@
     "yarn": ">= 1.19.1"
   },
   "dependencies": {
-    "@mycrypto/ui": "0.23.0",
+    "@mycrypto/ui": "1.0.0",
     "@testing-library/react-hooks": "3.4.1",
     "@types/react-slick": "0.23.4",
     "axios": "0.21.1",
