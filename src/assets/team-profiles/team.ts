@@ -82,10 +82,6 @@ const TEAM_MEMBERS: ITeamMember[] = [
         type: 'team-github',
         url: 'https://github.com/blurpesec',
       },
-      {
-        type: 'team-twitter',
-        url: 'https://twitter.com/blurpesec',
-      },
     ],
   },
   {
