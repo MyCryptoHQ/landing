@@ -2,7 +2,6 @@ import { ITeamMember } from '@types';
 
 import avani from './avani.jpg';
 import allison from './allison.jpg';
-import emmanuel from './emmanuel.jpg';
 import frederik from './frederik.jpg';
 import george from './george.jpg';
 import guillaume from './guroux.jpg';
@@ -81,21 +80,6 @@ const TEAM_MEMBERS: ITeamMember[] = [
       {
         type: 'team-github',
         url: 'https://github.com/blurpesec',
-      },
-    ],
-  },
-  {
-    picture: emmanuel,
-    name: 'Emmanuel',
-    title: 'Developer',
-    socials: [
-      {
-        type: 'team-github',
-        url: 'https://github.com/vilsbole',
-      },
-      {
-        type: 'team-twitter',
-        url: 'https://twitter.com/vilsbole',
       },
     ],
   },
