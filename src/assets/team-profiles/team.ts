@@ -2,6 +2,7 @@ import { ITeamMember } from '@types';
 
 import avani from './avani.jpg';
 import allison from './allison.jpg';
+import chris from './chris.jpg';
 import frederik from './frederik.jpg';
 import george from './george.jpg';
 import guillaume from './guroux.jpg';
@@ -197,6 +198,25 @@ const TEAM_MEMBERS: ITeamMember[] = [
       {
         type: 'team-twitter',
         url: 'https://twitter.com/Mrten_',
+      },
+    ],
+  },
+  {
+    picture: chris,
+    name: 'Chris',
+    title: 'Education & Support',
+    socials: [
+      {
+        type: 'team-github',
+        url: 'https://github.com/chrishamer91',
+      },
+      {
+        type: 'team-twitter',
+        url: 'https://twitter.com/CryptoChris91',
+      },
+      {
+        type: 'team-linkedin',
+        url: 'https://www.linkedin.com/in/chhamer/',
       },
     ],
   },
