@@ -1,4 +1,3 @@
-import React from 'react';
 import { Flex, Text, Icon, Box } from '@components';
 import { Socials, SOCIAL_LINKS } from '.';
 

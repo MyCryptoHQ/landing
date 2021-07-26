@@ -1,10 +1,4 @@
-import React, {
-  ReactNode,
-  useState,
-  useEffect,
-  FormEvent,
-  ChangeEvent,
-} from 'react';
+import { ReactNode, useState, useEffect, FormEvent, ChangeEvent } from 'react';
 import CopyToClipboard from 'react-copy-to-clipboard';
 import { SUBSCRIBE } from '@config';
 import { useSubscribe } from '@hooks';

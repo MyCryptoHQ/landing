@@ -1,4 +1,3 @@
-import React from 'react';
 import { shadow, border, position, PositionProps } from 'styled-system';
 import styled from 'styled-components';
 

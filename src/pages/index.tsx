@@ -1,18 +1,7 @@
 import React, { useEffect } from 'react';
 import { useLocation } from '@reach/router';
 
-import {
-  SEO,
-  Flex,
-  WalletList,
-  Testimonials,
-  GetStarted,
-  Features,
-  DownloadApp,
-  KeepAssetsSafe,
-  PeaceOfMind,
-  BottomAction,
-} from '@components';
+import { Flex } from '@components';
 import { useAnalytics } from '@hooks';
 
 const HomePage = () => {
@@ -28,16 +17,7 @@ const HomePage = () => {
   }, []);
   return (
     <Flex flexDirection="column">
-      <SEO />
-      <GetStarted />
-      <WalletList />
-      <Features />
-      <DownloadApp />
-      <KeepAssetsSafe />
-      <PeaceOfMind />
-      <Testimonials />
-      {/* Bottom Action */}
-      <BottomAction />
+      <p>hello</p>
     </Flex>
   );
 };

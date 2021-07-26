@@ -3,22 +3,18 @@
  * with Gatsby's StaticQuery component.
  * See: https://www.gatsbyjs.org/docs/static-query/
  */
-
-import React from 'react';
-
+import { ReactNode } from 'react';
 import { Flex } from '../';
-import Header from './Header';
 import Footer from './Footer';
 import { Banner } from './Banner';
 
 type Props = {
-  children: React.ReactNode;
+  children: ReactNode;
 };
 
 const Layout = ({ children }: Props) => {
   return (
     <>
-      <Header />
       <Banner />
       <Flex>
         <main role="main">{children}</main>

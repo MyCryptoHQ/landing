@@ -1,4 +1,3 @@
-import React from 'react';
 import { Image, ImageProps } from '@components';
 
 import oval from '@assets/icn-oval.svg';

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link as GatsbyLink } from 'gatsby';
 import { LinkProps, Link as ExtLink } from 'rebass';
 import styled from 'styled-components';

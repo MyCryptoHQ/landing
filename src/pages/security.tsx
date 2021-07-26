@@ -1,4 +1,3 @@
-import React from 'react';
 import { graphql } from 'gatsby';
 
 import { SEO, Flex, Heading, Text } from '@components';
