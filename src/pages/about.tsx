@@ -1,4 +1,3 @@
-import React from 'react';
 import { Text, Flex, Image, Link, Icon, SEO } from '@components';
 import { ITeamMember } from '@types';
 import TEAM_MEMBERS from '@assets/team-profiles/team';

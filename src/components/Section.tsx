@@ -1,10 +1,11 @@
+import { ReactNode } from 'react';
 import { Box, Flex, FlexProps, BoxProps } from 'rebass/styled-components';
 
 type SectionProps = {
   type?: 'landing';
   relative?: boolean;
   bg?: string;
-  children: React.ReactNode;
+  children: ReactNode;
 };
 
 const Section = ({

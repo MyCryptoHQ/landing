@@ -1,3 +1,5 @@
+import { theme as UITheme } from '@mycrypto/ui';
+import { merge } from 'lodash';
 /**
  *  From https://styled-system.com/responsive-styles/
  * */
@@ -16,7 +18,7 @@ breakpoints.lg = breakpoints[3];
 breakpoints.xl = breakpoints[4];
 breakpoints.xxl = breakpoints[5];
 
-export const theme = {
+export const theme = merge(UITheme, {
   breakpoints,
   radii: {
     default: '3px',
@@ -91,37 +93,6 @@ export const theme = {
     },
   },
   text: {
-    largeHeading: {
-      fontSize: 0,
-      lineHeight: 0,
-      fontWeight: 800,
-    },
-    heading: {
-      fontSize: 1,
-      lineHeight: 2,
-    },
-    subHeading: {
-      fontSize: 2,
-      lineHeight: 1,
-    },
-    title: {
-      fontSize: 3,
-      lineHeight: 3,
-    },
-    largeBase: {
-      fontSize: 4,
-      lineHeight: 4,
-    },
-    base: {
-      fontSize: 5,
-      lineHeight: 4,
-    },
-    link: {
-      fontSize: 5,
-      lineHeight: 4,
-      textDecoration: 'none',
-      fontFamily: 'body',
-    },
     footerSmall: {
       fontSize: '0.625rem',
       lineHeight: '0.75rem',
@@ -148,4 +119,4 @@ export const theme = {
       cursor: 'pointer',
     },
   },
-};
+});

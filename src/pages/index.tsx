@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useLocation } from '@reach/router';
 
-import { Flex } from '@components';
+import { AllInOnePlace, Flex } from '@components';
 import { useAnalytics } from '@hooks';
 
 const HomePage = () => {
@@ -17,7 +17,7 @@ const HomePage = () => {
   }, []);
   return (
     <Flex flexDirection="column">
-      <p>hello</p>
+      <AllInOnePlace />
     </Flex>
   );
 };
