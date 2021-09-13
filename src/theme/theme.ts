@@ -52,6 +52,7 @@ export const theme = merge(UITheme, {
     link: '#1EB8E7',
     textInvert: '#fff',
     greyed: '#BBC2CB',
+    background_grey: '#F6F8FA',
     // background: '',
     primary: '#007896',
     // secondary: '',
@@ -64,6 +65,8 @@ export const theme = merge(UITheme, {
     white: '#fff',
     grey: '#E9E9E9',
     banner: '#55B6E2',
+    blue_muted: 'rgba(85, 182, 226, .2)',
+    alert_purple: '#A682FF',
   },
   buttons: {
     primary: {
@@ -93,12 +96,25 @@ export const theme = merge(UITheme, {
     },
   },
   text: {
+    heading: {
+      fontSize: ['25px', '2.8rem'],
+      textAlign: 'center',
+      color: 'text',
+      fontWeight: [900, 700],
+      secondary: {
+        fontSize: ['16px', '1.5rem'],
+        fontWeight: ['normal', 500],
+        textAlign: 'center',
+        px: ['35px', 0],
+        color: 'text',
+      },
+    },
     footerSmall: {
       fontSize: '0.625rem',
       lineHeight: '0.75rem',
     },
     footerLink: {
-      fontSize: '0.875em',
+      fontSize: '0.875rem',
       lineHeight: '1.18em',
       fontWeight: 300,
       textDecoration: 'none',
@@ -111,6 +127,10 @@ export const theme = merge(UITheme, {
     },
   },
   variants: {
+    link: {
+      textDecoration: 'none',
+      color: 'link',
+    },
     card: {
       bg: 'white',
       boxShadow: 'small',

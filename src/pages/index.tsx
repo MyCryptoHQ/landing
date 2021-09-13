@@ -1,7 +1,19 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { useLocation } from '@reach/router';
 
-import { AllInOnePlace, Flex } from '@components';
+import {
+  AllInOnePlace,
+  Flex,
+  SafeAndEasy,
+  KeepItSafe,
+  BirdsEyeView,
+  Testimonial,
+  StayUpToDate,
+  MakeItYours,
+  ConnectYourWallet,
+  GetCaughtUp,
+  BottomActions,
+} from '@components';
 import { useAnalytics } from '@hooks';
 
 const HomePage = () => {
@@ -18,6 +30,16 @@ const HomePage = () => {
   return (
     <Flex flexDirection="column">
       <AllInOnePlace />
+      <SafeAndEasy />
+      <BirdsEyeView />
+      <KeepItSafe />
+      <Testimonial />
+      <MakeItYours />
+      <StayUpToDate />
+      <ConnectYourWallet />
+      <Testimonial second />
+      <GetCaughtUp />
+      <BottomActions />
     </Flex>
   );
 };

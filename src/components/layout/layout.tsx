@@ -6,7 +6,6 @@
 import { ReactNode } from 'react';
 import { Flex } from '../';
 import Footer from './Footer';
-import { Banner } from './Banner';
 
 type Props = {
   children: ReactNode;
@@ -15,7 +14,6 @@ type Props = {
 const Layout = ({ children }: Props) => {
   return (
     <>
-      <Banner />
       <Flex>
         <main role="main">{children}</main>
       </Flex>

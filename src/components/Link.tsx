@@ -1,5 +1,5 @@
 import { Link as GatsbyLink } from 'gatsby';
-import { LinkProps, Link as ExtLink } from 'rebass';
+import { LinkProps, Link as ExtLink } from 'rebass/styled-components';
 import styled from 'styled-components';
 import {
   layout,
@@ -24,8 +24,9 @@ const SGatsbyLink = styled(GatsbyLink)<LinkProps>`
 const Link = ({
   href,
   internal,
+  blank = true,
   ...props
-}: LinkProps & { internal?: boolean }) => {
+}: LinkProps & { internal?: boolean; blank?: boolean }) => {
   if (internal && href) {
     return (
       <SGatsbyLink to={href} style={{ textDecoration: 'none' }} {...props}>
@@ -33,7 +34,14 @@ const Link = ({
       </SGatsbyLink>
     );
   }
-  return <ExtLink {...props} href={href} target="_blank" rel="noreferrer" />;
+  return (
+    <ExtLink
+      {...props}
+      href={href}
+      target={blank ? '_blank' : undefined}
+      rel="noreferrer"
+    />
+  );
 };
 
 export default Link;
