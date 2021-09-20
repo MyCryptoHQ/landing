@@ -1,28 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import styled from 'styled-components';
 
 import { SEO, Flex, Heading, Text, ContactUsBox } from '@components';
-
-const Row = styled.div`
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 90%;
-  justify-content: center;
-  border: 1px solid red;
-`;
-
-const Column = styled.div`
-  display: flex;
-  flex-direction: column;
-  flex-basis: 100%;
-  flex: 1;
-
-  &:nth-child(2) {
-    margin: 100px 0 0 0;
-  }
-`;
 
 const md = (data: QueryResult) => {
   const { html } = data.data.allMarkdownRemark.edges[0].node;
