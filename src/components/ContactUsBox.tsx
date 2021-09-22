@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flex, Heading, Text } from '@components';
+import { Flex, Heading, Text, Link } from '@components';
 
 const ContactUsBox = () => {
   return (
@@ -17,7 +17,7 @@ const ContactUsBox = () => {
         >
           If you have any questions, comments, or suggestions about our
           disclaimer, please contact MyCrypto support at{' '}
-          <a href="mailto:support@mycrypto.com">support@mycrypto.com</a>
+          <Link href="mailto:support@mycrypto.com">support@mycrypto.com</Link>
         </Text>
       </Flex>
     </Flex>
