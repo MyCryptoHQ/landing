@@ -133,6 +133,11 @@ export const theme = {
       textDecoration: 'none',
       fontFamily: 'body',
     },
+    greyHeader: {
+      color: '#B5BFC7',
+      fontSize: '12px',
+      textTransform: 'uppercase',
+    },
   },
   variants: {
     card: {
