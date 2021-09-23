@@ -42,6 +42,11 @@ export const LINK_COLUMNS: TLink[] = [
         url: '/security',
         internal: true,
       },
+      {
+        title: 'Disclaimer',
+        url: '/disclaimer',
+        internal: true,
+      },
     ],
   },
   {
