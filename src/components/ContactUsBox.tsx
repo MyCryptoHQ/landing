@@ -1,13 +1,26 @@
 import React from 'react';
 import { Flex, Heading, Text, Link } from '@components';
 
-const ContactUsBox = () => {
+interface props {
+  title?: string;
+  children?: any;
+}
+
+const ContactUsBox = ({ title = 'Contact Us', children }: props) => {
   return (
     <Flex variant="card" width="300px" padding="24px">
       <Flex flexDirection="column" alignItems="left">
-        <Heading variant="greyHeader" mt="20px" display="block">
-          Contact Us
+        <Heading
+          variant="greyHeader"
+          mt="20px"
+          display="block"
+          paddingBottom="15px"
+        >
+          {title}
         </Heading>
+
+        {children}
+
         <Text
           variant="smallBase"
           mt="14px"

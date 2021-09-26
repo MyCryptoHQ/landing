@@ -39,6 +39,8 @@ import teamTwitter from '@assets/socials/team-twitter.svg';
 import teamLinkedin from '@assets/socials/team-linkedin.svg';
 import teamGithub from '@assets/socials/team-github.svg';
 
+import linkJumpTo from '@assets/icn-link-jumpto.svg';
+
 /**
  * Wallets
  */
@@ -92,6 +94,7 @@ const IconMap = {
   trust,
   web3Default,
   sadWallet,
+  linkJumpTo,
   'team-twitter': teamTwitter,
   'team-github': teamGithub,
   'team-linkedin': teamLinkedin,
