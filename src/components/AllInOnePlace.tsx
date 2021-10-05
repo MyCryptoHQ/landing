@@ -1,8 +1,10 @@
 import { Box, Section, Icon, Heading, Text, Link, Flex } from '@components';
 import { WALLETS } from '@config';
+import { getSeason } from '@utils';
 import { WalletButton } from './WalletButton';
 
 export const AllInOnePlace = () => {
+  const season = getSeason();
   return (
     <Box
       position="relative"
@@ -18,7 +20,7 @@ export const AllInOnePlace = () => {
         top={{ _: '22%', sm: '50px' }}
         zIndex={-1}
       >
-        <Icon name="summerLeft" width={{ _: '120px', sm: 'auto' }} />
+        <Icon name={season.left} width={{ _: '120px', sm: 'auto' }} />
       </Box>
       <Box
         position="absolute"
@@ -26,10 +28,10 @@ export const AllInOnePlace = () => {
         bottom={{ _: '50px', sm: '20%' }}
         zIndex={-1}
       >
-        <Icon name="summerRight" width={{ _: '120px', sm: 'auto' }} />
+        <Icon name={season.right} width={{ _: '120px', sm: 'auto' }} />
       </Box>
       <Box position="absolute" width="100%" bottom="0" left="0" zIndex={-2}>
-        <Icon name="summerBackground" width="100%" />
+        <Icon name={season.background} width="100%" />
       </Box>
       <Flex
         width={{ _: '100%', md: '80%', lg: '75%' }}
@@ -55,7 +57,7 @@ export const AllInOnePlace = () => {
             variant="heading.secondary"
             fontSize={{ _: '22px', sm: '1.5rem' }}
           >
-            Ready to dive in?
+            {season.title}
           </Heading>
           <Heading
             variant="heading.secondary"

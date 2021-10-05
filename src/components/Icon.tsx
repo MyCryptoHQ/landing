@@ -40,7 +40,16 @@ import teamLinkedin from '@assets/socials/team-linkedin.svg';
 import teamGithub from '@assets/socials/team-github.svg';
 import summerLeft from '@assets/illo_summer_left.svg';
 import summerRight from '@assets/illo_summer_right.svg';
+import fallBackground from '@assets/illo_fall_bkgd.svg';
+import fallLeft from '@assets/illo_fall_left.svg';
+import fallRight from '@assets/illo_fall_right.svg';
 import summerBackground from '@assets/illo_summer_bkgd.svg';
+import winterLeft from '@assets/illo_winter_left.svg';
+import winterRight from '@assets/illo_winter_right.svg';
+import winterBackground from '@assets/illo_winter_bkgd.svg';
+import springLeft from '@assets/illo_spring_left.svg';
+import springRight from '@assets/illo_spring_right.svg';
+import springBackground from '@assets/illo_spring_bkgd.svg';
 import buy from '@assets/buy.svg';
 import create from '@assets/create.svg';
 import demo from '@assets/demo.svg';
@@ -87,6 +96,15 @@ const IconMap = {
   summerLeft,
   summerRight,
   summerBackground,
+  springLeft,
+  springRight,
+  springBackground,
+  fallLeft,
+  fallRight,
+  fallBackground,
+  winterLeft,
+  winterRight,
+  winterBackground,
   MYCLogo,
   bitcoin,
   ether,

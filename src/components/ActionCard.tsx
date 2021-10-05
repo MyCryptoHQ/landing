@@ -1,18 +1,7 @@
 import { Flex, Icon, Button, IconName, Text, Link } from '@components';
+import { Action } from '@types';
 
-export const ActionCard = ({
-  icon,
-  title,
-  text,
-  button,
-  link,
-}: {
-  icon: IconName;
-  title: string;
-  text: string;
-  button: string;
-  link: string;
-}) => (
+export const ActionCard = ({ icon, title, text, button, link }: Action) => (
   <Flex
     width="350px"
     height="310px"
