@@ -11,18 +11,48 @@ import {
   Icon,
 } from '@components';
 
-const TableOfContents = {
-  'The Blockchain': '#the-blockchain',
-  'MyCrypto Collection of Information': '#mycrypto-collection-of-information',
-  'EtherScamDB / CryptoScamDB': '#etherscamdb--cryptoscamdb',
-  'Storage of Information': '#storage-of-information',
-  'Use of Information': '#use-of-information',
-  Cookies: '#cookies',
-  'Third Parties': '#third-parties',
-  'Law Enforcement Purposes': '#law-enforcement-purposes',
-  Amendments: '#amendments',
-  'Contact Us': '#contact-us',
-};
+const TableOfContents = [
+  {
+    title: 'The Blockchain',
+    link: '#the-blockchain',
+  },
+  {
+    title: 'MyCrypto Collection of Information',
+    link: '#mycrypto-collection-of-information',
+  },
+  {
+    title: 'EtherScamDB / CryptoScamDB',
+    link: '#etherscamdb--cryptoscamdb',
+  },
+  {
+    title: 'Storage of Information',
+    link: '#storage-of-information',
+  },
+  {
+    title: 'Use of Information',
+    link: '#use-of-information',
+  },
+  {
+    title: 'Cookies',
+    link: '#cookies',
+  },
+  {
+    title: 'Third Parties',
+    link: '#third-parties',
+  },
+  {
+    title: 'Law Enforcement Purposes',
+    link: '#law-enforcement-purposes',
+  },
+  {
+    title: 'Amendments',
+    link: '#amendments',
+  },
+  {
+    title: 'Contact Us',
+    link: '#contact-us',
+  },
+];
 
 const md = (data: QueryResult) => {
   const { html } = data.data.allMarkdownRemark.edges[0].node;
@@ -76,18 +106,18 @@ const PrivacyPolicyPage = ({ data }: QueryResult) => (
         margin={{ _: '0px 0', lg: '0px 0' }}
       >
         <ContactUsBox title="Jump to">
-          {Object.entries(TableOfContents).map(([label, link]) => {
+          {TableOfContents.map((data, index) => {
             return (
               <Flex
                 flexDirection="row"
                 justifyContent="s"
                 padding="5px"
-                key={label}
+                key={index}
               >
                 <Icon name={'linkJumpTo'} height="15px" mr="10px" />
                 <Text color="white" fontSize="14px">
-                  <Link href={link} internal={true}>
-                    {label}
+                  <Link href={data.link} internal={true}>
+                    {data.title}
                   </Link>
                 </Text>
               </Flex>
