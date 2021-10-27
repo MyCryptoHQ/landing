@@ -18,9 +18,7 @@ const ContactUsBox = ({ title = 'Contact Us', children }: props) => {
         >
           {title}
         </Heading>
-
         {children}
-
         <Text
           variant="smallBase"
           mt="14px"
