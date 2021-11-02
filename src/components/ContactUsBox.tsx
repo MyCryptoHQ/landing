@@ -20,6 +20,11 @@ const ContactUsBox = ({
           mt="20px"
           display="block"
           paddingBottom="15px"
+          sx={{
+            borderBottom: '1px solid #B5BFC7',
+            borderBottomStyle: 'solid',
+            marginBottom: '15px',
+          }}
         >
           {title}
         </Heading>
