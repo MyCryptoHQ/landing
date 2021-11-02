@@ -113,11 +113,11 @@ const PrivacyPolicyPage = ({ data }: QueryResult) => (
                 key={index}
               >
                 <Icon name={'linkJumpTo'} height="15px" mr="10px" />
-                <Text color="white" fontSize="14px">
-                  <Link href={data.link} internal={true}>
+                <Link href={data.link} internal={true}>
+                  <Text variant="link" color="link" fontSize="14px">
                     {data.title}
-                  </Link>
-                </Text>
+                  </Text>
+                </Link>
               </Flex>
             );
           })}
