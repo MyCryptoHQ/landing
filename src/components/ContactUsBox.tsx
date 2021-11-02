@@ -4,9 +4,14 @@ import { Flex, Heading, Text, Link } from '@components';
 interface props {
   title?: string;
   children?: any;
+  footertitle?: string;
 }
 
-const ContactUsBox = ({ title = 'Contact Us', children }: props) => {
+const ContactUsBox = ({
+  title = 'Contact Us',
+  children,
+  footertitle,
+}: props) => {
   return (
     <Flex variant="card" width="300px" padding="24px">
       <Flex flexDirection="column" alignItems="left">
@@ -19,6 +24,16 @@ const ContactUsBox = ({ title = 'Contact Us', children }: props) => {
           {title}
         </Heading>
         {children}
+        {footertitle && (
+          <Heading
+            variant="greyHeader"
+            mt="20px"
+            display="block"
+            paddingBottom="10px"
+          >
+            {footertitle}
+          </Heading>
+        )}
         <Text
           variant="smallBase"
           mt="14px"

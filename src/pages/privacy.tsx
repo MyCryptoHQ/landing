@@ -48,10 +48,6 @@ const TableOfContents = [
     title: 'Amendments',
     link: '#amendments',
   },
-  {
-    title: 'Contact Us',
-    link: '#contact-us',
-  },
 ];
 
 const md = (data: QueryResult) => {
@@ -91,9 +87,11 @@ const PrivacyPolicyPage = ({ data }: QueryResult) => (
         maxWidth="1245px"
         width="100%"
         margin={{ _: '60px 15px', lg: '0px 0' }}
+        mt="18px"
+        mb="18px"
       >
         {getHeading({ data })}
-        <Text variant="largeBase" textAlign="left" mt="20px" mb="30px">
+        <Text variant="largeBase" textAlign="left" mt="16px" mb="16px">
           {md({ data })}
         </Text>
       </Flex>
@@ -105,7 +103,7 @@ const PrivacyPolicyPage = ({ data }: QueryResult) => (
         width="100%"
         margin={{ _: '0px 0', lg: '0px 0' }}
       >
-        <ContactUsBox title="Jump to">
+        <ContactUsBox title="Jump to" footertitle="Contact Us">
           {TableOfContents.map((data, index) => {
             return (
               <Flex
