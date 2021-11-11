@@ -1,13 +1,44 @@
 import React from 'react';
 import { Flex, Heading, Text, Link } from '@components';
 
-const ContactUsBox = () => {
+interface props {
+  title?: string;
+  children?: any;
+  footertitle?: string;
+}
+
+const ContactUsBox = ({
+  title = 'Contact Us',
+  children,
+  footertitle,
+}: props) => {
   return (
     <Flex variant="card" width="300px" padding="24px">
       <Flex flexDirection="column" alignItems="left">
-        <Heading variant="greyHeader" mt="20px" display="block">
-          Contact Us
+        <Heading
+          variant="greyHeader"
+          mt="20px"
+          display="block"
+          paddingBottom="15px"
+          sx={{
+            borderBottom: '1px solid #B5BFC7',
+            borderBottomStyle: 'solid',
+            marginBottom: '15px',
+          }}
+        >
+          {title}
         </Heading>
+        {children}
+        {footertitle && (
+          <Heading
+            variant="greyHeader"
+            mt="20px"
+            display="block"
+            paddingBottom="10px"
+          >
+            {footertitle}
+          </Heading>
+        )}
         <Text
           variant="smallBase"
           mt="14px"
