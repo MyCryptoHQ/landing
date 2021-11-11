@@ -11,7 +11,7 @@ on:
 jobs:
   setup:
     name: Setup
-    runs-on: ubuntu-16.04
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout PR
         uses: actions/checkout@v1
@@ -45,7 +45,7 @@ jobs:
   run:
     name: Run
     needs: [setup]
-    runs-on: ubuntu-16.04
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout PR
         uses: actions/checkout@v1
