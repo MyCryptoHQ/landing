@@ -12,7 +12,7 @@ export const Carousel = ({
   inverted?: boolean;
   elements: CarouselElement[];
 }) => {
-  const [selected, setSelected] = useState(0);
+  const [selected, setSelected] = useState<CarouselElement>(elements[0]);
   return (
     <Flex
       flexDirection={{ _: 'column', md: inverted ? 'row-reverse' : 'row' }}
@@ -50,12 +50,14 @@ export const Carousel = ({
         >
           {elements.map((el) => (
             <Text
-              onClick={() => setSelected(elements.indexOf(el))}
+              onClick={() => setSelected(el)}
               fontSize="24px"
               fontWeight={700}
               flex="0 0 auto"
               color={
-                elements.indexOf(el) === selected ? 'alert_purple' : 'greyed'
+                elements.indexOf(el) === elements.indexOf(selected)
+                  ? 'alert_purple'
+                  : 'greyed'
               }
               my="20px"
               mr="30px"
@@ -71,7 +73,7 @@ export const Carousel = ({
                 cursor: 'pointer',
                 borderBottom: '2px solid',
                 borderBottomColor:
-                  elements.indexOf(el) === selected
+                  elements.indexOf(el) === elements.indexOf(selected)
                     ? 'alert_purple'
                     : 'transparent',
               }}
@@ -88,7 +90,7 @@ export const Carousel = ({
           lineHeight={1.7}
           px={{ _: '30px', sm: 0 }}
         >
-          {elements[selected].text}
+          {selected.text}
         </Text>
       </Flex>
       <Flex
@@ -96,7 +98,7 @@ export const Carousel = ({
         height={{ _: '247px', sm: '400px' }}
         my={{ _: '50px', md: 0 }}
       >
-        <Icon name={elements[selected].icon} width="100%" />
+        <Icon name={selected.icon} width="100%" />
       </Flex>
       <Text
         display={{ _: 'block', md: 'none' }}
@@ -105,7 +107,7 @@ export const Carousel = ({
         lineHeight={1.7}
         px={{ _: '30px', sm: 0 }}
       >
-        {elements[selected].text}
+        {selected.text}
       </Text>
     </Flex>
   );

@@ -1,4 +1,5 @@
 import { useState, useEffect, useMemo } from 'react';
+import { wallets as walletList, IWallet } from '@mycrypto/wallet-list';
 
 import Fuse from 'fuse.js';
 import styled from 'styled-components';
@@ -13,7 +14,7 @@ import {
   Text,
 } from '@components';
 import { WALLETS } from '@config';
-import { IWallet } from '@types';
+import { isOddRow, isFirstOfRow, isLastOfRow } from '@utils';
 
 const LENGTH = 11;
 
@@ -34,11 +35,11 @@ const SInput = styled.input`
 
 export const ConnectYourWallet = () => {
   const [query, setQuery] = useState('');
-  const [result, setResult] = useState<IWallet[]>(WALLETS);
+  const [result, setResult] = useState<IWallet[]>(walletList);
   const [length, setLength] = useState(LENGTH);
 
   const wallets = useMemo(
-    () => new Fuse(WALLETS, { keys: ['name'] }),
+    () => new Fuse(walletList, { keys: ['name'] }),
     [WALLETS]
   );
 
@@ -49,8 +50,16 @@ export const ConnectYourWallet = () => {
             .search(query)
             .reduce((acc, result) => [...acc, result.item], [] as IWallet[])
         )
-      : setResult(WALLETS);
+      : setResult(walletList);
   }, [query]);
+
+  const displayedList = useMemo(
+    () =>
+      result
+        .slice(0, length)
+        .sort((a: IWallet, b: IWallet) => b.priority - a.priority),
+    [result, length]
+  );
 
   return (
     <Section
@@ -77,15 +86,29 @@ export const ConnectYourWallet = () => {
         />
       </Box>
       <Flex
-        width="100%"
+        width="90%"
         flexDirection="row"
         flexWrap="wrap"
         justifyContent="center"
+        alignItems="center"
         mt="65px"
         mb="45px"
       >
-        {result.slice(0, length - 1).map((wallet) => (
-          <WalletButton wallet={wallet} />
+        {displayedList.map((wallet, i) => (
+          <WalletButton
+            wallet={wallet}
+            ml={
+              isOddRow(i) && isFirstOfRow(i)
+                ? '125px'
+                : { _: '10px', sm: '30px' }
+            }
+            mr={
+              isOddRow(i) && isLastOfRow(i)
+                ? '125px'
+                : { _: '10px', sm: '30px' }
+            }
+            my={{ _: '10px', sm: '15px' }}
+          />
         ))}
       </Flex>
       <Flex flexDirection="row">

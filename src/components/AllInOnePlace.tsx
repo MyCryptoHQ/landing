@@ -1,4 +1,5 @@
-import { Box, Section, Icon, Heading, Text, Link, Flex } from '@components';
+import { wallets } from '@mycrypto/wallet-list';
+import { Box, Icon, Heading, Text, Link, Flex } from '@components';
 import { WALLETS } from '@config';
 import { getSeason } from '@utils';
 import { WalletButton } from './WalletButton';
@@ -87,8 +88,8 @@ export const AllInOnePlace = () => {
           mt={{ _: '50px', sm: '25px' }}
           mb="80px"
         >
-          {WALLETS.map((wallet) => (
-            <WalletButton wallet={wallet} />
+          {wallets.slice(0, 5).map((wallet) => (
+            <WalletButton wallet={wallet} m={{ _: '10px', sm: '15px' }} />
           ))}
         </Flex>
         <Flex flexDirection={{ _: 'column', sm: 'row' }} textAlign="center">

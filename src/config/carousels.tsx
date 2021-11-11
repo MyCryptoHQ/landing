@@ -1,4 +1,5 @@
-import { Link, Text } from '@components';
+import { Text } from '@components';
+import Link from '@components/Link';
 import { JOIN_TELEGRAM, URLS } from '@config';
 import { CarouselElement } from '@types';
 

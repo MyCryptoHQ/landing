@@ -1,12 +1,12 @@
-import { IWallet } from '@types';
+import { IWallet, defaultWallet } from '@mycrypto/wallet-list';
 import { useState } from 'react';
 import { Flex, Image, Text, Box } from '@components';
-import { FlexProps } from 'styled-system';
+import { BoxProps } from 'rebass/styled-components';
 
 export const WalletButton = ({
   wallet,
   ...props
-}: FlexProps & { wallet: IWallet }) => {
+}: BoxProps & { wallet: IWallet }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -14,7 +14,7 @@ export const WalletButton = ({
       width={{ _: '95px', sm: '130px' }}
       height={{ _: '95px', sm: '130px' }}
       position="relative"
-      m={{ _: '10px', sm: '15px' }}
+      {...props}
     >
       <Flex
         onMouseEnter={() => setIsOpen(true)}
@@ -55,6 +55,21 @@ export const WalletButton = ({
               width={{ _: '30px', sm: '41px' }}
               height="auto"
             />
+            {wallet.tags && wallet.tags[0] && (
+              <Box
+                position="absolute"
+                right={0}
+                top={0}
+                width="63px"
+                height="63px"
+                backgroundColor="alert_purple"
+                sx={{
+                  borderRadius: '50%',
+                }}
+              >
+                {wallet.tags[0]}
+              </Box>
+            )}
           </Flex>
         ) : (
           <Flex
@@ -63,12 +78,18 @@ export const WalletButton = ({
             alignItems="center"
           >
             <Image
-              src={wallet.icon}
+              src={wallet.icon ?? defaultWallet}
               width={{ _: '30px', sm: '41px' }}
               height="auto"
             />
 
-            <Text mt="15px" fontWeight={700} fontSize="0.875em">
+            <Text
+              mt="15px"
+              fontWeight={700}
+              fontSize="0.875em"
+              width="90%"
+              textAlign="center"
+            >
               {wallet.name}
             </Text>
           </Flex>
