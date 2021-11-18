@@ -67,6 +67,7 @@ export const theme = merge(UITheme, {
     banner: '#55B6E2',
     blue_muted: 'rgba(85, 182, 226, .2)',
     alert_purple: '#A682FF',
+    faded_purple: '#C6B1FD',
   },
   buttons: {
     primary: {

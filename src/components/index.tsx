@@ -22,3 +22,4 @@ export { GetCaughtUp } from './GetCaughtUp';
 export { ArticleLink } from './ArticleLink';
 export { ActionCard } from './ActionCard';
 export { BottomActions } from './BottomActions';
+export { WalletTag } from './WalletTag';

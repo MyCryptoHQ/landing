@@ -99,13 +99,13 @@ export const ConnectYourWallet = () => {
             wallet={wallet}
             ml={
               isOddRow(i) && isFirstOfRow(i)
-                ? '125px'
-                : { _: '10px', sm: '30px' }
+                ? { _: '10px', md: '10%' }
+                : { _: '10px', md: '30px' }
             }
             mr={
               isOddRow(i) && isLastOfRow(i)
-                ? '125px'
-                : { _: '10px', sm: '30px' }
+                ? { _: '10px', md: '10%' }
+                : { _: '10px', md: '30px' }
             }
             my={{ _: '10px', sm: '15px' }}
           />

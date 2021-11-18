@@ -1,14 +1,78 @@
-import { IWallet, defaultWallet } from '@mycrypto/wallet-list';
+import {
+  IWallet,
+  defaultWallet,
+  WalletTags,
+  WalletTypes,
+  WalletConnectivity,
+} from '@mycrypto/wallet-list';
 import { useState } from 'react';
-import { Flex, Image, Text, Box } from '@components';
+import { Flex, Image, Text, Box, WalletTag, Link } from '@components';
 import { BoxProps } from 'rebass/styled-components';
+import { getRoute } from '@utils';
+
+export const getConnectionPhrase = (wallet: IWallet) => {
+  switch (wallet.connectivity) {
+    case WalletConnectivity.Ledger:
+    case WalletConnectivity.Trezor:
+    case WalletConnectivity.Web3:
+      return (
+        <Text color="greyed">
+          <Link href={`${getRoute('ADD_ACCOUNT')}/${wallet.id}`}>
+            Connect & sign
+          </Link>{' '}
+          transactions directly with your noncustodial wallet.
+        </Text>
+      );
+    case WalletConnectivity.ViewOnly:
+      return (
+        <Text color="greyed">
+          <Link href={`${getRoute('ADD_ACCOUNT')}/${wallet.id}`}>
+            Import an account
+          </Link>{' '}
+          and track your balances.
+        </Text>
+      );
+    case WalletConnectivity.WalletConnect:
+      return (
+        <Text color="greyed">
+          <Link href={`${getRoute('ADD_ACCOUNT')}/${wallet.id}`}>
+            Connect & sign
+          </Link>{' '}
+          via WalletConnect QR codes.
+        </Text>
+      );
+    case WalletConnectivity.MigrateCustodial:
+    case WalletConnectivity.MigrateNonCustodial:
+      return (
+        <Text color="greyed">
+          <Link href={`${getRoute('ONBOARDING')}/${wallet.id}`}>
+            Migrate your funds
+          </Link>{' '}
+          and control your keys.
+        </Text>
+      );
+    case WalletConnectivity.MyCrypto:
+      return (
+        <Text color="greyed">
+          <Link href={getRoute('DOWNLOAD')}>Download Quill</Link> and import
+          your {wallet.name}
+        </Text>
+      );
+    case WalletConnectivity.Interface:
+      return (
+        <Text color="greyed">
+          Select and connect to a wallet supported by this interface.
+        </Text>
+      );
+  }
+};
 
 export const WalletButton = ({
   wallet,
   ...props
 }: BoxProps & { wallet: IWallet }) => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const connectLink = getConnectionPhrase(wallet);
   return (
     <Box
       width={{ _: '95px', sm: '130px' }}
@@ -43,32 +107,38 @@ export const WalletButton = ({
             flexDirection="column"
             justifyContent="center"
             alignItems="flex-start"
+            ml={{ _: '20px', sm: '0' }}
           >
             <Text mt="15px" fontWeight={700} fontSize="1.125em">
               {wallet.name}
             </Text>
-            <Text mt="10px" mb="20px" color="greyed">
-              This is a test message
-            </Text>
+            <Box
+              mt="10px"
+              mb={{ _: '10px', sm: '20px' }}
+              maxWidth={{ _: '130px', sm: '150px' }}
+            >
+              {connectLink}
+            </Box>
             <Image
               src={wallet.icon}
               width={{ _: '30px', sm: '41px' }}
               height="auto"
             />
             {wallet.tags && wallet.tags[0] && (
-              <Box
-                position="absolute"
-                right={0}
-                top={0}
-                width="63px"
-                height="63px"
-                backgroundColor="alert_purple"
-                sx={{
-                  borderRadius: '50%',
-                }}
-              >
-                {wallet.tags[0]}
-              </Box>
+              <WalletTag
+                tag={wallet.tags[0]}
+                top={{ _: 'auto', sm: '5px' }}
+                right={{ _: '40px', sm: '5px' }}
+                bottom={{ _: '-25px', sm: 'auto' }}
+              />
+            )}
+            {wallet.tags && wallet.tags[1] && (
+              <WalletTag
+                tag={wallet.tags[1]}
+                top={{ _: 'auto', sm: '85px' }}
+                right={{ _: '-15px', sm: '-35px' }}
+                bottom={{ _: '10px', sm: 'auto' }}
+              />
             )}
           </Flex>
         ) : (

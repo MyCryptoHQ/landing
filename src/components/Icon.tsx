@@ -92,6 +92,18 @@ import frame from '@assets/wallets/frame.svg';
 import web3Default from '@assets/wallets/web3-default.svg';
 import trust from '@assets/wallets/trust-2.svg';
 
+/**
+ * Wallet Tags
+ */
+
+import desktopTag from '@assets/desktopTag.svg';
+import exchangeTag from '@assets/exchangeTag.svg';
+import hardwareTag from '@assets/hardwareTag.svg';
+import mobileTag from '@assets/mobileTag.svg';
+import otherTag from '@assets/otherTag.svg';
+import walletconnectTag from '@assets/walletconnectTag.svg';
+import webTag from '@assets/webTag.svg';
+
 const IconMap = {
   summerLeft,
   summerRight,
@@ -179,6 +191,16 @@ const IconMap = {
   'team-twitter': teamTwitter,
   'team-github': teamGithub,
   'team-linkedin': teamLinkedin,
+
+  /* Wallet Tags */
+
+  'desktop-tag': desktopTag,
+  'exchange-tag': exchangeTag,
+  'hardware-tag': hardwareTag,
+  'mobile-tag': mobileTag,
+  'other-tag': otherTag,
+  'walletconnect-tag': walletconnectTag,
+  'web-tag': webTag,
 };
 
 export type IconName = keyof typeof IconMap;

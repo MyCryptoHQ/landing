@@ -48,6 +48,9 @@ export const APP_ROUTES: TRoutes = {
   BUY: {
     path: '/buy',
   },
+  ONBOARDING: {
+    path: '/onboarding',
+  },
 };
 
 export type RouteName = keyof TRoutes;
