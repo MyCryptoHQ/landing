@@ -4,7 +4,7 @@ import { getRoute } from '@utils';
 export const MENU_LINKS: { link: string; text: string; icon: IconName }[] = [
   {
     link: getRoute('ADD_ACCOUNT'),
-    text: 'Launch Demon',
+    text: 'Launch Demo',
     icon: 'nav-launch-demo',
   },
   {

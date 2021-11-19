@@ -9,7 +9,16 @@ export const MenuButton = ({
   text: string;
   icon: IconName;
 }) => (
-  <Link href={link} my="5px">
+  <Link
+    href={link}
+    my="5px"
+    sx={{
+      transition: 'all .2s ease-in-out',
+      ':hover': {
+        transform: 'scale(1.1)',
+      },
+    }}
+  >
     <Flex
       flexDirection="row"
       alignItems="center"
@@ -28,7 +37,6 @@ export const MenuButton = ({
       <Flex
         alignItems="center"
         justifyContent="center"
-        backgroundColor="background_grey"
         size={{ _: '50px', sm: '70px' }}
         sx={{
           boxShadow:
