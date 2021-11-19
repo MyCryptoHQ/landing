@@ -12,3 +12,4 @@ export * from './seasons';
 export * from './carousels';
 export * from './articles';
 export * from './actions';
+export * from './menu';

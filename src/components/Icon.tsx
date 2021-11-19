@@ -78,6 +78,11 @@ import connectWallet from '@assets/connect_wallet.svg';
 import decentralizedSwap from '@assets/decentralized_swap.svg';
 import portfolioView from '@assets/portfolio_view.svg';
 import membership from '@assets/membership.svg';
+import arrow from '@assets/arrow.svg';
+import navLaunchDemo from '@assets/demo-mode.svg';
+import navBuyEth from '@assets/buy-eth.svg';
+import navCreateWallet from '@assets/create-wallet.svg';
+import navConnectWallet from '@assets/connect-wallet.svg';
 
 import linkJumpTo from '@assets/icn-link-jumpto.svg';
 
@@ -172,6 +177,7 @@ const IconMap = {
   star,
   announcement,
   membership,
+  arrow,
   'portfolio-view': portfolioView,
   'decentralized-swap': decentralizedSwap,
   'create-wallet': createWallet,
@@ -191,6 +197,10 @@ const IconMap = {
   'team-twitter': teamTwitter,
   'team-github': teamGithub,
   'team-linkedin': teamLinkedin,
+  'nav-launch-demo': navLaunchDemo,
+  'nav-buy-eth': navBuyEth,
+  'nav-create-wallet': navCreateWallet,
+  'nav-connect-wallet': navConnectWallet,
 
   /* Wallet Tags */
 
