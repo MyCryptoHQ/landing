@@ -15,8 +15,9 @@ export const OverlayMenu = ({ shouldShow }: { shouldShow: boolean }) => {
   return (
     <Box
       position="fixed"
-      bottom="200px"
-      right="70px"
+      bottom={{ _: '50px', sm: '200px' }}
+      right={{ _: '30px', sm: '70px' }}
+      zIndex={999}
       sx={{
         transform: shouldShow ? 'translateX(0)' : 'translateX(200%)',
         transition: 'all .3s ease-in-out',
@@ -26,25 +27,25 @@ export const OverlayMenu = ({ shouldShow }: { shouldShow: boolean }) => {
         <Flex
           flexDirection="column"
           mb="10px"
-          pr="10px"
+          pr={{ _: '0px', sm: '10px' }}
           maxHeight={isOpen ? '400px' : '0px'}
           opacity={isOpen ? 1 : 0}
           overflow="hidden"
           sx={{ transition: 'all .3s ease-in-out' }}
         >
-          {MENU_LINKS.map((menuLink) => (
-            <MenuButton {...menuLink} />
+          {MENU_LINKS.map((menuLink, i) => (
+            <MenuButton {...menuLink} key={i} />
           ))}
         </Flex>
         <Flex
-          size="90px"
+          size={{ _: '50px', sm: '90px' }}
           backgroundColor="faded_purple"
           alignItems="center"
           justifyContent="center"
           onClick={handleClick}
           sx={{ borderRadius: '50%', cursor: 'pointer' }}
         >
-          <Icon name="arrow" />
+          <Icon name="arrow" width={{ _: '24px', sm: '45px' }} />
         </Flex>
       </Flex>
     </Box>
