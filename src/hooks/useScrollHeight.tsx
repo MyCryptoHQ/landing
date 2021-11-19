@@ -1,14 +1,15 @@
 import { useState, useEffect } from 'react';
 
 export function useScrollHeight() {
-  const [bodyOffset, setBodyOffset] = useState(
-    document.body.getBoundingClientRect()
-  );
-  const [scrollY, setScrollY] = useState(bodyOffset.top);
+  const [bodyOffset, setBodyOffset] = useState<DOMRect | undefined>();
+  const [scrollY, setScrollY] = useState<number>(0);
 
   const listener = () => {
+    if (typeof window === 'undefined' || !window.document) {
+      return;
+    }
     setBodyOffset(document.body.getBoundingClientRect());
-    setScrollY(-bodyOffset.top);
+    setScrollY(bodyOffset ? -bodyOffset.top : 0);
   };
 
   useEffect(() => {
