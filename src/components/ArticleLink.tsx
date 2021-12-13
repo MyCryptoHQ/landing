@@ -2,7 +2,12 @@ import { IconName, Link, Flex, Icon, Text } from '@components';
 import { Article } from '@types';
 
 export const ArticleLink = ({ icon, title, text, link }: Article) => (
-  <Link href={link} width={{ _: '90%', sm: '500px' }} mx="40px" my="20px">
+  <Link
+    href={link}
+    width={{ _: '90%', lg: '400px', xl: '500px' }}
+    mx="40px"
+    my="20px"
+  >
     <Flex flexDirection="row" alignItems="center">
       <Flex
         justifyContent="center"

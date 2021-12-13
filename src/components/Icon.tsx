@@ -55,7 +55,7 @@ import create from '@assets/create.svg';
 import demo from '@assets/demo.svg';
 import screenLock from '@assets/screen_lock.svg';
 import protectedTransaction from '@assets/protected_transaction.svg';
-import desktopApp from '@assets/desktop_app.svg';
+import quill from '@assets/quill.svg';
 import everyWallet from '@assets/every_wallet.svg';
 import everyToken from '@assets/every_token.svg';
 import everyTransaction from '@assets/every_transaction.svg';
@@ -83,7 +83,7 @@ import navLaunchDemo from '@assets/demo-mode.svg';
 import navBuyEth from '@assets/buy-eth.svg';
 import navCreateWallet from '@assets/create-wallet.svg';
 import navConnectWallet from '@assets/connect-wallet.svg';
-
+import quillTag from '@assets/quillTag.svg';
 import linkJumpTo from '@assets/icn-link-jumpto.svg';
 
 /**
@@ -178,6 +178,7 @@ const IconMap = {
   announcement,
   membership,
   arrow,
+  quill,
   'portfolio-view': portfolioView,
   'decentralized-swap': decentralizedSwap,
   'create-wallet': createWallet,
@@ -186,7 +187,6 @@ const IconMap = {
   'illo-telegram': illoTelegram,
   'screen-lock': screenLock,
   'protected-transaction': protectedTransaction,
-  'desktop-app': desktopApp,
   'every-wallet': everyWallet,
   'every-token': everyToken,
   'every-transaction': everyTransaction,
@@ -211,6 +211,7 @@ const IconMap = {
   'other-tag': otherTag,
   'walletconnect-tag': walletconnectTag,
   'web-tag': webTag,
+  'quill-tag': quillTag,
 };
 
 export type IconName = keyof typeof IconMap;

@@ -1957,10 +1957,10 @@
     ethereum-blockies-base64 "1.0.2"
     rebass "4.0.7"
 
-"@mycrypto/wallet-list@1.3.0":
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/@mycrypto/wallet-list/-/wallet-list-1.3.0.tgz#c45cda8908775fa0378ae0259dfad6ac9e88129c"
-  integrity sha512-d+vinjhOnIGjWzjP99nOXam5pxGV9YEn4t+QQSZyZ22YCNbvRjOvrXXjShBUzZtLDgmTAcyMCIoWOrwzk06ktQ==
+"@mycrypto/wallet-list@1.4.0":
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@mycrypto/wallet-list/-/wallet-list-1.4.0.tgz#95a429644f0a94c0203b29c0d947636eee7f9de6"
+  integrity sha512-iqPc2JsrKkGRteG2Jdv71X5VrtIQJgkz2OmBMCZwy9++Yvs7qN8FAxtOh7Nq1iShjplMIaTz88uzIg6M0MX/3g==
   dependencies:
     remove "^0.1.5"
 

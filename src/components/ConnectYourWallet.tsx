@@ -1,4 +1,10 @@
-import { useState, useEffect, useMemo } from 'react';
+import {
+  useState,
+  useEffect,
+  useMemo,
+  ChangeEvent,
+  InputHTMLAttributes,
+} from 'react';
 import { wallets as walletList, IWallet } from '@mycrypto/wallet-list';
 
 import Fuse from 'fuse.js';
@@ -37,6 +43,12 @@ export const ConnectYourWallet = () => {
   const [query, setQuery] = useState('');
   const [result, setResult] = useState<IWallet[]>(walletList);
   const [length, setLength] = useState(LENGTH);
+
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) =>
+    setQuery(e.target.value);
+
+  const handleClick = () =>
+    length < result.length && setLength(length + LENGTH);
 
   const wallets = useMemo(
     () => new Fuse(walletList, { keys: ['name'] }),
@@ -78,7 +90,7 @@ export const ConnectYourWallet = () => {
         <SInput
           type="text"
           placeholder="Try “Trezor” or “MetaMask”"
-          onChange={(e) => setQuery(e.target.value)}
+          onChange={handleChange}
         />
         <Icon
           name="search"
@@ -86,7 +98,7 @@ export const ConnectYourWallet = () => {
         />
       </Box>
       <Flex
-        width="90%"
+        width={{ _: '80%', md: '100%', xl: '90%' }}
         flexDirection="row"
         flexWrap="wrap"
         justifyContent="center"
@@ -99,13 +111,13 @@ export const ConnectYourWallet = () => {
             wallet={wallet}
             ml={
               isOddRow(i) && isFirstOfRow(i)
-                ? { _: '10px', md: '10%' }
-                : { _: '10px', md: '30px' }
+                ? { _: '10px', md: '10px', lg: '15px', xl: '10%' }
+                : { _: '10px', md: '15px', xxl: '30px' }
             }
             mr={
               isOddRow(i) && isLastOfRow(i)
-                ? { _: '10px', md: '10%' }
-                : { _: '10px', md: '30px' }
+                ? { _: '10px', md: '10px', lg: '15px', xl: '10%' }
+                : { _: '10px', md: '15px', xxl: '30px' }
             }
             my={{ _: '10px', sm: '15px' }}
           />
@@ -114,7 +126,7 @@ export const ConnectYourWallet = () => {
       <Flex flexDirection="row">
         <Text>Don’t see what you were looking for?</Text>
         <Text
-          onClick={() => length < result.length && setLength(length + LENGTH)}
+          onClick={handleClick}
           color="link"
           ml="5px"
           sx={{ cursor: 'pointer' }}

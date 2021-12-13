@@ -1,6 +1,6 @@
 import { Text } from '@components';
-import Link from '@components/Link';
-import { JOIN_TELEGRAM, URLS } from '@config';
+import { Link } from '@components/Link';
+import { BLOG, URLS } from '@config';
 import { CarouselElement } from '@types';
 
 export const BirdsEyeViewElements: CarouselElement[] = [
@@ -33,9 +33,9 @@ export const KeepItSafeElements: CarouselElement[] = [
     icon: 'protected-transaction',
   },
   {
-    title: 'Desktop App',
-    text: 'Get away from the browser and download the MyCrypto Desktop App for an extra layer of security.',
-    icon: 'desktop-app',
+    title: 'MyCrypto Quill',
+    text: 'Get away from the browser and download the MyCrypto Quill desktop application for an extra layer of security.',
+    icon: 'quill',
   },
 ];
 
@@ -81,11 +81,11 @@ export const StayUpToDateElements: CarouselElement[] = [
     icon: 'newsletter',
   },
   {
-    title: 'Telegram',
+    title: 'Deep Dives',
     text: (
       <Text>
-        Join our community of users on Telegram and chat directly with our team.{' '}
-        <Link href={JOIN_TELEGRAM}>Join Now</Link>
+        Tune into the MyCrypto Blog each week for deep dives on Cryptocurrency,
+        Ethereum, and everything MyCrypto! <Link href={BLOG}>Dive in Now</Link>
       </Text>
     ),
     icon: 'illo-telegram',

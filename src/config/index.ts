@@ -3,6 +3,7 @@ export {
   GITHUB_RELEASES_URL,
   GITHUB_RELEASE_NOTES_URL,
   JOIN_TELEGRAM,
+  BLOG,
 } from './links';
 export { SUBSCRIBE } from './subscribe';
 export { APP_ROUTES, TRoutes, RouteName } from './routes';

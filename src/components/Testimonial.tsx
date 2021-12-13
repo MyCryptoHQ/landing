@@ -3,7 +3,7 @@ import { Section, Icon } from '@components';
 export const Testimonial = ({ second = false }: { second?: boolean }) => (
   <Section
     type="landing"
-    py="150px"
+    py={{ _: '50px', sm: '150px' }}
     alignItems="center"
     justifyContent="center"
     px="15px"

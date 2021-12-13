@@ -7,7 +7,7 @@ export const BottomActions = () => (
     flexDirection={{ _: 'column', md: 'row' }}
     justifyContent="center"
     alignItems={{ _: 'center', md: 'flex-start' }}
-    py="120px"
+    py={{ _: '50px', sm: '120px' }}
   >
     {ACTION_CARDS.map((card) => (
       <ActionCard {...card} />

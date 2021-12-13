@@ -42,6 +42,16 @@ export const getWalletTag = (
         icon: 'other-tag',
         text: 'Other',
       };
+    case WalletTags.Other:
+      return {
+        icon: 'other-tag',
+        text: 'Other',
+      };
+    case WalletTags.Quill:
+      return {
+        icon: 'quill-tag',
+        text: 'Quill',
+      };
   }
 };
 

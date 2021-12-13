@@ -30,10 +30,15 @@ const Section = ({
       </Box>
     </Box>
   ) : (
-    <Flex justifyContent="center" bg={bg} width={'100%'} {...props}>
-      <Box width={'100%'} maxWidth={props.width || '1920px'}>
+    <Flex justifyContent="center" bg={bg} width={'100%'}>
+      <Flex
+        {...props}
+        width={'100%'}
+        flexDirection={flexDirection}
+        maxWidth={props.width || '1920px'}
+      >
         {children}
-      </Box>
+      </Flex>
     </Flex>
   );
 };

@@ -21,7 +21,7 @@ const SGatsbyLink = styled(GatsbyLink)<LinkProps>`
   ${alignSelf}
 `;
 
-const Link = ({
+export const Link = ({
   href,
   internal,
   blank = true,
@@ -43,5 +43,3 @@ const Link = ({
     />
   );
 };
-
-export default Link;

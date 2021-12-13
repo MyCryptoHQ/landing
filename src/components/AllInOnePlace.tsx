@@ -10,7 +10,9 @@ export const AllInOnePlace = () => {
     <Box
       position="relative"
       width="100%"
-      height={{ _: '740px', sm: '120vh' }}
+      display={{ _: 'block', sm: 'flex' }}
+      alignItems="center"
+      minHeight={{ _: '110vh', sm: '120vh' }}
       mb="50px"
       pt="30px"
       pb={{ _: 0, sm: '45vh' }}
