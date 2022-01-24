@@ -259,7 +259,7 @@ const TEAM_MEMBERS: ITeamMember[] = [
       {
         type: 'team-linkedin',
         url: 'https://linkedin.com/in/jasoncivalleri',
-      }
+      },
     ],
   },
   {
