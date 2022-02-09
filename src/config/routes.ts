@@ -45,6 +45,12 @@ export const APP_ROUTES: TRoutes = {
   SETTINGS: {
     path: '/settings',
   },
+  BUY: {
+    path: '/buy',
+  },
+  ONBOARDING: {
+    path: '/onboarding',
+  },
 };
 
 export type RouteName = keyof TRoutes;

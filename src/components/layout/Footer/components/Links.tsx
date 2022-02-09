@@ -1,4 +1,3 @@
-import React from 'react';
 import { Flex, Text, Link } from '@components';
 
 interface TLink {

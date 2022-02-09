@@ -1,4 +1,3 @@
-import React from 'react';
 import { Flex } from '@components';
 import {
   Separator,

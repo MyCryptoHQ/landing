@@ -1,3 +1,5 @@
+import { theme as UITheme } from '@mycrypto/ui';
+import { merge } from 'lodash';
 /**
  *  From https://styled-system.com/responsive-styles/
  * */
@@ -16,7 +18,7 @@ breakpoints.lg = breakpoints[3];
 breakpoints.xl = breakpoints[4];
 breakpoints.xxl = breakpoints[5];
 
-export const theme = {
+export const theme = merge(UITheme, {
   breakpoints,
   radii: {
     default: '3px',
@@ -50,6 +52,7 @@ export const theme = {
     link: '#1EB8E7',
     textInvert: '#fff',
     greyed: '#BBC2CB',
+    background_grey: '#F6F8FA',
     // background: '',
     primary: '#007896',
     // secondary: '',
@@ -62,6 +65,9 @@ export const theme = {
     white: '#fff',
     grey: '#E9E9E9',
     banner: '#55B6E2',
+    blue_muted: 'rgba(85, 182, 226, .2)',
+    alert_purple: '#A682FF',
+    faded_purple: '#C6B1FD',
   },
   buttons: {
     primary: {
@@ -91,43 +97,25 @@ export const theme = {
     },
   },
   text: {
-    largeHeading: {
-      fontSize: 0,
-      lineHeight: 0,
-      fontWeight: 800,
-    },
     heading: {
-      fontSize: 1,
-      lineHeight: 2,
-    },
-    subHeading: {
-      fontSize: 2,
-      lineHeight: 1,
-    },
-    title: {
-      fontSize: 3,
-      lineHeight: 3,
-    },
-    largeBase: {
-      fontSize: 4,
-      lineHeight: 4,
-    },
-    base: {
-      fontSize: 5,
-      lineHeight: 4,
-    },
-    link: {
-      fontSize: 5,
-      lineHeight: 4,
-      textDecoration: 'none',
-      fontFamily: 'body',
+      fontSize: ['25px', '2.8rem'],
+      textAlign: 'center',
+      color: 'text',
+      fontWeight: [900, 700],
+      secondary: {
+        fontSize: ['16px', '1.5rem'],
+        fontWeight: ['normal', 500],
+        textAlign: 'center',
+        px: ['35px', 0],
+        color: 'text',
+      },
     },
     footerSmall: {
       fontSize: '0.625rem',
       lineHeight: '0.75rem',
     },
     footerLink: {
-      fontSize: '0.875em',
+      fontSize: '0.875rem',
       lineHeight: '1.18em',
       fontWeight: 300,
       textDecoration: 'none',
@@ -140,6 +128,10 @@ export const theme = {
     },
   },
   variants: {
+    link: {
+      textDecoration: 'none',
+      color: 'link',
+    },
     card: {
       bg: 'white',
       boxShadow: 'small',
@@ -148,4 +140,4 @@ export const theme = {
       cursor: 'pointer',
     },
   },
-};
+});

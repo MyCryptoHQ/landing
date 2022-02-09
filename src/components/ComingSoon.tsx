@@ -1,4 +1,3 @@
-import React from 'react';
 import { SEO, Flex, Heading, Icon, Text, Link, Button } from '@components';
 
 export const ComingSoon = () => (

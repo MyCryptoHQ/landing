@@ -1,4 +1,3 @@
-import React from 'react';
 import { Flex, Text, Link, Image } from '@components';
 import { URLS } from '@config';
 import IcnAnnouncement from '@assets/icn-announcement.svg';

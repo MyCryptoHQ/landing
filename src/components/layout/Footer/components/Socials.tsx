@@ -1,4 +1,3 @@
-import React from 'react';
 import { Flex, IconName, Link, Icon } from '@components';
 
 interface TSocial {

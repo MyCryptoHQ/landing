@@ -1,11 +1,11 @@
-import React from 'react';
+import { ReactNode } from 'react';
 import { Box, Flex, FlexProps, BoxProps } from 'rebass/styled-components';
 
 type SectionProps = {
   type?: 'landing';
   relative?: boolean;
   bg?: string;
-  children: React.ReactNode;
+  children: ReactNode;
 };
 
 const Section = ({
@@ -19,8 +19,8 @@ const Section = ({
   return type === 'landing' ? (
     <Box bg={bg}>
       <Box
-        width={{ _: '100%', md: '80%', lg: '75%' }}
-        maxWidth="1920px"
+        width={{ _: '100%', md: '95%', lg: '75%' }}
+        maxWidth="1440px"
         margin="0 auto"
         sx={{ position: relative ? 'relative' : '' }}
       >
@@ -30,10 +30,15 @@ const Section = ({
       </Box>
     </Box>
   ) : (
-    <Flex justifyContent="center" bg={bg} width={'100%'} {...props}>
-      <Box width={'100%'} maxWidth="1920px">
+    <Flex justifyContent="center" bg={bg} width={'100%'}>
+      <Flex
+        {...props}
+        width={'100%'}
+        flexDirection={flexDirection}
+        maxWidth={props.width || '1920px'}
+      >
         {children}
-      </Box>
+      </Flex>
     </Flex>
   );
 };
